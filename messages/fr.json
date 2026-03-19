@@ -11,7 +11,7 @@
     "closeMenu": "Fermer le menu"
   },
   "hero": {
-    "title": "Construire la Résilience",
+    "title": "Renforcer la Résilience",
     "hashtag": "#BuildingResilience",
     "subtitle": "17–18 Avril 2026 · Libreville, Gabon",
     "register": "S'inscrire",
@@ -25,7 +25,7 @@
     "seconds": "Secondes"
   },
   "cta": {
-    "headline": "Rejoignez les leaders africains pour construire la résilience",
+    "headline": "Rejoignez les leaders africains pour renforcer la résilience",
     "button": "S'inscrire maintenant",
     "date": "17–18 Avril 2026 · Libreville, Gabon"
   },
@@ -51,7 +51,7 @@
       "other": "Autre"
     },
     "languagePref": "Langue préférée",
-    "gdprConsent": "J'accepte que mes données soient traitées conformément à la politique de confidentialité de l'OAFLAD.",
+    "gdprConsent": "J'accepte que mes données soient traitées conformément à la politique de confidentialité de l'OPDAD.",
     "submit": "Soumettre l'inscription",
     "success": "Inscription réussie !",
     "errorDuplicate": "Cette adresse e-mail est déjà inscrite.",
@@ -62,13 +62,13 @@
   },
   "confirmation": {
     "title": "Inscription confirmée",
-    "message": "Merci pour votre inscription à la conférence #BuildingResilience de l'OAFLAD.",
-    "details": "17–18 Avril 2026 · Libreville, Gabon · Organisé par l'OAFLAD",
+    "message": "Merci pour votre inscription à la conférence #BuildingResilience de l'OPDAD.",
+    "details": "17–18 Avril 2026 · Libreville, Gabon · Organisé par l'OPDAD",
     "downloadIcs": "Ajouter au calendrier (.ics)",
     "backHome": "Retour à l'accueil"
   },
   "footer": {
-    "copyright": "© 2026 OAFLAD. Tous droits réservés.",
+    "copyright": "© 2026 OPDAD. Tous droits réservés.",
     "privacy": "Politique de confidentialité",
     "terms": "Conditions d'utilisation",
     "tagline": "Organisation des Premières Dames d'Afrique pour le Développement"
