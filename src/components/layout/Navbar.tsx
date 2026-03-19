@@ -4,7 +4,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import { List, X } from "@phosphor-icons/react";
 
 const NAV_LINKS = [
@@ -26,6 +26,7 @@ export function Navbar({ locale }: { locale: string }) {
   const tLang = useTranslations("lang");
   const navbarLogo = NAVBAR_LOGOS[locale] ?? NAVBAR_LOGO_FALLBACK;
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
 
@@ -39,9 +40,22 @@ export function Navbar({ locale }: { locale: string }) {
     router.push(`/${otherLocale}${pathWithoutLocale}`);
   }
 
+  function isActive(href: string) {
+    return pathname === `/${locale}${href}`;
+  }
+
   const closeMenu = useCallback(() => {
     setMenuOpen(false);
     hamburgerRef.current?.focus();
+  }, []);
+
+  // Scroll-aware glass effect
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 10);
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   // Close on Escape
@@ -109,9 +123,14 @@ export function Navbar({ locale }: { locale: string }) {
   }, [menuOpen]);
 
   return (
-    <header className="sticky top-0 z-50 bg-navy" role="banner">
+    <header
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled ? "glass shadow-lg" : "bg-navy"
+      }`}
+      role="banner"
+    >
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-8"
+        className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8"
         aria-label="Main navigation"
       >
         {/* Logo */}
@@ -132,12 +151,16 @@ export function Navbar({ locale }: { locale: string }) {
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-8">
           {NAV_LINKS.map(({ key, href }) => (
             <Link
               key={key}
               href={`/${locale}${href}`}
-              className="font-heading text-base font-semibold text-white hover:text-orange border-b-2 border-transparent hover:border-orange transition-colors focus:outline-none focus:ring-2 focus:ring-orange rounded px-1 py-1"
+              className={`font-heading text-base font-semibold border-b-2 transition-colors focus:outline-none focus:ring-2 focus:ring-orange rounded px-1 py-1 ${
+                isActive(href)
+                  ? "text-orange border-orange"
+                  : "text-white hover:text-orange border-transparent hover:border-orange"
+              }`}
             >
               {t(key)}
             </Link>
@@ -183,37 +206,44 @@ export function Navbar({ locale }: { locale: string }) {
         </div>
       </nav>
 
-      {/* Mobile menu overlay */}
-      {menuOpen && (
-        <div
-          ref={menuRef}
-          id="mobile-menu"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Mobile navigation"
-          className="lg:hidden bg-navy border-t border-white/10"
-        >
-          <div className="flex flex-col px-4 py-4 gap-2">
-            {NAV_LINKS.map(({ key, href }) => (
-              <Link
-                key={key}
-                href={`/${locale}${href}`}
-                onClick={() => setMenuOpen(false)}
-                className="font-heading text-lg font-semibold text-white hover:text-orange py-3 border-b border-white/10 focus:outline-none focus:ring-2 focus:ring-orange rounded"
-              >
-                {t(key)}
-              </Link>
-            ))}
+      {/* Mobile menu overlay — CSS transition instead of conditional render */}
+      <div
+        ref={menuRef}
+        id="mobile-menu"
+        role={menuOpen ? "dialog" : undefined}
+        aria-modal={menuOpen ? true : undefined}
+        aria-label={menuOpen ? "Mobile navigation" : undefined}
+        aria-hidden={!menuOpen}
+        className={`lg:hidden bg-navy border-t border-white/10 transition-all duration-300 ease-in-out overflow-hidden ${
+          menuOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="flex flex-col px-4 py-4 gap-2">
+          {NAV_LINKS.map(({ key, href }) => (
             <Link
-              href={`/${locale}/register`}
+              key={key}
+              href={`/${locale}${href}`}
               onClick={() => setMenuOpen(false)}
-              className="font-heading text-lg font-semibold text-white bg-orange hover:bg-orange/90 px-4 py-3 rounded text-center mt-2 focus:outline-none focus:ring-2 focus:ring-orange focus:ring-offset-2 focus:ring-offset-navy"
+              tabIndex={menuOpen ? 0 : -1}
+              className={`font-heading text-lg font-semibold py-3 border-b border-white/10 focus:outline-none focus:ring-2 focus:ring-orange rounded ${
+                isActive(href)
+                  ? "text-orange"
+                  : "text-white hover:text-orange"
+              }`}
             >
-              {t("register")}
+              {t(key)}
             </Link>
-          </div>
+          ))}
+          <Link
+            href={`/${locale}/register`}
+            onClick={() => setMenuOpen(false)}
+            tabIndex={menuOpen ? 0 : -1}
+            className="font-heading text-lg font-semibold text-white bg-orange hover:bg-orange/90 px-4 py-3 rounded text-center mt-2 focus:outline-none focus:ring-2 focus:ring-orange focus:ring-offset-2 focus:ring-offset-navy"
+          >
+            {t("register")}
+          </Link>
         </div>
-      )}
+      </div>
     </header>
   );
 }

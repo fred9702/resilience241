@@ -26,7 +26,11 @@
   },
   "cta": {
     "headline": "Rejoignez les leaders africains pour renforcer la résilience",
-    "button": "S'inscrire maintenant"
+    "button": "S'inscrire maintenant",
+    "date": "17–18 Avril 2026 · Libreville, Gabon"
+  },
+  "comingSoon": {
+    "badge": "Bientôt disponible"
   },
   "register": {
     "title": "Inscription",
@@ -71,6 +75,7 @@
   },
   "media": {
     "title": "Média",
+    "content": "Les contenus média seront disponibles après l'événement.",
     "comingSoon": "Les contenus média seront disponibles après l'événement.",
     "backHome": "Retour à l'accueil"
   },
