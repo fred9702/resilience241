@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return {
     title: locale === "fr"
-      ? "Accueil | OAFLAD #BuildingResilience"
+      ? "Accueil | OPDAD #BuildingResilience"
       : "Home | OAFLAD #BuildingResilience",
   };
 }

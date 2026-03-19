@@ -1,11 +1,18 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
+
+const HERO_LOGOS: Record<string, string> = {
+  fr: "/images/fr/campaign-logo.svg",
+};
+const HERO_LOGO_FALLBACK = "/images/common/mark.svg";
 
 export function HeroSection() {
   const t = useTranslations("hero");
   const locale = useLocale();
+  const heroLogo = HERO_LOGOS[locale] ?? HERO_LOGO_FALLBACK;
 
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
@@ -30,38 +37,16 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-4xl px-4 py-20 text-center">
-        {/* Logo placeholder */}
+        {/* Campaign logo */}
         <div className="mb-8 flex justify-center">
-          <svg
-            width="120"
-            height="120"
-            viewBox="0 0 48 48"
-            fill="none"
-            aria-label="OAFLAD logo"
-          >
-            <circle cx="24" cy="24" r="22" stroke="#E07B39" strokeWidth="2" />
-            <text
-              x="24"
-              y="20"
-              textAnchor="middle"
-              fill="white"
-              fontSize="8"
-              fontWeight="bold"
-              fontFamily="Montserrat, sans-serif"
-            >
-              OAFLAD
-            </text>
-            <text
-              x="24"
-              y="32"
-              textAnchor="middle"
-              fill="#E07B39"
-              fontSize="5"
-              fontFamily="Source Sans 3, sans-serif"
-            >
-              #BR
-            </text>
-          </svg>
+          <Image
+            src={heroLogo}
+            alt="OAFLAD #BuildingResilience"
+            width={280}
+            height={140}
+            className="h-auto w-[280px] md:w-[360px] drop-shadow-lg"
+            priority
+          />
         </div>
 
         <h1 className="font-heading text-5xl md:text-7xl font-extrabold text-white leading-tight">
