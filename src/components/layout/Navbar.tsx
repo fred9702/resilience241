@@ -206,7 +206,7 @@ export function Navbar({ locale }: { locale: string }) {
         </div>
       </nav>
 
-      {/* Mobile menu overlay — CSS transition instead of conditional render */}
+      {/* Mobile menu — fixed full-screen overlay below navbar */}
       <div
         ref={menuRef}
         id="mobile-menu"
@@ -214,11 +214,13 @@ export function Navbar({ locale }: { locale: string }) {
         aria-modal={menuOpen ? true : undefined}
         aria-label={menuOpen ? "Mobile navigation" : undefined}
         aria-hidden={!menuOpen}
-        className={`lg:hidden bg-navy border-t border-white/10 transition-all duration-300 ease-in-out overflow-hidden ${
-          menuOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+        className={`lg:hidden fixed inset-x-0 top-[68px] bottom-0 bg-navy/95 backdrop-blur-sm transition-all duration-300 ease-in-out ${
+          menuOpen
+            ? "opacity-100 pointer-events-auto translate-y-0"
+            : "opacity-0 pointer-events-none -translate-y-2"
         }`}
       >
-        <div className="flex flex-col px-4 py-4 gap-2">
+        <div className="flex flex-col px-6 py-6 gap-1 border-t border-white/10">
           {NAV_LINKS.map(({ key, href }) => (
             <Link
               key={key}
@@ -238,7 +240,7 @@ export function Navbar({ locale }: { locale: string }) {
             href={`/${locale}/register`}
             onClick={() => setMenuOpen(false)}
             tabIndex={menuOpen ? 0 : -1}
-            className="font-heading text-lg font-semibold text-white bg-orange hover:bg-orange/90 px-4 py-3 rounded text-center mt-2 focus:outline-none focus:ring-2 focus:ring-orange focus:ring-offset-2 focus:ring-offset-navy"
+            className="font-heading text-lg font-semibold text-white bg-orange hover:bg-orange/90 px-4 py-3 rounded text-center mt-4 focus:outline-none focus:ring-2 focus:ring-orange focus:ring-offset-2 focus:ring-offset-navy"
           >
             {t("register")}
           </Link>
