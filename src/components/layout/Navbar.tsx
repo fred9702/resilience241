@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { List, X } from "@phosphor-icons/react";
 
 const NAV_LINKS = [
@@ -15,9 +16,15 @@ const NAV_LINKS = [
   { key: "contact", href: "/contact" },
 ] as const;
 
+const NAVBAR_LOGOS: Record<string, string> = {
+  fr: "/images/fr/navbar-logo.png",
+};
+const NAVBAR_LOGO_FALLBACK = "/images/common/mark.svg";
+
 export function Navbar({ locale }: { locale: string }) {
   const t = useTranslations("nav");
   const tLang = useTranslations("lang");
+  const navbarLogo = NAVBAR_LOGOS[locale] ?? NAVBAR_LOGO_FALLBACK;
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
@@ -113,36 +120,15 @@ export function Navbar({ locale }: { locale: string }) {
           className="flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-orange rounded"
           aria-label="OAFLAD - Home"
         >
-          <svg
-            width="48"
-            height="48"
-            viewBox="0 0 48 48"
-            fill="none"
+          <Image
+            src={navbarLogo}
+            alt=""
+            width={160}
+            height={48}
+            className="h-12 w-auto"
             aria-hidden="true"
-          >
-            <circle cx="24" cy="24" r="22" stroke="#E07B39" strokeWidth="2" />
-            <text
-              x="24"
-              y="20"
-              textAnchor="middle"
-              fill="white"
-              fontSize="8"
-              fontWeight="bold"
-              fontFamily="Montserrat, sans-serif"
-            >
-              OAFLAD
-            </text>
-            <text
-              x="24"
-              y="32"
-              textAnchor="middle"
-              fill="#E07B39"
-              fontSize="5"
-              fontFamily="Source Sans 3, sans-serif"
-            >
-              #BR
-            </text>
-          </svg>
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import {
@@ -9,9 +10,15 @@ import {
   YoutubeLogo,
 } from "@phosphor-icons/react";
 
+const FOOTER_LOGOS: Record<string, string> = {
+  fr: "/images/fr/navbar-logo.png",
+};
+const FOOTER_LOGO_FALLBACK = "/images/common/mark.svg";
+
 export function Footer() {
   const t = useTranslations("footer");
   const locale = useLocale();
+  const footerLogo = FOOTER_LOGOS[locale] ?? FOOTER_LOGO_FALLBACK;
 
   return (
     <footer className="bg-brown text-white" role="contentinfo">
@@ -30,42 +37,13 @@ export function Footer() {
         <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between md:items-start">
           {/* Logo + tagline */}
           <div className="flex flex-col items-center md:items-start gap-3">
-            <svg
-              width="60"
-              height="60"
-              viewBox="0 0 48 48"
-              fill="none"
-              aria-label="OAFLAD logo"
-            >
-              <circle
-                cx="24"
-                cy="24"
-                r="22"
-                stroke="white"
-                strokeWidth="2"
-              />
-              <text
-                x="24"
-                y="20"
-                textAnchor="middle"
-                fill="white"
-                fontSize="8"
-                fontWeight="bold"
-                fontFamily="Montserrat, sans-serif"
-              >
-                OAFLAD
-              </text>
-              <text
-                x="24"
-                y="32"
-                textAnchor="middle"
-                fill="#E07B39"
-                fontSize="5"
-                fontFamily="Source Sans 3, sans-serif"
-              >
-                #BR
-              </text>
-            </svg>
+            <Image
+              src={footerLogo}
+              alt="OAFLAD logo"
+              width={140}
+              height={42}
+              className="h-auto w-[140px] brightness-0 invert"
+            />
             <p className="font-body text-sm text-white/90 text-center md:text-left max-w-xs">
               {t("tagline")}
             </p>
