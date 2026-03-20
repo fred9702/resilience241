@@ -2,7 +2,6 @@
 
 import { useEffect, useState, useRef } from "react";
 import { useTranslations } from "next-intl";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 
 const TARGET = new Date("2026-04-17T08:00:00+01:00").getTime();
 
@@ -16,33 +15,12 @@ function getTimeLeft() {
   };
 }
 
-function FlipDigit({ value, shouldReduceMotion }: { value: string; shouldReduceMotion: boolean | null }) {
-  if (shouldReduceMotion) {
-    return <span>{value}</span>;
-  }
-
-  return (
-    <AnimatePresence mode="popLayout">
-      <motion.span
-        key={value}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -20 }}
-        transition={{ duration: 0.3 }}
-      >
-        {value}
-      </motion.span>
-    </AnimatePresence>
-  );
-}
-
 export function Countdown() {
   const t = useTranslations("countdown");
   const [mounted, setMounted] = useState(false);
   const [time, setTime] = useState(getTimeLeft);
   const srRef = useRef<HTMLDivElement>(null);
   const lastAnnouncedMinute = useRef(-1);
-  const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
     setMounted(true);
@@ -90,10 +68,7 @@ export function Countdown() {
                 aria-hidden="true"
               >
                 <span className="font-heading text-4xl md:text-6xl font-extrabold text-warm-cream tabular-nums">
-                  <FlipDigit
-                    value={mounted ? String(value).padStart(2, "0") : "--"}
-                    shouldReduceMotion={shouldReduceMotion}
-                  />
+                  {mounted ? String(value).padStart(2, "0") : "--"}
                 </span>
                 <span className="mt-2 font-body text-xs md:text-sm text-warm-cream/90 uppercase tracking-wider">
                   {label}

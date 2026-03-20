@@ -227,7 +227,7 @@ export function Navbar({ locale }: { locale: string }) {
               href={`/${locale}${href}`}
               onClick={() => setMenuOpen(false)}
               tabIndex={menuOpen ? 0 : -1}
-              className={`font-heading text-lg font-semibold py-3 border-b border-brown/10 focus:outline-none focus:ring-2 focus:ring-orange rounded ${
+              className={`font-heading text-lg font-semibold px-3 py-3 border-b border-brown/10 focus:outline-none focus:ring-2 focus:ring-orange rounded ${
                 isActive(href)
                   ? "text-crimson"
                   : "text-brown hover:text-crimson"
