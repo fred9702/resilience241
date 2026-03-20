@@ -54,10 +54,17 @@ p {
 
 /* Glass utility */
 .glass {
-  background: rgba(31, 78, 121, 0.6);
+  background: rgba(107, 52, 23, 0.5);
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.glass-cream {
+  background: rgba(251, 240, 230, 0.85);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  box-shadow: 0 2px 8px rgba(224, 123, 57, 0.15);
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -35,100 +35,78 @@ export function HeroSection() {
       };
 
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-      {/* Animated gradient background */}
+    <section
+      className="relative min-h-[80vh] flex items-center overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(135deg, #FBF0E6 0%, #F5E6D3 50%, #FBF0E6 100%)",
+      }}
+    >
+      {/* Geometric triangle stripe on far-left edge */}
       <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(135deg, #1F4E79 0%, rgba(31,78,121,0.9) 30%, rgba(107,52,23,0.7) 60%, rgba(155,28,55,0.2) 80%, #1F4E79 100%)",
-          backgroundSize: "200% 200%",
-          animation: "gradient-shift 20s ease infinite",
-        }}
+        className="absolute left-0 top-0 bottom-0 w-3 md:w-4"
         aria-hidden="true"
-      />
-      {/* Navy overlay */}
-      <div className="absolute inset-0 bg-navy/50" aria-hidden="true" />
+      >
+        <div className="h-1/4 bg-orange" />
+        <div className="h-1/4 bg-crimson" />
+        <div className="h-1/4 bg-brown" />
+        <div className="h-1/4 bg-green" />
+      </div>
 
-      {/* Dot grid texture */}
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle, white 1px, transparent 1px)",
-          backgroundSize: "40px 40px",
-        }}
-        aria-hidden="true"
-      />
+      {/* Content — two-column layout */}
+      <div className="relative z-10 mx-auto max-w-7xl w-full px-4 py-20 lg:px-8">
+        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+          {/* Left column — campaign logo */}
+          <motion.div
+            className="flex justify-center md:justify-start md:w-1/3 shrink-0"
+            {...logoAnim}
+          >
+            <Image
+              src={heroLogo}
+              alt="OAFLAD #BuildingResilience"
+              width={360}
+              height={180}
+              className="h-auto w-[240px] md:w-[320px] lg:w-[360px]"
+              priority
+            />
+          </motion.div>
 
-      {/* Geometric African motif overlay */}
-      <div
-        className="absolute inset-0 opacity-[0.07]"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='40,0 80,40 40,80 0,40' fill='none' stroke='white' stroke-width='0.5'/%3E%3Cpolygon points='40,10 70,40 40,70 10,40' fill='none' stroke='white' stroke-width='0.3'/%3E%3C/svg%3E")`,
-          backgroundSize: "80px 80px",
-          animation: "float-pattern 12s ease-in-out infinite",
-        }}
-        aria-hidden="true"
-      />
+          {/* Right column — text + CTAs */}
+          <div className="text-center md:text-left md:w-2/3">
+            <motion.h1
+              className="font-heading text-5xl md:text-7xl font-extrabold text-crimson leading-tight"
+              {...fadeUp(0.6)}
+            >
+              {t("title")}
+            </motion.h1>
 
-      {/* Top decorative strip */}
-      <div
-        className="absolute top-0 left-0 right-0 h-8 opacity-15"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='32' viewBox='0 0 40 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='20,0 40,32 0,32' fill='white'/%3E%3C/svg%3E")`,
-          backgroundRepeat: "repeat-x",
-          backgroundSize: "40px 32px",
-        }}
-        aria-hidden="true"
-      />
+            <motion.p
+              className="mt-4 font-heading text-2xl md:text-3xl font-bold text-orange"
+              {...fadeUp(0.8)}
+            >
+              {t("hashtag")}
+            </motion.p>
 
-      {/* Content */}
-      <div className="relative z-10 mx-auto max-w-4xl px-4 py-20 text-center">
-        {/* Campaign logo */}
-        <motion.div className="mb-8 flex justify-center" {...logoAnim}>
-          <Image
-            src={heroLogo}
-            alt="OAFLAD #BuildingResilience"
-            width={280}
-            height={140}
-            className="h-auto w-[280px] md:w-[360px] drop-shadow-lg"
-            priority
-          />
-        </motion.div>
+            <motion.p
+              className="mt-4 font-body text-lg md:text-xl text-brown/90"
+              {...fadeUp(1.0)}
+            >
+              {t("subtitle")}
+            </motion.p>
 
-        <motion.h1
-          className="font-heading text-5xl md:text-7xl font-extrabold text-white leading-tight"
-          {...fadeUp(0.6)}
-        >
-          {t("title")}
-        </motion.h1>
-
-        <motion.p
-          className="mt-4 font-heading text-2xl md:text-3xl font-bold text-orange"
-          {...fadeUp(0.8)}
-        >
-          {t("hashtag")}
-        </motion.p>
-
-        <motion.p
-          className="mt-4 font-body text-lg md:text-xl text-white/90"
-          {...fadeUp(1.0)}
-        >
-          {t("subtitle")}
-        </motion.p>
-
-        <motion.div
-          className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
-          {...fadeUp(1.2)}
-        >
-          <Button href={`/${locale}/register`} variant="primary">
-            {t("register")}
-          </Button>
-          <Button href={`/${locale}/programme`} variant="secondary">
-            {t("programme")}
-          </Button>
-        </motion.div>
+            <motion.div
+              className="mt-10 flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4"
+              {...fadeUp(1.2)}
+            >
+              <Button href={`/${locale}/register`} variant="primary">
+                {t("register")}
+              </Button>
+              <Button href={`/${locale}/programme`} variant="secondary-dark">
+                {t("programme")}
+              </Button>
+            </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );

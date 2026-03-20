@@ -70,7 +70,7 @@ export function Countdown() {
 
   return (
     <section
-      className="bg-navy py-12"
+      className="bg-brown py-12"
       aria-label={t("label")}
     >
       {/* Screen reader announcement — updates only on minute change */}
@@ -78,7 +78,7 @@ export function Countdown() {
 
       <div className="mx-auto max-w-3xl px-4">
         {/* Section heading */}
-        <p className="text-sm uppercase tracking-widest text-white/60 text-center mb-6 font-heading">
+        <p className="text-sm uppercase tracking-widest text-orange text-center mb-6 font-heading">
           {t("label")}
         </p>
 
@@ -89,13 +89,13 @@ export function Countdown() {
                 className="glass rounded-xl p-4 md:p-6 flex flex-col items-center hover:shadow-[0_0_30px_rgba(224,123,57,0.15)] transition-shadow duration-300"
                 aria-hidden="true"
               >
-                <span className="font-heading text-4xl md:text-6xl font-extrabold text-white tabular-nums">
+                <span className="font-heading text-4xl md:text-6xl font-extrabold text-warm-cream tabular-nums">
                   <FlipDigit
                     value={mounted ? String(value).padStart(2, "0") : "--"}
                     shouldReduceMotion={shouldReduceMotion}
                   />
                 </span>
-                <span className="mt-2 font-body text-xs md:text-sm text-white/90 uppercase tracking-wider">
+                <span className="mt-2 font-body text-xs md:text-sm text-warm-cream/90 uppercase tracking-wider">
                   {label}
                 </span>
               </div>
