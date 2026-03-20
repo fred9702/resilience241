@@ -10,13 +10,7 @@ export function CTABanner() {
 
   return (
     <section
-      className="relative py-16 overflow-hidden"
-      style={{
-        background:
-          "linear-gradient(to right, #E07B39, rgba(155,28,55,0.8), #E07B39)",
-        backgroundSize: "200% 100%",
-        animation: "gradient-shift 8s ease infinite",
-      }}
+      className="relative py-16 overflow-hidden bg-crimson"
     >
       {/* Geometric overlay */}
       <div
@@ -38,7 +32,7 @@ export function CTABanner() {
             {t("date")}
           </p>
           <div className="mt-8">
-            <Button href={`/${locale}/register`} variant="secondary">
+            <Button href={`/${locale}/register`} variant="primary">
               {t("button")}
             </Button>
           </div>

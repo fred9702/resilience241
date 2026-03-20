@@ -17,7 +17,7 @@ const NAV_LINKS = [
 ] as const;
 
 const NAVBAR_LOGOS: Record<string, string> = {
-  fr: "/images/fr/navbar-logo.png",
+  fr: "/images/fr/campaign-navbar.png",
 };
 const NAVBAR_LOGO_FALLBACK = "/images/common/mark.svg";
 
@@ -125,8 +125,8 @@ export function Navbar({ locale }: { locale: string }) {
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass shadow-lg" : "bg-navy"
-      }`}
+        scrolled ? "glass-cream shadow-lg" : "bg-warm-cream"
+      } border-b border-orange/20`}
       role="banner"
     >
       <nav
@@ -158,8 +158,8 @@ export function Navbar({ locale }: { locale: string }) {
               href={`/${locale}${href}`}
               className={`font-heading text-base font-semibold border-b-2 transition-colors focus:outline-none focus:ring-2 focus:ring-orange rounded px-1 py-1 ${
                 isActive(href)
-                  ? "text-orange border-orange"
-                  : "text-white hover:text-orange border-transparent hover:border-orange"
+                  ? "text-crimson border-crimson"
+                  : "text-brown hover:text-crimson border-transparent hover:border-crimson"
               }`}
             >
               {t(key)}
@@ -169,7 +169,7 @@ export function Navbar({ locale }: { locale: string }) {
           {/* Register CTA */}
           <Link
             href={`/${locale}/register`}
-            className="font-heading text-base font-semibold text-white bg-orange hover:bg-orange/90 px-4 py-2 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-orange focus:ring-offset-2 focus:ring-offset-navy"
+            className="font-heading text-base font-semibold text-white bg-orange hover:bg-orange/90 px-4 py-2 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-orange focus:ring-offset-2 focus:ring-offset-warm-cream"
           >
             {t("register")}
           </Link>
@@ -177,7 +177,7 @@ export function Navbar({ locale }: { locale: string }) {
           {/* Language switcher — min 44px touch target */}
           <button
             onClick={switchLocale}
-            className="font-heading text-sm font-semibold text-white/90 hover:text-white border border-white/30 hover:border-white min-h-[44px] min-w-[44px] px-3 py-1 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-orange"
+            className="font-heading text-sm font-semibold text-brown/90 hover:text-brown border border-brown/30 hover:border-brown min-h-[44px] min-w-[44px] px-3 py-1 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-orange"
             aria-label={`Switch to ${otherLocale.toUpperCase()}`}
           >
             {tLang("switchTo")}
@@ -188,7 +188,7 @@ export function Navbar({ locale }: { locale: string }) {
         <div className="flex items-center gap-3 lg:hidden">
           <button
             onClick={switchLocale}
-            className="font-heading text-sm font-semibold text-white/90 hover:text-white border border-white/30 min-h-[44px] min-w-[44px] px-3 py-1 rounded focus:outline-none focus:ring-2 focus:ring-orange"
+            className="font-heading text-sm font-semibold text-brown/90 hover:text-brown border border-brown/30 min-h-[44px] min-w-[44px] px-3 py-1 rounded focus:outline-none focus:ring-2 focus:ring-orange"
             aria-label={`Switch to ${otherLocale.toUpperCase()}`}
           >
             {tLang("switchTo")}
@@ -196,7 +196,7 @@ export function Navbar({ locale }: { locale: string }) {
           <button
             ref={hamburgerRef}
             onClick={() => setMenuOpen(!menuOpen)}
-            className="text-white p-2 min-h-[44px] min-w-[44px] flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-orange rounded"
+            className="text-brown p-2 min-h-[44px] min-w-[44px] flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-orange rounded"
             aria-label={menuOpen ? t("closeMenu") : t("openMenu")}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
@@ -214,23 +214,23 @@ export function Navbar({ locale }: { locale: string }) {
         aria-modal={menuOpen ? true : undefined}
         aria-label={menuOpen ? "Mobile navigation" : undefined}
         aria-hidden={!menuOpen}
-        className={`lg:hidden fixed inset-x-0 top-[68px] bottom-0 bg-navy/95 backdrop-blur-sm transition-all duration-300 ease-in-out ${
+        className={`lg:hidden fixed inset-x-0 top-[68px] bottom-0 bg-warm-cream/95 backdrop-blur-sm transition-all duration-300 ease-in-out ${
           menuOpen
             ? "opacity-100 pointer-events-auto translate-y-0"
             : "opacity-0 pointer-events-none -translate-y-2"
         }`}
       >
-        <div className="flex flex-col px-6 py-6 gap-1 border-t border-white/10">
+        <div className="flex flex-col px-6 py-6 gap-1 border-t border-brown/10">
           {NAV_LINKS.map(({ key, href }) => (
             <Link
               key={key}
               href={`/${locale}${href}`}
               onClick={() => setMenuOpen(false)}
               tabIndex={menuOpen ? 0 : -1}
-              className={`font-heading text-lg font-semibold py-3 border-b border-white/10 focus:outline-none focus:ring-2 focus:ring-orange rounded ${
+              className={`font-heading text-lg font-semibold px-3 py-3 border-b border-brown/10 focus:outline-none focus:ring-2 focus:ring-orange rounded ${
                 isActive(href)
-                  ? "text-orange"
-                  : "text-white hover:text-orange"
+                  ? "text-crimson"
+                  : "text-brown hover:text-crimson"
               }`}
             >
               {t(key)}
@@ -240,7 +240,7 @@ export function Navbar({ locale }: { locale: string }) {
             href={`/${locale}/register`}
             onClick={() => setMenuOpen(false)}
             tabIndex={menuOpen ? 0 : -1}
-            className="font-heading text-lg font-semibold text-white bg-orange hover:bg-orange/90 px-4 py-3 rounded text-center mt-4 focus:outline-none focus:ring-2 focus:ring-orange focus:ring-offset-2 focus:ring-offset-navy"
+            className="font-heading text-lg font-semibold text-white bg-orange hover:bg-orange/90 px-4 py-3 rounded text-center mt-4 focus:outline-none focus:ring-2 focus:ring-orange focus:ring-offset-2 focus:ring-offset-warm-cream"
           >
             {t("register")}
           </Link>

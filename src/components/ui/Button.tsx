@@ -3,7 +3,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-type Variant = "primary" | "secondary" | "ghost";
+type Variant = "primary" | "secondary" | "secondary-dark" | "ghost";
 
 interface ButtonProps {
   href: string;
@@ -21,6 +21,8 @@ const variants: Record<Variant, string> = {
     "text-white bg-orange hover:bg-orange/90 px-8 py-3 shadow-lg shadow-orange/30 hover:scale-[1.02] active:scale-[0.98] focus:ring-offset-navy overflow-hidden",
   secondary:
     "text-white border-2 border-white hover:bg-white/10 px-8 py-3 hover:scale-[1.02] active:scale-[0.98] focus:ring-offset-navy overflow-hidden",
+  "secondary-dark":
+    "text-crimson border-2 border-crimson hover:bg-crimson/10 px-8 py-3 hover:scale-[1.02] active:scale-[0.98] focus:ring-offset-warm-cream overflow-hidden",
   ghost:
     "text-white underline underline-offset-4 px-4 py-2 hover:text-orange focus:ring-offset-navy",
 };
@@ -33,7 +35,7 @@ export function Button({ href, variant = "primary", children, className = "", on
       className={`${base} ${variants[variant]} ${className}`}
     >
       {children}
-      {(variant === "primary" || variant === "secondary") && (
+      {(variant === "primary" || variant === "secondary" || variant === "secondary-dark") && (
         <span
           className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent hover-shimmer pointer-events-none"
           aria-hidden="true"

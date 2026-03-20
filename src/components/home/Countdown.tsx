@@ -2,7 +2,6 @@
 
 import { useEffect, useState, useRef } from "react";
 import { useTranslations } from "next-intl";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 
 const TARGET = new Date("2026-04-17T08:00:00+01:00").getTime();
 
@@ -16,33 +15,12 @@ function getTimeLeft() {
   };
 }
 
-function FlipDigit({ value, shouldReduceMotion }: { value: string; shouldReduceMotion: boolean | null }) {
-  if (shouldReduceMotion) {
-    return <span>{value}</span>;
-  }
-
-  return (
-    <AnimatePresence mode="popLayout">
-      <motion.span
-        key={value}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -20 }}
-        transition={{ duration: 0.3 }}
-      >
-        {value}
-      </motion.span>
-    </AnimatePresence>
-  );
-}
-
 export function Countdown() {
   const t = useTranslations("countdown");
   const [mounted, setMounted] = useState(false);
   const [time, setTime] = useState(getTimeLeft);
   const srRef = useRef<HTMLDivElement>(null);
   const lastAnnouncedMinute = useRef(-1);
-  const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
     setMounted(true);
@@ -70,7 +48,7 @@ export function Countdown() {
 
   return (
     <section
-      className="bg-navy py-12"
+      className="bg-brown py-12"
       aria-label={t("label")}
     >
       {/* Screen reader announcement — updates only on minute change */}
@@ -78,7 +56,7 @@ export function Countdown() {
 
       <div className="mx-auto max-w-3xl px-4">
         {/* Section heading */}
-        <p className="text-sm uppercase tracking-widest text-white/60 text-center mb-6 font-heading">
+        <p className="text-sm uppercase tracking-widest text-orange text-center mb-6 font-heading">
           {t("label")}
         </p>
 
@@ -89,13 +67,10 @@ export function Countdown() {
                 className="glass rounded-xl p-4 md:p-6 flex flex-col items-center hover:shadow-[0_0_30px_rgba(224,123,57,0.15)] transition-shadow duration-300"
                 aria-hidden="true"
               >
-                <span className="font-heading text-4xl md:text-6xl font-extrabold text-white tabular-nums">
-                  <FlipDigit
-                    value={mounted ? String(value).padStart(2, "0") : "--"}
-                    shouldReduceMotion={shouldReduceMotion}
-                  />
+                <span className="font-heading text-4xl md:text-6xl font-extrabold text-warm-cream tabular-nums">
+                  {mounted ? String(value).padStart(2, "0") : "--"}
                 </span>
-                <span className="mt-2 font-body text-xs md:text-sm text-white/90 uppercase tracking-wider">
+                <span className="mt-2 font-body text-xs md:text-sm text-warm-cream/90 uppercase tracking-wider">
                   {label}
                 </span>
               </div>
