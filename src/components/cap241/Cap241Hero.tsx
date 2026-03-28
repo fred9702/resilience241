@@ -44,7 +44,18 @@ export function Cap241Hero() {
 
         <ScrollReveal delay={0.2}>
           <p className="mt-6 font-body text-lg md:text-xl text-near-black/80 max-w-2xl">
-            {t("heroIntro")}
+            {t.rich("heroIntro", {
+              link: (chunks) => (
+                <a
+                  href="https://mabanniere.ga/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-crimson underline underline-offset-2 hover:text-orange transition-colors"
+                >
+                  {chunks}
+                </a>
+              ),
+            })}
           </p>
         </ScrollReveal>
 
