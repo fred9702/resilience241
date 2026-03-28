@@ -215,7 +215,7 @@ export function Navbar({ locale }: { locale: string }) {
         aria-modal={menuOpen ? true : undefined}
         aria-label={menuOpen ? "Mobile navigation" : undefined}
         aria-hidden={!menuOpen}
-        className={`lg:hidden fixed inset-x-0 top-[68px] bottom-0 bg-warm-cream/95 backdrop-blur-sm transition-all duration-300 ease-in-out ${
+        className={`lg:hidden fixed inset-x-0 top-[68px] bottom-0 bg-warm-cream transition-all duration-300 ease-in-out ${
           menuOpen
             ? "opacity-100 pointer-events-auto translate-y-0"
             : "opacity-0 pointer-events-none -translate-y-2"
