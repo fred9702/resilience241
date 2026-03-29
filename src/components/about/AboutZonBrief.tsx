@@ -27,6 +27,9 @@ export function AboutZonBrief() {
             <p className="font-body text-xl md:text-2xl text-white/90 leading-relaxed italic max-w-3xl mx-auto">
               &ldquo;{t("zonQuote")}&rdquo;
             </p>
+            <footer className="mt-4 font-heading text-lg font-bold text-white">
+              — {t("zonAuthor")}
+            </footer>
           </blockquote>
         </ScrollReveal>
       </div>

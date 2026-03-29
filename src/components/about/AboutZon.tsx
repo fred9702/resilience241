@@ -57,6 +57,12 @@ export function AboutZon() {
               </p>
             </blockquote>
           </ScrollReveal>
+
+          <ScrollReveal delay={0.4}>
+            <p className="mt-10 font-heading text-lg font-bold text-white text-right">
+              — {t("zonAuthor")}
+            </p>
+          </ScrollReveal>
         </div>
       </div>
     </section>
