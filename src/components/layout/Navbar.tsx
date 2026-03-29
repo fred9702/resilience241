@@ -19,6 +19,7 @@ const NAV_LINKS = [
 
 const NAVBAR_LOGOS: Record<string, string> = {
   fr: "/images/fr/campaign-navbar.png",
+  en: "/images/en/campaign-navbar.png",
 };
 const NAVBAR_LOGO_FALLBACK = "/images/common/mark.svg";
 

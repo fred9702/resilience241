@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/Button";
 
 const HERO_LOGOS: Record<string, string> = {
   fr: "/images/fr/campaign-logo-full.svg",
+  en: "/images/en/campaign-logo-full.svg",
 };
 const HERO_LOGO_FALLBACK = "/images/common/mark.svg";
 

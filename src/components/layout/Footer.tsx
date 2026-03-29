@@ -12,6 +12,7 @@ import {
 
 const FOOTER_LOGOS: Record<string, string> = {
   fr: "/images/fr/navbar-logo.png",
+  en: "/images/en/navbar-logo.png",
 };
 const FOOTER_LOGO_FALLBACK = "/images/common/mark.svg";
 
