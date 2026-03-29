@@ -126,7 +126,7 @@ export function Navbar({ locale }: { locale: string }) {
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass-cream shadow-lg" : "bg-warm-cream"
+        menuOpen ? "bg-warm-cream shadow-lg" : scrolled ? "glass-cream shadow-lg" : "bg-warm-cream"
       } border-b border-orange/20`}
       role="banner"
     >
