@@ -4,6 +4,7 @@ import { type ReactNode } from "react";
 
 const KEYWORDS = [
   "#BuildingResilience",
+  "#RenforcerLaRésilience",
   "CAP 241",
   "ÉQUILIBRES",
   "EQUILIBRIUM",
