@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { ArrowRight } from "@phosphor-icons/react";
@@ -45,6 +46,19 @@ export function PartnerCard({ partner }: { partner: Partner }) {
     <div
       className={`relative rounded-2xl p-8 border ${colors.border} ${colors.bg} backdrop-blur-sm transition-all duration-300`}
     >
+      {/* Logo */}
+      {partner.logoPath && (
+        <div className="mb-4">
+          <Image
+            src={partner.logoPath}
+            alt={t(`${partner.id}.name`)}
+            width={180}
+            height={60}
+            className="object-contain h-12 w-auto"
+          />
+        </div>
+      )}
+
       {/* Partner name */}
       <h3 className="font-heading text-xl font-bold text-near-black mb-3">
         {t(`${partner.id}.name`)}

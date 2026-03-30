@@ -3,6 +3,7 @@ export interface Partner {
   website: string;
   color: "crimson" | "brown" | "green" | "orange";
   expandable?: boolean;
+  logoPath?: string;
 }
 
 export const partners: Partner[] = [
@@ -16,6 +17,7 @@ export const partners: Partner[] = [
     id: "fondation",
     website: "https://mabanniere.ga/",
     color: "brown",
+    logoPath: "/images/partners/ma-banniere-logo.png",
   },
   {
     id: "cap241",
