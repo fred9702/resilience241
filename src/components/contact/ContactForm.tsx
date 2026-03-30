@@ -2,7 +2,6 @@
 
 import { useState, type FormEvent } from "react";
 import { useTranslations } from "next-intl";
-import { Envelope, Phone, MapPin } from "@phosphor-icons/react";
 
 const INQUIRY_TYPES = [
   "general",
@@ -114,55 +113,7 @@ export function ContactForm() {
         aria-hidden="true"
       />
 
-      <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-10">
-          {/* Contact info sidebar */}
-          <div className="space-y-6">
-            <div>
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-10 h-10 rounded-full bg-orange/10 flex items-center justify-center">
-                  <Envelope size={20} className="text-orange" weight="bold" />
-                </div>
-                <h3 className="font-heading text-base font-bold text-near-black">
-                  {t("infoEmailTitle")}
-                </h3>
-              </div>
-              <p className="font-body text-sm text-near-black/70 pl-[52px]">
-                contact@resilience241.com
-              </p>
-            </div>
-
-            <div>
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-10 h-10 rounded-full bg-crimson/10 flex items-center justify-center">
-                  <Phone size={20} className="text-crimson" weight="bold" />
-                </div>
-                <h3 className="font-heading text-base font-bold text-near-black">
-                  {t("infoPhoneTitle")}
-                </h3>
-              </div>
-              <p className="font-body text-sm text-near-black/70 pl-[52px]">
-                +241 77 00 00 00
-              </p>
-            </div>
-
-            <div>
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-10 h-10 rounded-full bg-brown/10 flex items-center justify-center">
-                  <MapPin size={20} className="text-brown" weight="bold" />
-                </div>
-                <h3 className="font-heading text-base font-bold text-near-black">
-                  {t("infoLocationTitle")}
-                </h3>
-              </div>
-              <p className="font-body text-sm text-near-black/70 pl-[52px]">
-                {t("infoLocationText")}
-              </p>
-            </div>
-          </div>
-
-          {/* Form */}
-          <div className="md:col-span-2">
+      <div className="relative mx-auto max-w-3xl px-6 lg:px-8">
             <form
               onSubmit={handleSubmit}
               noValidate
@@ -303,8 +254,6 @@ export function ContactForm() {
                 {submitting ? "..." : t("submitButton")}
               </button>
             </form>
-          </div>
-        </div>
       </div>
     </section>
   );
