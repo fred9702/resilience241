@@ -302,6 +302,8 @@
     "hostLabel": "Hôtesse",
     "firstGentlemanLabel": "Premier Gentleman",
     "firstLadyLabel": "Première Dame",
+    "honorificMrs": "S.E Mme",
+    "honorificMr": "S.E M.",
     "firstLadies": {
       "gabon": { "name": "Zita Oligui Nguema", "country": "Gabon" },
       "angola": { "name": "Ana Dias Lourenço", "country": "Angola" },

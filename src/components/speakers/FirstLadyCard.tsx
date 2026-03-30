@@ -16,6 +16,8 @@ export function FirstLadyCard({ lady }: { lady: FirstLady }) {
       ? t("firstGentlemanLabel")
       : t("firstLadyLabel");
 
+  const honorific = lady.isFirstGentleman ? t("honorificMr") : t("honorificMrs");
+
   return (
     <div
       className={`group relative rounded-xl overflow-hidden border ${
@@ -62,8 +64,8 @@ export function FirstLadyCard({ lady }: { lady: FirstLady }) {
             {country}
           </span>
         </div>
-        <p className="font-heading text-sm font-bold text-near-black leading-tight truncate">
-          {name}
+        <p className="font-heading text-sm font-bold text-near-black leading-tight">
+          {honorific} {name}
         </p>
       </div>
     </div>
