@@ -12,6 +12,7 @@ export const partners: Partner[] = [
     website: "https://oaflad.org",
     color: "crimson",
     expandable: true,
+    logoPath: "/images/partners/oaflad-logo.svg",
   },
   {
     id: "fondation",
