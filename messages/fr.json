@@ -13,9 +13,9 @@
     "closeMenu": "Fermer le menu"
   },
   "hero": {
-    "metaDescription": "Conférence panafricaine des Premières Dames sur la résilience — 17 avril 2026, Libreville, Gabon. Inscrivez-vous à #BuildingResilience.",
+    "metaDescription": "Conférence panafricaine des Premières Dames sur la résilience — 17 avril 2026, Libreville, Gabon. Inscrivez-vous à #RenforcerLaRésilience.",
     "title": "Renforcer la Résilience",
-    "hashtag": "#BuildingResilience",
+    "hashtag": "#RenforcerLaRésilience",
     "subtitle": "17 Avril 2026 · Libreville, Gabon",
     "register": "S'inscrire",
     "programme": "Programme",
@@ -37,7 +37,7 @@
     "badge": "Bientôt disponible"
   },
   "register": {
-    "metaDescription": "Inscrivez-vous à la campagne #BuildingResilience — une initiative continentale pour renforcer la résilience des femmes et des filles en Afrique.",
+    "metaDescription": "Inscrivez-vous à la campagne #RenforcerLaRésilience — une initiative continentale pour renforcer la résilience des femmes et des filles en Afrique.",
     "title": "Inscription",
     "firstName": "Prénom",
     "lastName": "Nom",
@@ -67,7 +67,7 @@
   },
   "confirmation": {
     "title": "Inscription confirmée",
-    "message": "Merci pour votre inscription à la conférence #BuildingResilience de l'OPDAD.",
+    "message": "Merci pour votre inscription à la conférence #RenforcerLaRésilience de l'OPDAD.",
     "details": "17 Avril 2026 · Libreville, Gabon · Organisé par l'OPDAD",
     "downloadIcs": "Ajouter au calendrier (.ics)",
     "backHome": "Retour à l'accueil"
@@ -79,18 +79,18 @@
     "tagline": "Organisation des Premières Dames d'Afrique pour le Développement"
   },
   "media": {
-    "metaDescription": "Ressources médiatiques de la campagne OPDAD #BuildingResilience — photos, communiqués de presse et moments forts.",
+    "metaDescription": "Ressources médiatiques de la campagne OPDAD #RenforcerLaRésilience — photos, communiqués de presse et moments forts.",
     "title": "Média",
     "content": "Les contenus média seront disponibles après l'événement.",
     "comingSoon": "Les contenus média seront disponibles après l'événement.",
     "backHome": "Retour à l'accueil"
   },
   "about": {
-    "metaDescription": "À propos de la campagne #BuildingResilience portée par l'OPDAD — renforcer la résilience des femmes et des filles face aux changements climatiques et aux conflits.",
+    "metaDescription": "À propos de la campagne #RenforcerLaRésilience portée par l'OPDAD — renforcer la résilience des femmes et des filles face aux changements climatiques et aux conflits.",
     "title": "À propos",
     "campaignBadge": "Campagne continentale",
     "campaignTitle": "Une initiative africaine pour renforcer la résilience",
-    "campaignIntro": "La campagne continentale #BuildingResilience, portée par l'Organisation des Premières Dames d'Afrique pour le Développement (OPDAD / OAFLAD), s'inscrit dans une dynamique collective visant à répondre aux fragilités croissantes auxquelles sont confrontées les sociétés africaines.",
+    "campaignIntro": "La campagne continentale #RenforcerLaRésilience, portée par l'Organisation des Premières Dames d'Afrique pour le Développement (OPDAD / OAFLAD), s'inscrit dans une dynamique collective visant à répondre aux fragilités croissantes auxquelles sont confrontées les sociétés africaines.",
     "campaignContext": "Dans un contexte marqué par :",
     "campaignContextItems": {
       "climate": "Les effets du changement climatique",
@@ -106,11 +106,11 @@
       "women": "Soutenir les femmes dans leur rôle central",
       "responses": "Développer des réponses coordonnées et adaptées aux réalités locales"
     },
-    "campaignFramework": "La campagne #BuildingResilience constitue ainsi un cadre de mobilisation continentale favorisant le partage d'expériences, la coordination des actions et l'émergence de solutions durables.",
+    "campaignFramework": "La campagne #RenforcerLaRésilience constitue ainsi un cadre de mobilisation continentale favorisant le partage d'expériences, la coordination des actions et l'émergence de solutions durables.",
     "gabonBadge": "L'engagement du Gabon",
     "gabonTitle": "Le choix stratégique du Gabon",
     "gabonIntro": "Face aux défis contemporains, le Gabon a fait un choix clair :",
-    "gabonChoice": "Contribuer à la dynamique continentale #BuildingResilience en plaçant la santé et la stabilité des familles au cœur de son engagement.",
+    "gabonChoice": "Contribuer à la dynamique continentale #RenforcerLaRésilience en plaçant la santé et la stabilité des familles au cœur de son engagement.",
     "gabonConviction": "Ce choix repose sur une conviction simple :",
     "gabonConvictionText": "La résilience ne se décrète pas. Elle se construit.",
     "gabonBuilt": "Elle se construit par la prévention, la continuité des soins et la reconstruction des trajectoires de vie fragilisées.",
@@ -149,7 +149,7 @@
     "closingQuote": "Sous Ma Bannière, nous soignons, nous partageons, nous protégeons."
   },
   "cap241": {
-    "metaDescription": "CAP 241 — le cadre stratégique d'action sociale du Gabon dans la campagne #BuildingResilience, articulant santé, stabilité familiale, prévention et transfert de compétences.",
+    "metaDescription": "CAP 241 — le cadre stratégique d'action sociale du Gabon dans la campagne #RenforcerLaRésilience, articulant santé, stabilité familiale, prévention et transfert de compétences.",
     "title": "CAP 241",
     "badge": "Cadre stratégique",
     "heroTitle": "CAP 241 : un cadre structurant",
@@ -239,7 +239,7 @@
     "nkokAmbition": "Passer du silence à l'accompagnement."
   },
   "programme": {
-    "metaDescription": "Programme de la conférence #BuildingResilience — panels sur la résilience des femmes, la santé, la stabilité familiale et les partenariats durables. 17 avril 2026.",
+    "metaDescription": "Programme de la conférence #RenforcerLaRésilience — panels sur la résilience des femmes, la santé, la stabilité familiale et les partenariats durables. 17 avril 2026.",
     "title": "Programme",
     "badge": "Jour de l'événement",
     "milestoneBadge": "17 avril 2026",
@@ -286,14 +286,14 @@
     },
     "cap241Badge": "La réponse nationale du Gabon",
     "cap241Title": "Découvrir CAP 241",
-    "cap241Intro": "Découvrez comment le Gabon traduit la vision continentale #BuildingResilience en un cadre national structuré d'action sociale.",
+    "cap241Intro": "Découvrez comment le Gabon traduit la vision continentale #RenforcerLaRésilience en un cadre national structuré d'action sociale.",
     "cap241Cta": "Explorer CAP 241"
   },
   "speakers": {
-    "metaDescription": "Intervenants de la conférence OPDAD #BuildingResilience — leaders africains, experts et défenseurs de la résilience des femmes.",
+    "metaDescription": "Intervenants de la conférence OPDAD #RenforcerLaRésilience — leaders africains, experts et défenseurs de la résilience des femmes.",
     "title": "Intervenants & Dignitaires",
     "badge": "Intervenants & Dignitaires",
-    "intro": "Découvrez les leaders et dignitaires distingués qui participent à la conférence #BuildingResilience à Libreville.",
+    "intro": "Découvrez les leaders et dignitaires distingués qui participent à la conférence #RenforcerLaRésilience à Libreville.",
     "content": "Liste des intervenants à venir.",
     "comingSoonBadge": "Bientôt disponible",
     "comingSoonTitle": "Annonces des intervenants",
@@ -326,10 +326,10 @@
     }
   },
   "partners": {
-    "metaDescription": "Partenaires de la campagne OPDAD #BuildingResilience — organisations engagées pour renforcer la résilience à travers l'Afrique.",
+    "metaDescription": "Partenaires de la campagne OPDAD #RenforcerLaRésilience — organisations engagées pour renforcer la résilience à travers l'Afrique.",
     "title": "Partenaires",
     "badge": "Nos Partenaires",
-    "intro": "La campagne #BuildingResilience est rendue possible grâce à la collaboration d'organisations engagées pour renforcer la résilience à travers l'Afrique.",
+    "intro": "La campagne #RenforcerLaRésilience est rendue possible grâce à la collaboration d'organisations engagées pour renforcer la résilience à travers l'Afrique.",
     "visitWebsite": "Visiter le site",
     "viewFirstLadies": "Voir les Premières Dames présentes",
     "oaflad": {
@@ -342,7 +342,7 @@
     },
     "cap241": {
       "name": "Cap241",
-      "description": "Cap241 est le cadre stratégique d'action sociale articulant santé, stabilité familiale, prévention et transfert de compétences dans le cadre de la campagne #BuildingResilience."
+      "description": "Cap241 est le cadre stratégique d'action sociale articulant santé, stabilité familiale, prévention et transfert de compétences dans le cadre de la campagne #RenforcerLaRésilience."
     },
     "bomalab": {
       "name": "Bomalab",
@@ -350,7 +350,7 @@
     }
   },
   "contact": {
-    "metaDescription": "Contactez l'équipe de la campagne OPDAD #BuildingResilience — demandes, partenariats et presse.",
+    "metaDescription": "Contactez l'équipe de la campagne OPDAD #RenforcerLaRésilience — demandes, partenariats et presse.",
     "title": "Contact",
     "content": "Page de contact en construction."
   },
@@ -360,9 +360,9 @@
     "privacyLastUpdated": "Dernière mise à jour : avril 2026",
     "privacyIntro": "L'Organisation des Premières Dames d'Afrique pour le Développement (OPDAD) s'engage à protéger vos données personnelles. Cette politique explique comment nous collectons, utilisons et protégeons les informations fournies via le site resilience241.com.",
     "dataCollectedTitle": "Données collectées",
-    "dataCollected": "Lors de votre inscription à la conférence #BuildingResilience, nous collectons les informations suivantes : prénom, nom, adresse e-mail, numéro de téléphone, organisation, fonction, catégorie et langue préférée.",
+    "dataCollected": "Lors de votre inscription à la conférence #RenforcerLaRésilience, nous collectons les informations suivantes : prénom, nom, adresse e-mail, numéro de téléphone, organisation, fonction, catégorie et langue préférée.",
     "purposeTitle": "Utilisation de vos données",
-    "purpose": "Vos données personnelles sont utilisées exclusivement par l'OPDAD dans le cadre de l'organisation et de l'administration de la conférence #BuildingResilience. Cela inclut la gestion des inscriptions, la communication des détails de l'événement et la coordination logistique. Vos données ne sont ni partagées, ni vendues, ni divulguées à des tiers.",
+    "purpose": "Vos données personnelles sont utilisées exclusivement par l'OPDAD dans le cadre de l'organisation et de l'administration de la conférence #RenforcerLaRésilience. Cela inclut la gestion des inscriptions, la communication des détails de l'événement et la coordination logistique. Vos données ne sont ni partagées, ni vendues, ni divulguées à des tiers.",
     "retentionTitle": "Conservation des données",
     "retention": "Vos données personnelles sont conservées pendant la durée nécessaire à l'organisation de la conférence et pendant une période raisonnable par la suite à des fins administratives. Vous pouvez demander la suppression de vos données à tout moment en nous contactant.",
     "rightsTitle": "Vos droits",
@@ -375,7 +375,7 @@
     "termsLastUpdated": "Dernière mise à jour : avril 2026",
     "termsIntro": "En accédant au site resilience241.com et en l'utilisant, vous acceptez les conditions générales suivantes.",
     "useTitle": "Utilisation du site",
-    "use": "Ce site est exploité par l'OPDAD afin de fournir des informations sur la campagne et la conférence #BuildingResilience. Vous pouvez utiliser ce site uniquement à des fins personnelles et non commerciales. Vous vous engagez à ne pas détourner le site ou son contenu.",
+    "use": "Ce site est exploité par l'OPDAD afin de fournir des informations sur la campagne et la conférence #RenforcerLaRésilience. Vous pouvez utiliser ce site uniquement à des fins personnelles et non commerciales. Vous vous engagez à ne pas détourner le site ou son contenu.",
     "ipTitle": "Propriété intellectuelle",
     "ip": "Tout le contenu de ce site, y compris les textes, images, logos et éléments de design, est la propriété de l'OPDAD ou de ses partenaires et est protégé par les lois applicables en matière de propriété intellectuelle. Toute reproduction, distribution ou modification du contenu est interdite sans autorisation écrite préalable.",
     "registrationTitle": "Inscription",
