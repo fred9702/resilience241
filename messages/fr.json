@@ -93,18 +93,18 @@
     "campaignIntro": "La campagne continentale #BuildingResilience, portée par l'Organisation des Premières Dames d'Afrique pour le Développement (OPDAD / OAFLAD), s'inscrit dans une dynamique collective visant à répondre aux fragilités croissantes auxquelles sont confrontées les sociétés africaines.",
     "campaignContext": "Dans un contexte marqué par :",
     "campaignContextItems": {
-      "climate": "les effets du changement climatique,",
-      "tensions": "les tensions sociales et les situations de conflit,",
-      "health": "la vulnérabilité des systèmes de santé,"
+      "climate": "les effets du changement climatique",
+      "tensions": "les tensions sociales et les situations de conflit",
+      "health": "la vulnérabilité des systèmes de santé"
     },
     "campaignWomen": "Les femmes et les jeunes filles apparaissent à la fois comme les premières exposées et les principales actrices de la résilience des communautés.",
     "campaignConviction": "Cette initiative repose sur une conviction forte :",
     "campaignConvictionText": "La résilience ne peut être durable que si elle est structurée, accompagnée et portée collectivement.",
     "campaignGoalsIntro": "À travers cette campagne, l'OPDAD appelle à :",
     "campaignGoals": {
-      "systems": "renforcer les systèmes de protection sociale et sanitaire,",
-      "women": "soutenir les femmes dans leur rôle central,",
-      "responses": "développer des réponses coordonnées et adaptées aux réalités locales."
+      "systems": "renforcer les systèmes de protection sociale et sanitaire",
+      "women": "soutenir les femmes dans leur rôle central",
+      "responses": "développer des réponses coordonnées et adaptées aux réalités locales"
     },
     "campaignFramework": "La campagne #BuildingResilience constitue ainsi un cadre de mobilisation continentale favorisant le partage d'expériences, la coordination des actions et l'émergence de solutions durables.",
     "gabonBadge": "L'engagement du Gabon",
@@ -225,16 +225,16 @@
     "nkokCenter": "C'est dans cette perspective que s'inscrit le projet de création du Centre de désintoxication, de formation et de réinsertion de Nkok.",
     "nkokDescription": "Ce centre propose :",
     "nkokServices": {
-      "reception": "un accueil adapté,",
-      "psychosocial": "un accompagnement psychosocial,",
-      "training": "des dispositifs de formation et de réinsertion,",
-      "followup": "un suivi des parcours."
+      "reception": "un accueil adapté",
+      "psychosocial": "un accompagnement psychosocial",
+      "training": "des dispositifs de formation et de réinsertion",
+      "followup": "un suivi des parcours"
     },
     "nkokApproach": "Il incarne une approche globale :",
     "nkokApproachItems": {
-      "recognizing": "reconnaître,",
-      "supporting": "accompagner,",
-      "restoring": "restaurer."
+      "recognizing": "reconnaître",
+      "supporting": "accompagner",
+      "restoring": "restaurer"
     },
     "nkokAmbition": "Passer du silence à l'accompagnement."
   },

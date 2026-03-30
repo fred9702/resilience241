@@ -93,18 +93,18 @@
     "campaignIntro": "The continental campaign #BuildingResilience, led by the Organization of African First Ladies for Development (OAFLAD), reflects a collective effort to address the growing vulnerabilities facing African societies.",
     "campaignContext": "In a context marked by:",
     "campaignContextItems": {
-      "climate": "the impact of climate change,",
-      "tensions": "social tensions and conflict situations,",
-      "health": "the fragility of health systems,"
+      "climate": "the impact of climate change",
+      "tensions": "social tensions and conflict situations",
+      "health": "the fragility of health systems"
     },
     "campaignWomen": "women and girls emerge as both the most exposed and the central drivers of resilience within families and communities.",
     "campaignConviction": "This continental initiative is grounded in a strong conviction:",
     "campaignConvictionText": "resilience cannot be sustainable unless it is structured, supported, and collectively driven.",
     "campaignGoalsIntro": "Through this campaign, OAFLAD calls for:",
     "campaignGoals": {
-      "systems": "strengthening social and health protection systems,",
-      "women": "supporting women in their central role within families and communities,",
-      "responses": "developing coordinated responses tailored to local realities."
+      "systems": "strengthening social and health protection systems",
+      "women": "supporting women in their central role within families and communities",
+      "responses": "developing coordinated responses tailored to local realities"
     },
     "campaignFramework": "The #BuildingResilience campaign therefore provides a continental framework for mobilization, fostering the exchange of experiences, coordination of actions, and the development of sustainable solutions.",
     "gabonBadge": "Gabon's Commitment",
@@ -225,16 +225,16 @@
     "nkokCenter": "It is within this perspective that the Nkok Integrated Center for Rehabilitation, Training, and Reintegration is being developed.",
     "nkokDescription": "This center represents a concrete response to fragile life trajectories by providing:",
     "nkokServices": {
-      "reception": "tailored reception and support for vulnerable individuals,",
-      "psychosocial": "structured psychosocial support,",
-      "training": "training and reintegration pathways,",
-      "followup": "continuous follow-up aimed at rebuilding sustainable life paths."
+      "reception": "tailored reception and support for vulnerable individuals",
+      "psychosocial": "structured psychosocial support",
+      "training": "training and reintegration pathways",
+      "followup": "continuous follow-up aimed at rebuilding sustainable life paths"
     },
     "nkokApproach": "Beyond its operational function, the center embodies a comprehensive approach:",
     "nkokApproachItems": {
-      "recognizing": "recognizing vulnerabilities,",
-      "supporting": "supporting life pathways,",
-      "restoring": "restoring balance."
+      "recognizing": "recognizing vulnerabilities",
+      "supporting": "supporting life pathways",
+      "restoring": "restoring balance"
     },
     "nkokAmbition": "This initiative reflects a clear ambition: to move from silent vulnerability to structured, visible, and sustainable responses."
   },
