@@ -23,6 +23,9 @@ create table if not exists contact_messages (
   created_at timestamptz default now(),
   name text not null,
   email text not null,
+  organisation text,
+  inquiry_type text not null default 'general',
+  subject text not null,
   message text not null
 );
 
