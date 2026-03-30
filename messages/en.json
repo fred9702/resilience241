@@ -93,18 +93,18 @@
     "campaignIntro": "The continental campaign #BuildingResilience, led by the Organization of African First Ladies for Development (OAFLAD), reflects a collective effort to address the growing vulnerabilities facing African societies.",
     "campaignContext": "In a context marked by:",
     "campaignContextItems": {
-      "climate": "the impact of climate change",
-      "tensions": "social tensions and conflict situations",
-      "health": "the fragility of health systems"
+      "climate": "The impact of climate change",
+      "tensions": "Social tensions and conflict situations",
+      "health": "The fragility of health systems"
     },
     "campaignWomen": "women and girls emerge as both the most exposed and the central drivers of resilience within families and communities.",
     "campaignConviction": "This continental initiative is grounded in a strong conviction:",
     "campaignConvictionText": "resilience cannot be sustainable unless it is structured, supported, and collectively driven.",
     "campaignGoalsIntro": "Through this campaign, OAFLAD calls for:",
     "campaignGoals": {
-      "systems": "strengthening social and health protection systems",
-      "women": "supporting women in their central role within families and communities",
-      "responses": "developing coordinated responses tailored to local realities"
+      "systems": "Strengthening social and health protection systems",
+      "women": "Supporting women in their central role within families and communities",
+      "responses": "Developing coordinated responses tailored to local realities"
     },
     "campaignFramework": "The #BuildingResilience campaign therefore provides a continental framework for mobilization, fostering the exchange of experiences, coordination of actions, and the development of sustainable solutions.",
     "gabonBadge": "Gabon's Commitment",
@@ -117,9 +117,9 @@
     "gabonProgramme": "The EQUILIBRIUM Programme 2026–2029, part of the national CAP 241 framework, represents Gabon's contribution to this African initiative.",
     "gabonCommitmentIntro": "It reflects a strong commitment:",
     "gabonCommitments": {
-      "national": "to structure a coherent national response",
-      "root": "to address the root causes of vulnerability",
-      "social": "to sustainably strengthen social stability"
+      "national": "To structure a coherent national response",
+      "root": "To address the root causes of vulnerability",
+      "social": "To sustainably strengthen social stability"
     },
     "gabonPosition": "Gabon affirms a clear position:",
     "gabonHealth": "Health is not a sectoral policy.",
@@ -141,9 +141,9 @@
     "fondationOaflad": "Within the framework of the continental dynamic led by OAFLAD, the Foundation contributes to the implementation of structured initiatives at the national level.",
     "fondationPrinciplesIntro": "Its mission is based on three key principles:",
     "fondationPrinciples": {
-      "sustainable": "structuring sustainable responses",
-      "resilience": "strengthening resilience among populations",
-      "partnerships": "mobilizing strategic partnerships"
+      "sustainable": "Structuring sustainable responses",
+      "resilience": "Strengthening resilience among populations",
+      "partnerships": "Mobilizing strategic partnerships"
     },
     "fondationKeyMessage": "The Foundation acts as a catalyst for social, health, and community solutions.",
     "closingQuote": "Under Ma Banniere, we care, we share, we protect."
@@ -155,18 +155,18 @@
     "heroTitle": "CAP 241: A Framework for Social Action",
     "heroIntro": "The work of the <link>Ma Banniere Foundation</link> is structured through CAP 241, a framework linking:",
     "heroLinks": {
-      "social": "social impact",
-      "national": "national stability",
-      "international": "international visibility"
+      "social": "Social impact",
+      "national": "National stability",
+      "international": "International visibility"
     },
     "pillarsBadge": "Four Pillars",
     "pillarsTitle": "Four Complementary Pillars",
     "pillarsIntro": "These pillars do not function in isolation. They operate in a logic of interdependence:",
     "pillarsInterdependence": {
-      "health": "health stability protects women",
-      "family": "family stability safeguards childhood",
-      "prevention": "prevention strengthens education",
-      "skills": "skills transfer supports economic resilience"
+      "health": "Health stability protects women",
+      "family": "Family stability safeguards childhood",
+      "prevention": "Prevention strengthens education",
+      "skills": "Skills transfer supports economic resilience"
     },
     "pillarsArchitecture": "This architecture avoids fragmentation of interventions. It fosters a cross-cutting, coherent and sustainable approach.",
     "pillar1": {
@@ -174,10 +174,10 @@
       "programme": "EQUILIBRIUM",
       "description": "Health is the foundation of stability. When care pathways break, life trajectories collapse.",
       "items": {
-        "care": "continuity of care",
-        "mental": "mental health support",
-        "social": "social vulnerability support",
-        "family": "family stability protection"
+        "care": "Continuity of care",
+        "mental": "Mental health support",
+        "social": "Social vulnerability support",
+        "family": "Family stability protection"
       }
     },
     "pillar2": {
@@ -200,24 +200,24 @@
     "equilibriumSubtitle": "Prevent — Support — Rebuild",
     "equilibriumIntro": "Women often carry the weight of fragility. EQUILIBRIUM provides structured responses:",
     "equilibriumActions": {
-      "prevent": "preventing disruptions",
-      "support": "supporting care continuity",
-      "rebuild": "rebuilding life trajectories"
+      "prevent": "Preventing disruptions",
+      "support": "Supporting care continuity",
+      "rebuild": "Rebuilding life trajectories"
     },
     "equilibriumAmbition": "A clear ambition: to transform fragilities into stabilized trajectories. To move from silence to support. To build sustainable responses.",
     "trajectoriesBadge": "The Challenge",
     "trajectoriesTitle": "Fragile Trajectories Requiring Structured Response",
     "trajectoriesIntro": "Our societies face:",
     "trajectoriesIssues": {
-      "psychosocial": "psychosocial fragility",
-      "family": "family breakdown",
-      "paths": "disrupted life paths"
+      "psychosocial": "Psychosocial fragility",
+      "family": "Family breakdown",
+      "paths": "Disrupted life paths"
     },
     "trajectoriesResponse": "EQUILIBRIUM responds by:",
     "trajectoriesActions": {
-      "recognising": "recognising",
-      "preventing": "preventing",
-      "supporting": "supporting"
+      "recognising": "Recognising",
+      "preventing": "Preventing",
+      "supporting": "Supporting"
     },
     "nkokBadge": "Concrete Action",
     "nkokTitle": "Towards a Structured Response",
@@ -225,16 +225,16 @@
     "nkokCenter": "It is within this perspective that the Nkok Integrated Center for Rehabilitation, Training, and Reintegration is being developed.",
     "nkokDescription": "This center represents a concrete response to fragile life trajectories by providing:",
     "nkokServices": {
-      "reception": "tailored reception and support for vulnerable individuals",
-      "psychosocial": "structured psychosocial support",
-      "training": "training and reintegration pathways",
-      "followup": "continuous follow-up aimed at rebuilding sustainable life paths"
+      "reception": "Tailored reception and support for vulnerable individuals",
+      "psychosocial": "Structured psychosocial support",
+      "training": "Training and reintegration pathways",
+      "followup": "Continuous follow-up aimed at rebuilding sustainable life paths"
     },
     "nkokApproach": "Beyond its operational function, the center embodies a comprehensive approach:",
     "nkokApproachItems": {
-      "recognizing": "recognizing vulnerabilities",
-      "supporting": "supporting life pathways",
-      "restoring": "restoring balance"
+      "recognizing": "Recognizing vulnerabilities",
+      "supporting": "Supporting life pathways",
+      "restoring": "Restoring balance"
     },
     "nkokAmbition": "This initiative reflects a clear ambition: to move from silent vulnerability to structured, visible, and sustainable responses."
   },
