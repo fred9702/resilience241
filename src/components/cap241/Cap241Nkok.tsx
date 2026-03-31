@@ -41,7 +41,7 @@ export function Cap241Nkok() {
               {t("nkokCenter")}
             </h3>
 
-            <p className="mt-4 font-body text-white/80">
+            <p className="mt-4 font-body text-base md:text-lg text-white/80">
               {t("nkokDescription")}
             </p>
 
@@ -49,7 +49,7 @@ export function Cap241Nkok() {
               {(["reception", "psychosocial", "training", "followup"] as const).map((key) => (
                 <li key={key} className="flex items-start gap-3">
                   <span className="mt-1.5 w-2 h-2 rounded-full bg-orange shrink-0" />
-                  <span className="font-body text-white/90">
+                  <span className="font-body text-base md:text-lg text-white/90">
                     {t(`nkokServices.${key}`)}
                   </span>
                 </li>
@@ -60,14 +60,14 @@ export function Cap241Nkok() {
 
         <ScrollReveal delay={0.3}>
           <div className="mt-10">
-            <p className="font-body text-white/80">
+            <p className="font-body text-base md:text-lg text-white/80">
               {t("nkokApproach")}
             </p>
             <div className="mt-4 flex flex-wrap gap-3">
               {(["recognizing", "supporting", "restoring"] as const).map((key) => (
                 <span
                   key={key}
-                  className="font-body text-sm bg-white/15 text-white px-4 py-2 rounded-full border border-white/20"
+                  className="font-body text-base bg-white/15 text-white px-4 py-2 rounded-full border border-white/20"
                 >
                   {t(`nkokApproachItems.${key}`)}
                 </span>

@@ -24,7 +24,7 @@ export function ProgrammePanels() {
             <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-crimson">
               {t("panelsTitle")}
             </h2>
-            <p className="mt-4 font-body text-near-black/70 max-w-2xl mx-auto">
+            <p className="mt-4 font-body text-base md:text-lg text-near-black/70 max-w-2xl mx-auto">
               {t("panelsIntro")}
             </p>
           </div>
@@ -47,7 +47,7 @@ export function ProgrammePanels() {
                     {t(`panel${num}.topic`)}
                   </p>
 
-                  <div className="mt-5 space-y-2 text-sm font-body text-near-black/60">
+                  <div className="mt-5 space-y-2 text-base font-body text-near-black/60">
                     <p>
                       <span className="font-semibold text-near-black/70">{t("panelModeratorLabel")}:</span>{" "}
                       {t("panelTbc")}

@@ -53,7 +53,7 @@ export function Cap241Equilibrium() {
                     {i + 1}
                   </span>
                 </div>
-                <p className="font-heading text-base font-bold text-near-black">
+                <p className="font-heading text-base md:text-lg font-bold text-near-black">
                   {t(`equilibriumActions.${key}`)}
                 </p>
               </div>
@@ -62,7 +62,7 @@ export function Cap241Equilibrium() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.3}>
-          <p className="mt-10 font-body text-near-black/70 italic max-w-3xl">
+          <p className="mt-10 font-body text-base md:text-lg text-near-black/70 italic max-w-3xl">
             {t("equilibriumAmbition")}
           </p>
         </ScrollReveal>
@@ -79,14 +79,14 @@ export function Cap241Equilibrium() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <p className="mt-4 font-body text-near-black/80">
+            <p className="mt-4 font-body text-base md:text-lg text-near-black/80">
               {t("trajectoriesIntro")}
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               {(["psychosocial", "family", "paths"] as const).map((key) => (
                 <span
                   key={key}
-                  className="font-body text-sm bg-crimson/8 text-crimson px-4 py-2 rounded-full border border-crimson/15"
+                  className="font-body text-base bg-crimson/8 text-crimson px-4 py-2 rounded-full border border-crimson/15"
                 >
                   {t(`trajectoriesIssues.${key}`)}
                 </span>
@@ -95,14 +95,14 @@ export function Cap241Equilibrium() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
-            <p className="mt-8 font-body text-near-black/80">
+            <p className="mt-8 font-body text-base md:text-lg text-near-black/80">
               <HighlightKeywords>{t("trajectoriesResponse")}</HighlightKeywords>
             </p>
             <div className="mt-4 flex flex-wrap gap-3">
               {(["recognising", "preventing", "supporting"] as const).map((key) => (
                 <span
                   key={key}
-                  className="font-body text-sm bg-green/8 text-green px-4 py-2 rounded-full border border-green/15 font-medium"
+                  className="font-body text-base bg-green/8 text-green px-4 py-2 rounded-full border border-green/15 font-medium"
                 >
                   {t(`trajectoriesActions.${key}`)}
                 </span>
