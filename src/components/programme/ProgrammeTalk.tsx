@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { SectionBadge } from "@/components/ui/SectionBadge";
 
 const INFO_ITEMS = [
   {
@@ -40,22 +41,26 @@ export function ProgrammeTalk() {
         aria-hidden="true"
       />
 
-      {/* Subtle dot pattern */}
+      {/* Subtle diagonal lines for visual variety */}
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage:
-            "radial-gradient(circle, var(--color-brown) 1px, transparent 1px)",
-          backgroundSize: "24px 24px",
+          backgroundImage: `repeating-linear-gradient(
+            -45deg,
+            var(--color-brown),
+            var(--color-brown) 1px,
+            transparent 1px,
+            transparent 24px
+          )`,
         }}
         aria-hidden="true"
       />
 
       <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
         <ScrollReveal>
-          <span className="inline-block font-heading text-sm font-semibold uppercase tracking-widest text-orange bg-orange/10 px-4 py-1.5 rounded-full mb-6">
+          <SectionBadge color="orange" variant="underline">
             {t("talkBadge")}
-          </span>
+          </SectionBadge>
           <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-crimson leading-tight">
             {t("talkTitle")}
           </h2>

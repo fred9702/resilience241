@@ -48,12 +48,12 @@ export function AboutCampaign() {
         {/* Context items */}
         <ScrollReveal delay={0.2}>
           <div className="mt-8">
-            <p className="font-body text-near-black/70 mb-4">{t("campaignContext")}</p>
+            <p className="font-body text-base md:text-lg text-near-black/70 mb-4">{t("campaignContext")}</p>
             <div className="flex flex-col gap-3 ml-1">
               {(["climate", "tensions", "health"] as const).map((key) => (
                 <div key={key} className="flex items-start gap-3">
-                  <span className="mt-1.5 w-2 h-2 rounded-full bg-crimson shrink-0" />
-                  <span className="font-body text-near-black/75">
+                  <span className="mt-2 w-2 h-2 rounded-full bg-crimson shrink-0" />
+                  <span className="font-body text-base md:text-lg text-near-black/75">
                     {t(`campaignContextItems.${key}`)}
                   </span>
                 </div>
@@ -71,37 +71,45 @@ export function AboutCampaign() {
         {/* Conviction block */}
         <ScrollReveal delay={0.35}>
           <div className="mt-10 border-l-4 border-crimson bg-crimson/5 rounded-r-xl px-6 py-5">
-            <p className="font-body text-near-black/70 mb-1">{t("campaignConviction")}</p>
+            <p className="font-body text-base md:text-lg text-near-black/70 mb-1">{t("campaignConviction")}</p>
             <p className="font-heading text-lg font-bold text-crimson">
               {t("campaignConvictionText")}
             </p>
           </div>
         </ScrollReveal>
 
-        {/* OAFLAD goals */}
+        {/* OAFLAD goals with decorative color accents */}
         <ScrollReveal delay={0.4}>
           <div className="mt-10">
-            <p className="font-body text-near-black/80 mb-4">{t("campaignGoalsIntro")}</p>
+            <p className="font-body text-base md:text-lg text-near-black/80 mb-4">{t("campaignGoalsIntro")}</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {(["systems", "women", "responses"] as const).map((key, i) => (
-                <div
-                  key={key}
-                  className="bg-white/60 backdrop-blur-sm border border-orange/10 rounded-xl p-5"
-                >
-                  <div className="w-8 h-8 rounded-full bg-orange/10 flex items-center justify-center mb-3">
-                    <span className="font-heading font-bold text-orange text-sm">{i + 1}</span>
+              {(["systems", "women", "responses"] as const).map((key, i) => {
+                const accents = [
+                  { bg: "bg-crimson/8", border: "border-crimson/15", dot: "bg-crimson", text: "text-crimson" },
+                  { bg: "bg-orange/8", border: "border-orange/15", dot: "bg-orange", text: "text-orange" },
+                  { bg: "bg-green/8", border: "border-green/15", dot: "bg-green", text: "text-green" },
+                ];
+                const accent = accents[i];
+                return (
+                  <div
+                    key={key}
+                    className={`${accent.bg} border ${accent.border} rounded-xl p-5 transition-transform hover:scale-[1.02]`}
+                  >
+                    <div className={`w-10 h-10 rounded-full ${accent.dot} flex items-center justify-center mb-3`}>
+                      <span className="font-heading font-bold text-white text-sm">{i + 1}</span>
+                    </div>
+                    <p className="font-body text-base text-near-black/75">
+                      {t(`campaignGoals.${key}`)}
+                    </p>
                   </div>
-                  <p className="font-body text-sm text-near-black/75">
-                    {t(`campaignGoals.${key}`)}
-                  </p>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </ScrollReveal>
 
         <ScrollReveal delay={0.45}>
-          <p className="mt-10 font-body text-near-black/70 leading-relaxed max-w-3xl">
+          <p className="mt-10 font-body text-base md:text-lg text-near-black/70 leading-relaxed max-w-3xl">
             <HighlightKeywords>{t("campaignFramework")}</HighlightKeywords>
           </p>
         </ScrollReveal>

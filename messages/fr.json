@@ -31,7 +31,11 @@
   "cta": {
     "headline": "Rejoignez les leaders africains pour renforcer la résilience",
     "button": "S'inscrire maintenant",
-    "date": "17 Avril 2026 · Libreville, Gabon"
+    "date": "17 Avril 2026 · Libreville, Gabon",
+    "programmeButton": "Voir le programme",
+    "stat1": { "value": "19", "label": "Premières Dames" },
+    "stat2": { "value": "4", "label": "Piliers" },
+    "stat3": { "value": "1", "label": "Jour" }
   },
   "comingSoon": {
     "badge": "Bientôt disponible"
@@ -63,6 +67,9 @@
     "errorGeneric": "Une erreur est survenue. Veuillez réessayer.",
     "required": "Ce champ est requis.",
     "invalidEmail": "Adresse e-mail invalide.",
+    "phoneCountryCode": "Indicatif pays",
+    "phoneLocal": "Numéro de téléphone (sans indicatif)",
+    "invalidPhone": "Numéro de téléphone invalide.",
     "consentRequired": "Vous devez accepter la politique de confidentialité."
   },
   "confirmation": {
@@ -84,7 +91,9 @@
     "title": "Média",
     "content": "Les contenus média seront disponibles après l'événement.",
     "comingSoon": "Les contenus média seront disponibles après l'événement.",
-    "backHome": "Retour à l'accueil"
+    "backHome": "Retour à l'accueil",
+    "followUs": "Suivez #RenforcerLaRésilience sur les réseaux sociaux",
+    "contactCta": "Contact pour les demandes presse"
   },
   "about": {
     "metaDescription": "À propos de la campagne #RenforcerLaRésilience portée par l'OPDAD — renforcer la résilience des femmes et des filles face aux changements climatiques et aux conflits.",
@@ -131,7 +140,7 @@
     "zonQuote": "En ce jour du 17 avril, journée nationale de la femme au Gabon, je souhaite m'adresser à chacune d'entre vous. À celles qui sont ici présentes. À celles qui œuvrent dans nos villes, dans nos villages, dans nos foyers. Et à celles dont l'engagement, souvent discret, continue de porter notre société.",
     "zonQuote2": "Car derrière les équilibres que nous observons, il y a, très souvent, le poids silencieux que portent les femmes. Lorsque les fragilités s'installent, qu'elles soient sociales, économiques ou sanitaires, ce sont elles qui absorbent, organisent, maintiennent. Mais la résilience d'une Nation ne peut pas reposer uniquement sur cette force silencieuse. Elle doit être structurée. Elle doit être accompagnée. Elle doit être organisée.",
     "zonQuote3": "À travers le programme ÉQUILIBRES 2026–2029, que je lance officiellement ce jour, nous faisons le choix d'agir sur ce qui fonde durablement la stabilité : la continuité des soins, la prise en compte des fragilités, et la reconstruction des trajectoires.",
-    "zonAuthor": "Son Excellence Zita Oligui Nguema",
+    "zonAuthor": "Son Excellence Madame Zita Oligui Nguema",
     "zonCta": "Découvrir CAP 241",
     "fondationBadge": "Fondation",
     "fondationTitle": "Fondation Ma Bannière",
@@ -247,9 +256,9 @@
     "milestoneTitle": "Une étape fondatrice",
     "milestoneIntro": "Le 17 avril 2026 marque :",
     "milestoneItems": {
-      "launch": "le lancement du programme ÉQUILIBRES",
-      "partners": "la mobilisation des partenaires",
-      "cooperation": "le début d'une dynamique de coopération"
+      "launch": "Le lancement du programme ÉQUILIBRES",
+      "partners": "La mobilisation des partenaires",
+      "cooperation": "Le début d'une dynamique de coopération"
     },
     "talkBadge": "Journée Nationale de la Femme",
     "talkTitle": "Talk — Journée Nationale de la Femme",
@@ -284,6 +293,40 @@
     "panel3": {
       "title": "Panel 3",
       "topic": "Partenariats et réponses durables"
+    },
+    "timelineBadge": "Programme de la journée",
+    "timelineTitle": "La journée en un coup d'œil",
+    "timeline": {
+      "registration": {
+        "time": "TBC",
+        "title": "Accueil & Inscription",
+        "description": "Arrivée, accréditation et networking"
+      },
+      "opening": {
+        "time": "10h",
+        "title": "Talk — Journée nationale de la Femme",
+        "description": "Un dialogue national sur la résilience des femmes et des familles"
+      },
+      "panel1": {
+        "time": "TBC",
+        "title": "Panel 1 — Résilience climatique et sociale",
+        "description": "La résilience des femmes face aux crises climatiques et sociales"
+      },
+      "panel2": {
+        "time": "TBC",
+        "title": "Panel 2 — Santé et stabilité familiale",
+        "description": "Santé, stabilité familiale et résilience"
+      },
+      "panel3": {
+        "time": "TBC",
+        "title": "Panel 3 — Partenariats",
+        "description": "Partenariats et réponses durables"
+      },
+      "closing": {
+        "time": "TBC",
+        "title": "Lancement du CAP 241 & Clôture",
+        "description": "Lancement officiel du CAP 241 et déclarations de clôture"
+      }
     },
     "cap241Badge": "La réponse nationale du Gabon",
     "cap241Title": "Découvrir CAP 241",
@@ -333,6 +376,9 @@
     "intro": "La campagne #RenforcerLaRésilience est rendue possible grâce à la collaboration d'organisations engagées pour renforcer la résilience à travers l'Afrique.",
     "visitWebsite": "Visiter le site",
     "viewFirstLadies": "Voir les Premières Dames présentes",
+    "ctaTitle": "Devenir Partenaire",
+    "ctaDescription": "Rejoignez le mouvement #RenforcerLaRésilience. Associez-vous à l'OPDAD pour renforcer la résilience des femmes et des filles en Afrique.",
+    "ctaButton": "Nous Contacter",
     "oaflad": {
       "name": "OPDAD / OAFLAD",
       "description": "L'Organisation des Premières Dames d'Afrique pour le Développement rassemble les Premières Dames du continent pour promouvoir la santé, l'éducation et l'autonomisation des femmes."

@@ -13,16 +13,7 @@ export function ProgrammePanels() {
   const t = useTranslations("programme");
 
   return (
-    <section className="relative py-20 md:py-28 overflow-hidden bg-white">
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle, var(--color-brown) 1px, transparent 1px)",
-          backgroundSize: "32px 32px",
-        }}
-        aria-hidden="true"
-      />
+    <section className="relative py-20 md:py-28 overflow-hidden bg-light-beige">
 
       <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
         <ScrollReveal>
@@ -33,7 +24,7 @@ export function ProgrammePanels() {
             <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-crimson">
               {t("panelsTitle")}
             </h2>
-            <p className="mt-4 font-body text-near-black/70 max-w-2xl mx-auto">
+            <p className="mt-4 font-body text-base md:text-lg text-near-black/70 max-w-2xl mx-auto">
               {t("panelsIntro")}
             </p>
           </div>
@@ -56,7 +47,7 @@ export function ProgrammePanels() {
                     {t(`panel${num}.topic`)}
                   </p>
 
-                  <div className="mt-5 space-y-2 text-sm font-body text-near-black/60">
+                  <div className="mt-5 space-y-2 text-base font-body text-near-black/60">
                     <p>
                       <span className="font-semibold text-near-black/70">{t("panelModeratorLabel")}:</span>{" "}
                       {t("panelTbc")}

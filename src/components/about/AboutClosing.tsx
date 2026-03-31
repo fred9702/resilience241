@@ -7,7 +7,7 @@ export function AboutClosing() {
   const t = useTranslations("about");
 
   return (
-    <section className="relative py-16 md:py-20 overflow-hidden bg-brown">
+    <section className="relative py-12 md:py-16 overflow-hidden bg-brown">
       <div className="relative mx-auto max-w-4xl px-6 lg:px-8 text-center">
         <ScrollReveal>
           <div

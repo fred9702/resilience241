@@ -7,16 +7,7 @@ export function SpeakersComingSoon() {
   const t = useTranslations("speakers");
 
   return (
-    <section className="relative py-20 md:py-28 overflow-hidden">
-      <div
-        className="absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle, var(--color-brown) 1px, transparent 1px)",
-          backgroundSize: "40px 40px",
-        }}
-        aria-hidden="true"
-      />
+    <section className="relative py-12 md:py-16 overflow-hidden">
 
       <div className="relative mx-auto max-w-3xl px-4 text-center">
         <ScrollReveal>

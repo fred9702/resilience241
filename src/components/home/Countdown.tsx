@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { useTranslations } from "next-intl";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 
 const TARGET = new Date("2026-04-17T08:00:00+01:00").getTime();
 
@@ -15,12 +16,36 @@ function getTimeLeft() {
   };
 }
 
+function FlipNumber({ value, mounted, shouldReduceMotion }: { value: number; mounted: boolean; shouldReduceMotion: boolean | null }) {
+  const display = mounted ? String(value).padStart(2, "0") : "--";
+
+  if (shouldReduceMotion) {
+    return <span className="font-heading text-4xl md:text-6xl font-extrabold text-warm-cream tabular-nums">{display}</span>;
+  }
+
+  return (
+    <AnimatePresence mode="popLayout">
+      <motion.span
+        key={display}
+        initial={{ y: -12, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: 12, opacity: 0 }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+        className="font-heading text-4xl md:text-6xl font-extrabold text-warm-cream tabular-nums inline-block"
+      >
+        {display}
+      </motion.span>
+    </AnimatePresence>
+  );
+}
+
 export function Countdown() {
   const t = useTranslations("countdown");
   const [mounted, setMounted] = useState(false);
   const [time, setTime] = useState(getTimeLeft);
   const srRef = useRef<HTMLDivElement>(null);
   const lastAnnouncedMinute = useRef(-1);
+  const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
     setMounted(true);
@@ -67,9 +92,7 @@ export function Countdown() {
                 className="glass rounded-xl p-4 md:p-6 flex flex-col items-center hover:shadow-[0_0_30px_rgba(224,123,57,0.15)] transition-shadow duration-300"
                 aria-hidden="true"
               >
-                <span className="font-heading text-4xl md:text-6xl font-extrabold text-warm-cream tabular-nums">
-                  {mounted ? String(value).padStart(2, "0") : "--"}
-                </span>
+                <FlipNumber value={value} mounted={mounted} shouldReduceMotion={shouldReduceMotion} />
                 <span className="mt-2 font-body text-xs md:text-sm text-warm-cream/90 uppercase tracking-wider">
                   {label}
                 </span>

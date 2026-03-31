@@ -23,6 +23,7 @@ export function ScrollReveal({ children, delay = 0, className }: ScrollRevealPro
       viewport={{ once: true, margin: "-64px" }}
       transition={{ duration: 0.6, delay, ease: "easeOut" }}
       className={className}
+      style={{ willChange: "transform, opacity" }}
     >
       {children}
     </motion.div>

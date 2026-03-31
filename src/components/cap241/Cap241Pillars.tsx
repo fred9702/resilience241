@@ -17,16 +17,6 @@ export function Cap241Pillars() {
 
   return (
     <section className="relative py-20 md:py-28 overflow-hidden bg-white">
-      {/* Subtle dot grid */}
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle, var(--color-brown) 1px, transparent 1px)",
-          backgroundSize: "32px 32px",
-        }}
-        aria-hidden="true"
-      />
 
       <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
         <ScrollReveal>
@@ -64,7 +54,7 @@ export function Cap241Pillars() {
                     {t(`${key}.programme`)}
                   </p>
 
-                  <p className="mt-4 font-body text-near-black/75 leading-relaxed">
+                  <p className="mt-4 font-body text-base md:text-lg text-near-black/75 leading-relaxed">
                     {t(`${key}.description`)}
                   </p>
 
@@ -74,7 +64,7 @@ export function Cap241Pillars() {
                       {(["care", "mental", "social", "family"] as const).map((item) => (
                         <li key={item} className="flex items-start gap-2">
                           <span className={`mt-1.5 w-1.5 h-1.5 rounded-full ${color.dot} shrink-0`} />
-                          <span className="font-body text-sm text-near-black/70">
+                          <span className="font-body text-base text-near-black/70">
                             {t(`${key}.items.${item}`)}
                           </span>
                         </li>
@@ -97,13 +87,13 @@ export function Cap241Pillars() {
               {(["health", "family", "prevention", "skills"] as const).map((key) => (
                 <div key={key} className="flex items-start gap-3">
                   <span className="mt-1 w-2 h-2 rounded-full bg-orange shrink-0" />
-                  <span className="font-body text-white/90">
+                  <span className="font-body text-base md:text-lg text-white/90">
                     {t(`pillarsInterdependence.${key}`)}
                   </span>
                 </div>
               ))}
             </div>
-            <p className="mt-6 font-body text-white/80 text-sm border-t border-white/20 pt-6">
+            <p className="mt-6 font-body text-white/80 text-base border-t border-white/20 pt-6">
               {t("pillarsArchitecture")}
             </p>
           </div>

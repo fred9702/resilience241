@@ -31,7 +31,11 @@
   "cta": {
     "headline": "Join African leaders in building resilience",
     "button": "Register now",
-    "date": "17 April 2026 · Libreville, Gabon"
+    "date": "17 April 2026 · Libreville, Gabon",
+    "programmeButton": "View Programme",
+    "stat1": { "value": "19", "label": "First Ladies" },
+    "stat2": { "value": "4", "label": "Pillars" },
+    "stat3": { "value": "1", "label": "Day" }
   },
   "comingSoon": {
     "badge": "Coming Soon"
@@ -63,6 +67,9 @@
     "errorGeneric": "An error occurred. Please try again.",
     "required": "This field is required.",
     "invalidEmail": "Invalid email address.",
+    "phoneCountryCode": "Country code",
+    "phoneLocal": "Phone number (without country code)",
+    "invalidPhone": "Invalid phone number.",
     "consentRequired": "You must accept the privacy policy."
   },
   "confirmation": {
@@ -84,7 +91,9 @@
     "title": "Media",
     "content": "Media content will be available after the event.",
     "comingSoon": "Media content will be available after the event.",
-    "backHome": "Back to homepage"
+    "backHome": "Back to homepage",
+    "followUs": "Follow #BuildingResilience on social media",
+    "contactCta": "Contact for Press Inquiries"
   },
   "about": {
     "metaDescription": "About the #BuildingResilience campaign led by OAFLAD — strengthening resilience for women and girls facing climate change and conflict across Africa.",
@@ -131,7 +140,7 @@
     "zonQuote": "On this day of April 17, National Women's Day in Gabon, I wish to address each and every one of you. To those present here. To those working in our cities, in our villages, in our homes. And to those whose commitment, often unseen, continues to sustain our society.",
     "zonQuote2": "Because behind the balances we observe, there is, very often, the silent burden carried by women. When fragilities emerge — social, economic or health-related — they are the ones who absorb, organize, and sustain. But the resilience of a Nation cannot rely solely on this silent strength. It must be structured. It must be supported. It must be organized.",
     "zonQuote3": "Through the EQUILIBRIUM Programme 2026–2029, which I officially launch today, we choose to act on what sustainably underpins stability: continuity of care, recognition of vulnerabilities, and the rebuilding of life trajectories.",
-    "zonAuthor": "Her Excellency Zita Oligui Nguema",
+    "zonAuthor": "Her Excellency Mrs Zita Oligui Nguema",
     "zonCta": "Discover CAP 241",
     "fondationBadge": "Foundation",
     "fondationTitle": "Ma Banniere Foundation",
@@ -247,9 +256,9 @@
     "milestoneTitle": "A Foundational Milestone",
     "milestoneIntro": "April 17, 2026 marks:",
     "milestoneItems": {
-      "launch": "the launch of EQUILIBRIUM",
-      "partners": "partner mobilization",
-      "cooperation": "the start of a structured cooperation dynamic"
+      "launch": "The launch of EQUILIBRIUM",
+      "partners": "Partner mobilization",
+      "cooperation": "The start of a structured cooperation dynamic"
     },
     "talkBadge": "National Women's Day",
     "talkTitle": "Talk — National Women's Day",
@@ -284,6 +293,40 @@
     "panel3": {
       "title": "Panel 3",
       "topic": "Partnerships and sustainable responses"
+    },
+    "timelineBadge": "Conference Schedule",
+    "timelineTitle": "Day at a Glance",
+    "timeline": {
+      "registration": {
+        "time": "TBC",
+        "title": "Registration & Welcome",
+        "description": "Arrival, accreditation, and networking"
+      },
+      "opening": {
+        "time": "10am",
+        "title": "Talk — National Women's Day",
+        "description": "A national dialogue on the resilience of women and families"
+      },
+      "panel1": {
+        "time": "TBC",
+        "title": "Panel 1 — Climate & Social Resilience",
+        "description": "Women's resilience in the face of climate and social crises"
+      },
+      "panel2": {
+        "time": "TBC",
+        "title": "Panel 2 — Health & Family Stability",
+        "description": "Health, family stability and resilience"
+      },
+      "panel3": {
+        "time": "TBC",
+        "title": "Panel 3 — Partnerships",
+        "description": "Partnerships and sustainable responses"
+      },
+      "closing": {
+        "time": "TBC",
+        "title": "CAP 241 Launch & Closing",
+        "description": "Official launch of CAP 241 and closing declarations"
+      }
     },
     "cap241Badge": "Gabon's National Response",
     "cap241Title": "Discover CAP 241",
@@ -333,6 +376,9 @@
     "intro": "The #BuildingResilience campaign is made possible through the collaboration of organizations committed to strengthening resilience across Africa.",
     "visitWebsite": "Visit website",
     "viewFirstLadies": "View attending First Ladies",
+    "ctaTitle": "Become a Partner",
+    "ctaDescription": "Join the #BuildingResilience movement. Partner with OAFLAD to strengthen resilience for women and girls across Africa.",
+    "ctaButton": "Contact Us",
     "oaflad": {
       "name": "OAFLAD / OPDAD",
       "description": "The Organization of African First Ladies for Development brings together First Ladies from across the continent to advocate for health, education, and women's empowerment."

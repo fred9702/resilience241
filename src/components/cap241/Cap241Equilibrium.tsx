@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { SectionBadge } from "@/components/ui/SectionBadge";
 import { HighlightKeywords } from "@/components/ui/HighlightKeywords";
 
 export function Cap241Equilibrium() {
@@ -9,11 +10,12 @@ export function Cap241Equilibrium() {
 
   return (
     <section className="relative py-20 md:py-28 overflow-hidden">
+      {/* Distinct background: subtle warm white without dot-grid */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(180deg, var(--color-warm-cream) 0%, #fff 100%)",
+            "linear-gradient(180deg, #fff 0%, var(--color-warm-cream) 50%, #fff 100%)",
         }}
         aria-hidden="true"
       />
@@ -21,9 +23,9 @@ export function Cap241Equilibrium() {
       <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
         {/* EQUILIBRIUM Programme */}
         <ScrollReveal>
-          <span className="inline-block font-heading text-sm font-semibold uppercase tracking-widest text-crimson bg-crimson/10 px-4 py-1.5 rounded-full mb-6">
+          <SectionBadge color="crimson" variant="underline">
             {t("equilibriumBadge")}
-          </span>
+          </SectionBadge>
           <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-crimson">
             <HighlightKeywords>{t("equilibriumTitle")}</HighlightKeywords>
           </h2>
@@ -51,7 +53,7 @@ export function Cap241Equilibrium() {
                     {i + 1}
                   </span>
                 </div>
-                <p className="font-heading text-base font-bold text-near-black">
+                <p className="font-heading text-base md:text-lg font-bold text-near-black">
                   {t(`equilibriumActions.${key}`)}
                 </p>
               </div>
@@ -60,7 +62,7 @@ export function Cap241Equilibrium() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.3}>
-          <p className="mt-10 font-body text-near-black/70 italic max-w-3xl">
+          <p className="mt-10 font-body text-base md:text-lg text-near-black/70 italic max-w-3xl">
             {t("equilibriumAmbition")}
           </p>
         </ScrollReveal>
@@ -77,14 +79,14 @@ export function Cap241Equilibrium() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <p className="mt-4 font-body text-near-black/80">
+            <p className="mt-4 font-body text-base md:text-lg text-near-black/80">
               {t("trajectoriesIntro")}
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               {(["psychosocial", "family", "paths"] as const).map((key) => (
                 <span
                   key={key}
-                  className="font-body text-sm bg-crimson/8 text-crimson px-4 py-2 rounded-full border border-crimson/15"
+                  className="font-body text-base bg-crimson/8 text-crimson px-4 py-2 rounded-full border border-crimson/15"
                 >
                   {t(`trajectoriesIssues.${key}`)}
                 </span>
@@ -93,14 +95,14 @@ export function Cap241Equilibrium() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
-            <p className="mt-8 font-body text-near-black/80">
+            <p className="mt-8 font-body text-base md:text-lg text-near-black/80">
               <HighlightKeywords>{t("trajectoriesResponse")}</HighlightKeywords>
             </p>
             <div className="mt-4 flex flex-wrap gap-3">
               {(["recognising", "preventing", "supporting"] as const).map((key) => (
                 <span
                   key={key}
-                  className="font-body text-sm bg-green/8 text-green px-4 py-2 rounded-full border border-green/15 font-medium"
+                  className="font-body text-base bg-green/8 text-green px-4 py-2 rounded-full border border-green/15 font-medium"
                 >
                   {t(`trajectoriesActions.${key}`)}
                 </span>
