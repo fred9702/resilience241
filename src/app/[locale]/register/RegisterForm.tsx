@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
+import { FEATURED_CODES, AFRICAN_CODES } from "@/data/country-codes";
 
 const CATEGORIES = [
   "opdad",
@@ -41,6 +42,13 @@ export function RegisterForm() {
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       errors.email = t("invalidEmail");
     }
+    const phone = form.get("phoneLocal") as string;
+    if (phone) {
+      const digits = phone.replace(/[\s\-().]/g, "");
+      if (digits.length < 7 || digits.length > 15 || !/^\d+$/.test(digits)) {
+        errors.phone = t("invalidPhone");
+      }
+    }
     if (!form.get("category")) errors.category = t("required");
     if (!form.get("gdprConsent")) errors.gdprConsent = t("consentRequired");
     return errors;
@@ -60,11 +68,19 @@ export function RegisterForm() {
 
     setSubmitting(true);
     try {
+      const countryCode = formData.get("phoneCountryCode") as string;
+      const phoneLocal = formData.get("phoneLocal") as string;
+      let phone: string | null = null;
+      if (phoneLocal) {
+        const digits = phoneLocal.replace(/[\s\-().]/g, "");
+        phone = countryCode + digits;
+      }
+
       const body = {
         first_name: formData.get("firstName"),
         last_name: formData.get("lastName"),
         email: formData.get("email"),
-        phone: formData.get("phone") || null,
+        phone,
         organisation: formData.get("organisation") || null,
         role: formData.get("role") || null,
         category: formData.get("category"),
@@ -184,11 +200,48 @@ export function RegisterForm() {
         </div>
 
         {/* Phone */}
-        <div>
-          <label htmlFor="phone" className={labelClass}>
+        <div className="md:col-span-2">
+          <label className={labelClass}>
             {t("phone")}
           </label>
-          <input id="phone" name="phone" type="tel" className={inputClass} />
+          <div className="flex gap-2">
+            <select
+              name="phoneCountryCode"
+              defaultValue="+241"
+              className={`${inputClass} w-32 shrink-0`}
+              aria-label={t("phoneCountryCode")}
+            >
+              <optgroup label="—">
+                {FEATURED_CODES.map((c) => (
+                  <option key={`f-${c.iso}`} value={c.code}>
+                    {c.code} {c.country}
+                  </option>
+                ))}
+              </optgroup>
+              <optgroup label="Africa">
+                {AFRICAN_CODES.map((c) => (
+                  <option key={`a-${c.iso}`} value={c.code}>
+                    {c.code} {c.country}
+                  </option>
+                ))}
+              </optgroup>
+            </select>
+            <input
+              id="phoneLocal"
+              name="phoneLocal"
+              type="tel"
+              placeholder="e.g. 074123456"
+              aria-label={t("phoneLocal")}
+              aria-invalid={!!fieldErrors.phone}
+              aria-describedby={fieldErrors.phone ? "phone-error" : undefined}
+              className={`${inputClass} flex-1`}
+            />
+          </div>
+          {fieldErrors.phone && (
+            <p id="phone-error" className={errorClass} role="alert">
+              {fieldErrors.phone}
+            </p>
+          )}
         </div>
 
         {/* Organisation */}
