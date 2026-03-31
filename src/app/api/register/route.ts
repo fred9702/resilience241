@@ -1,6 +1,14 @@
 import { NextResponse } from "next/server";
 import { createServerClient } from "@/lib/supabase/server";
 
+async function hashEmail(email: string): Promise<string> {
+  const normalized = email.toLowerCase().trim();
+  const encoded = new TextEncoder().encode(normalized);
+  const hashBuffer = await crypto.subtle.digest("SHA-256", encoded);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
@@ -34,6 +42,8 @@ export async function POST(request: Request) {
 
     const supabase = createServerClient();
 
+    const email_hash = await hashEmail(email);
+
     const { error } = await supabase.from("registrations").insert({
       first_name,
       last_name,
@@ -45,6 +55,7 @@ export async function POST(request: Request) {
       language_pref: language_pref || "fr",
       gdpr_consent,
       consent_timestamp: new Date().toISOString(),
+      email_hash,
     });
 
     if (error) {
