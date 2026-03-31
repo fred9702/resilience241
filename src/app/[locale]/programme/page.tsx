@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { ProgrammeMilestone } from "@/components/programme/ProgrammeMilestone";
+import { ProgrammeTimeline } from "@/components/programme/ProgrammeTimeline";
 import { ProgrammeTalk } from "@/components/programme/ProgrammeTalk";
 import { ProgrammePanels } from "@/components/programme/ProgrammePanels";
 import { ProgrammeCap241Cta } from "@/components/programme/ProgrammeCap241Cta";
@@ -20,6 +21,7 @@ export default async function ProgrammePage({ params }: Props) {
   return (
     <>
       <ProgrammeMilestone />
+      <ProgrammeTimeline />
       <ProgrammeTalk />
       <ProgrammePanels />
       <ProgrammeCap241Cta />

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { ComingSoonPage } from "@/components/ui/ComingSoonPage";
+import { MediaSocials } from "@/components/media/MediaSocials";
 import { buildMetadata } from "@/lib/seo";
 
 type Props = {
@@ -16,5 +17,10 @@ export default async function MediaPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <ComingSoonPage namespace="media" />;
+  return (
+    <>
+      <ComingSoonPage namespace="media" />
+      <MediaSocials />
+    </>
+  );
 }

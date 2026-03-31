@@ -13,17 +13,8 @@ export function FirstLadiesSection() {
 
   return (
     <section id="first-ladies" className="relative py-20 md:py-28 overflow-hidden bg-white">
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle, var(--color-brown) 1px, transparent 1px)",
-          backgroundSize: "32px 32px",
-        }}
-        aria-hidden="true"
-      />
 
-      <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
+      <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
         <ScrollReveal>
           <span className="inline-block font-heading text-sm font-semibold uppercase tracking-widest text-crimson bg-crimson/10 px-4 py-1.5 rounded-full mb-6">
             {t("firstLadiesBadge")}
@@ -33,12 +24,17 @@ export function FirstLadiesSection() {
           </h2>
         </ScrollReveal>
 
-        <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-          {host && (
-            <ScrollReveal>
-              <FirstLadyCard lady={host} />
-            </ScrollReveal>
-          )}
+        {/* Featured host card */}
+        {host && (
+          <ScrollReveal>
+            <div className="mt-10 mb-8">
+              <FirstLadyCard lady={host} featured />
+            </div>
+          </ScrollReveal>
+        )}
+
+        {/* Attendees grid — 4 columns max for larger cards */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
           {attendees.map((lady, i) => (
             <ScrollReveal key={lady.id} delay={0.03 * (i + 1)}>
               <FirstLadyCard lady={lady} />

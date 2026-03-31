@@ -17,16 +17,6 @@ export function Cap241Pillars() {
 
   return (
     <section className="relative py-20 md:py-28 overflow-hidden bg-white">
-      {/* Subtle dot grid */}
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle, var(--color-brown) 1px, transparent 1px)",
-          backgroundSize: "32px 32px",
-        }}
-        aria-hidden="true"
-      />
 
       <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
         <ScrollReveal>

@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { SectionBadge } from "@/components/ui/SectionBadge";
 import { HighlightKeywords } from "@/components/ui/HighlightKeywords";
 
 export function Cap241Equilibrium() {
@@ -9,11 +10,12 @@ export function Cap241Equilibrium() {
 
   return (
     <section className="relative py-20 md:py-28 overflow-hidden">
+      {/* Distinct background: subtle warm white without dot-grid */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(180deg, var(--color-warm-cream) 0%, #fff 100%)",
+            "linear-gradient(180deg, #fff 0%, var(--color-warm-cream) 50%, #fff 100%)",
         }}
         aria-hidden="true"
       />
@@ -21,9 +23,9 @@ export function Cap241Equilibrium() {
       <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
         {/* EQUILIBRIUM Programme */}
         <ScrollReveal>
-          <span className="inline-block font-heading text-sm font-semibold uppercase tracking-widest text-crimson bg-crimson/10 px-4 py-1.5 rounded-full mb-6">
+          <SectionBadge color="crimson" variant="underline">
             {t("equilibriumBadge")}
-          </span>
+          </SectionBadge>
           <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-crimson">
             <HighlightKeywords>{t("equilibriumTitle")}</HighlightKeywords>
           </h2>

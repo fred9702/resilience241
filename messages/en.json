@@ -31,7 +31,11 @@
   "cta": {
     "headline": "Join African leaders in building resilience",
     "button": "Register now",
-    "date": "17 April 2026 · Libreville, Gabon"
+    "date": "17 April 2026 · Libreville, Gabon",
+    "programmeButton": "View Programme",
+    "stat1": { "value": "19", "label": "First Ladies" },
+    "stat2": { "value": "4", "label": "Pillars" },
+    "stat3": { "value": "1", "label": "Day" }
   },
   "comingSoon": {
     "badge": "Coming Soon"
@@ -84,7 +88,9 @@
     "title": "Media",
     "content": "Media content will be available after the event.",
     "comingSoon": "Media content will be available after the event.",
-    "backHome": "Back to homepage"
+    "backHome": "Back to homepage",
+    "followUs": "Follow #BuildingResilience on social media",
+    "contactCta": "Contact for Press Inquiries"
   },
   "about": {
     "metaDescription": "About the #BuildingResilience campaign led by OAFLAD — strengthening resilience for women and girls facing climate change and conflict across Africa.",
@@ -285,6 +291,40 @@
       "title": "Panel 3",
       "topic": "Partnerships and sustainable responses"
     },
+    "timelineBadge": "Conference Schedule",
+    "timelineTitle": "Day at a Glance",
+    "timeline": {
+      "registration": {
+        "time": "8:00",
+        "title": "Registration & Welcome",
+        "description": "Arrival, accreditation, and networking breakfast"
+      },
+      "opening": {
+        "time": "9:00",
+        "title": "Opening Ceremony",
+        "description": "Welcome addresses and keynote speeches"
+      },
+      "panel1": {
+        "time": "10:30",
+        "title": "Panel 1 — Climate & Social Resilience",
+        "description": "Women's resilience in the face of climate and social crises"
+      },
+      "panel2": {
+        "time": "12:00",
+        "title": "Panel 2 — Health & Family Stability",
+        "description": "Health, family stability and resilience"
+      },
+      "panel3": {
+        "time": "14:00",
+        "title": "Panel 3 — Partnerships",
+        "description": "Partnerships and sustainable responses"
+      },
+      "closing": {
+        "time": "16:00",
+        "title": "CAP 241 Launch & Closing",
+        "description": "Official launch of CAP 241 and closing declarations"
+      }
+    },
     "cap241Badge": "Gabon's National Response",
     "cap241Title": "Discover CAP 241",
     "cap241Intro": "Learn how Gabon is translating the continental #BuildingResilience vision into a structured national framework for social action.",
@@ -333,6 +373,9 @@
     "intro": "The #BuildingResilience campaign is made possible through the collaboration of organizations committed to strengthening resilience across Africa.",
     "visitWebsite": "Visit website",
     "viewFirstLadies": "View attending First Ladies",
+    "ctaTitle": "Become a Partner",
+    "ctaDescription": "Join the #BuildingResilience movement. Partner with OAFLAD to strengthen resilience for women and girls across Africa.",
+    "ctaButton": "Contact Us",
     "oaflad": {
       "name": "OAFLAD / OPDAD",
       "description": "The Organization of African First Ladies for Development brings together First Ladies from across the continent to advocate for health, education, and women's empowerment."

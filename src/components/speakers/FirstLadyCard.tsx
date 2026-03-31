@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import type { FirstLady } from "@/data/first-ladies";
 
-export function FirstLadyCard({ lady }: { lady: FirstLady }) {
+export function FirstLadyCard({ lady, featured = false }: { lady: FirstLady; featured?: boolean }) {
   const t = useTranslations("speakers");
 
   const name = t(`firstLadies.${lady.id}.name`);
@@ -18,9 +18,46 @@ export function FirstLadyCard({ lady }: { lady: FirstLady }) {
 
   const honorific = lady.isFirstGentleman ? t("honorificMr") : t("honorificMrs");
 
+  if (featured) {
+    return (
+      <div className="group relative flex flex-col sm:flex-row items-center gap-6 rounded-2xl overflow-hidden border-2 border-crimson/30 bg-crimson/5 ring-2 ring-crimson/20 p-4 sm:p-0">
+        {/* Featured photo */}
+        <div className="relative w-full sm:w-48 md:w-56 aspect-[3/4] sm:aspect-auto sm:h-64 bg-light-beige overflow-hidden rounded-xl sm:rounded-none sm:rounded-l-2xl shrink-0">
+          {lady.photoPath ? (
+            <Image
+              src={lady.photoPath}
+              alt={name}
+              width={224}
+              height={300}
+              className="object-cover w-full h-full"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-light-beige to-warm-cream">
+              <span className="text-7xl">{lady.countryFlag}</span>
+            </div>
+          )}
+        </div>
+
+        {/* Featured info */}
+        <div className="flex-1 py-4 sm:py-6 px-2 sm:pr-6 text-center sm:text-left">
+          <span className="inline-block text-xs font-heading font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-crimson text-white mb-3">
+            {titleLabel}
+          </span>
+          <div className="flex items-center justify-center sm:justify-start gap-2 mb-2">
+            <span className="text-2xl leading-none">{lady.countryFlag}</span>
+            <span className="font-body text-sm text-near-black/60">{country}</span>
+          </div>
+          <p className="font-heading text-xl md:text-2xl font-bold text-near-black">
+            {honorific} {name}
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div
-      className={`group relative rounded-xl overflow-hidden border ${
+      className={`group relative rounded-xl overflow-hidden border transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${
         lady.isHost
           ? "border-crimson/30 bg-crimson/5 ring-2 ring-crimson/20"
           : "border-brown/10 bg-white/60"

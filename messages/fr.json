@@ -31,7 +31,11 @@
   "cta": {
     "headline": "Rejoignez les leaders africains pour renforcer la résilience",
     "button": "S'inscrire maintenant",
-    "date": "17 Avril 2026 · Libreville, Gabon"
+    "date": "17 Avril 2026 · Libreville, Gabon",
+    "programmeButton": "Voir le programme",
+    "stat1": { "value": "19", "label": "Premières Dames" },
+    "stat2": { "value": "4", "label": "Piliers" },
+    "stat3": { "value": "1", "label": "Jour" }
   },
   "comingSoon": {
     "badge": "Bientôt disponible"
@@ -84,7 +88,9 @@
     "title": "Média",
     "content": "Les contenus média seront disponibles après l'événement.",
     "comingSoon": "Les contenus média seront disponibles après l'événement.",
-    "backHome": "Retour à l'accueil"
+    "backHome": "Retour à l'accueil",
+    "followUs": "Suivez #RenforcerLaRésilience sur les réseaux sociaux",
+    "contactCta": "Contact pour les demandes presse"
   },
   "about": {
     "metaDescription": "À propos de la campagne #RenforcerLaRésilience portée par l'OPDAD — renforcer la résilience des femmes et des filles face aux changements climatiques et aux conflits.",
@@ -285,6 +291,40 @@
       "title": "Panel 3",
       "topic": "Partenariats et réponses durables"
     },
+    "timelineBadge": "Programme de la journée",
+    "timelineTitle": "La journée en un coup d'œil",
+    "timeline": {
+      "registration": {
+        "time": "8h00",
+        "title": "Accueil & Inscription",
+        "description": "Arrivée, accréditation et petit-déjeuner de networking"
+      },
+      "opening": {
+        "time": "9h00",
+        "title": "Cérémonie d'ouverture",
+        "description": "Allocutions de bienvenue et discours d'ouverture"
+      },
+      "panel1": {
+        "time": "10h30",
+        "title": "Panel 1 — Résilience climatique et sociale",
+        "description": "La résilience des femmes face aux crises climatiques et sociales"
+      },
+      "panel2": {
+        "time": "12h00",
+        "title": "Panel 2 — Santé et stabilité familiale",
+        "description": "Santé, stabilité familiale et résilience"
+      },
+      "panel3": {
+        "time": "14h00",
+        "title": "Panel 3 — Partenariats",
+        "description": "Partenariats et réponses durables"
+      },
+      "closing": {
+        "time": "16h00",
+        "title": "Lancement du CAP 241 & Clôture",
+        "description": "Lancement officiel du CAP 241 et déclarations de clôture"
+      }
+    },
     "cap241Badge": "La réponse nationale du Gabon",
     "cap241Title": "Découvrir CAP 241",
     "cap241Intro": "Découvrez comment le Gabon traduit la vision continentale #RenforcerLaRésilience en un cadre national structuré d'action sociale.",
@@ -333,6 +373,9 @@
     "intro": "La campagne #RenforcerLaRésilience est rendue possible grâce à la collaboration d'organisations engagées pour renforcer la résilience à travers l'Afrique.",
     "visitWebsite": "Visiter le site",
     "viewFirstLadies": "Voir les Premières Dames présentes",
+    "ctaTitle": "Devenir Partenaire",
+    "ctaDescription": "Rejoignez le mouvement #RenforcerLaRésilience. Associez-vous à l'OPDAD pour renforcer la résilience des femmes et des filles en Afrique.",
+    "ctaButton": "Nous Contacter",
     "oaflad": {
       "name": "OPDAD / OAFLAD",
       "description": "L'Organisation des Premières Dames d'Afrique pour le Développement rassemble les Premières Dames du continent pour promouvoir la santé, l'éducation et l'autonomisation des femmes."

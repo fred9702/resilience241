@@ -13,16 +13,7 @@ export function ProgrammePanels() {
   const t = useTranslations("programme");
 
   return (
-    <section className="relative py-20 md:py-28 overflow-hidden bg-white">
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle, var(--color-brown) 1px, transparent 1px)",
-          backgroundSize: "32px 32px",
-        }}
-        aria-hidden="true"
-      />
+    <section className="relative py-20 md:py-28 overflow-hidden bg-light-beige">
 
       <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
         <ScrollReveal>

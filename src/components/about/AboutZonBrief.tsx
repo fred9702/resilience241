@@ -7,7 +7,7 @@ export function AboutZonBrief() {
   const t = useTranslations("about");
 
   return (
-    <section className="relative py-16 md:py-20 overflow-hidden bg-crimson">
+    <section className="relative py-12 md:py-16 overflow-hidden bg-crimson">
       <div
         className="absolute inset-0 opacity-10"
         style={{

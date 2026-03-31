@@ -25,11 +25,18 @@ export function Footer() {
   const [legalModal, setLegalModal] = useState<"privacy" | "terms" | null>(null);
   const footerLogo = FOOTER_LOGOS[locale] ?? FOOTER_LOGO_FALLBACK;
 
-  const quickLinks = [
+  const conferenceLinks = [
     { key: "about", href: "/about" },
     { key: "cap241", href: "/cap-241" },
     { key: "programme", href: "/programme" },
+    { key: "speakers", href: "/speakers" },
+  ];
+
+  const connectLinks = [
+    { key: "partners", href: "/partners" },
+    { key: "media", href: "/media" },
     { key: "contact", href: "/contact" },
+    { key: "register", href: "/register" },
   ];
 
   return (
@@ -70,13 +77,13 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Col 2: Quick links */}
+          {/* Col 2: Quick links — two sub-columns */}
           <div className="flex flex-col items-center md:items-start gap-3">
             <h3 className="font-heading text-sm font-semibold uppercase tracking-widest text-white/60">
               {locale === "fr" ? "Liens rapides" : "Quick links"}
             </h3>
-            <nav className="flex flex-col gap-2" aria-label="Footer navigation">
-              {quickLinks.map(({ key, href }) => (
+            <nav className="grid grid-cols-2 gap-x-8 gap-y-2" aria-label="Footer navigation">
+              {[...conferenceLinks, ...connectLinks].map(({ key, href }) => (
                 <Link
                   key={key}
                   href={`/${locale}${href}`}
@@ -98,7 +105,6 @@ export function Footer() {
                 { icon: FacebookLogo, label: "Facebook", href: "https://www.facebook.com/share/1B4pNuGHt7/?mibextid=wwXIfr" },
                 { icon: TwitterLogo, label: "Twitter / X", href: "https://x.com/resilience241" },
                 { icon: InstagramLogo, label: "Instagram", href: "https://instagram.com/resilience_241" },
-                { icon: YoutubeLogo, label: "YouTube", href: "#" },
               ].map(({ icon: Icon, label, href }) => (
                 <a
                   key={label}

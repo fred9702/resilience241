@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { PartnersHero } from "@/components/partners/PartnersHero";
 import { PartnersGrid } from "@/components/partners/PartnersGrid";
+import { PartnersCta } from "@/components/partners/PartnersCta";
 import { buildMetadata } from "@/lib/seo";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -19,6 +20,7 @@ export default async function PartnersPage({ params }: Props) {
     <>
       <PartnersHero />
       <PartnersGrid />
+      <PartnersCta />
     </>
   );
 }
