@@ -21,10 +21,10 @@ const PILLAR_LOGOS = [
 ] as const;
 
 const PILLAR_PHOTOS = [
-  "/images/photography/operating-room.jpg",
+  "/images/photography/medical-examination.jpg",
   "/images/photography/artisan-hands.jpg",
   "/images/photography/cap-femmes-gathering.jpg",
-  "/images/photography/medical-examination.jpg",
+  "/images/photography/doctor-baby.jpg",
 ] as const;
 
 export function Cap241Pillars() {
