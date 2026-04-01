@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { HighlightKeywords } from "@/components/ui/HighlightKeywords";
@@ -29,7 +30,9 @@ export function AboutCampaign() {
         <div className="h-1/4 bg-green" />
       </div>
 
-      <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
+      <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row gap-10 lg:gap-14">
+        <div className="md:w-3/5">
         <ScrollReveal>
           <span className="inline-block font-heading text-sm font-semibold uppercase tracking-widest text-orange bg-orange/10 px-4 py-1.5 rounded-full mb-6">
             {t("campaignBadge")}
@@ -113,6 +116,36 @@ export function AboutCampaign() {
             <HighlightKeywords>{t("campaignFramework")}</HighlightKeywords>
           </p>
         </ScrollReveal>
+        </div>
+
+        {/* Image column — stacked photos */}
+        <div className="md:w-2/5">
+          <ScrollReveal>
+            <div className="space-y-6 md:sticky md:top-24">
+              <div className="rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/photography/zita-community.jpg"
+                  alt={t("campaignTitle")}
+                  width={1600}
+                  height={900}
+                  className="w-full h-auto object-cover"
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                />
+              </div>
+              <div className="rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/photography/mature-woman-memory.jpg"
+                  alt=""
+                  width={1066}
+                  height={1600}
+                  className="w-full h-auto aspect-[4/3] object-cover"
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                />
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+        </div>
       </div>
     </section>
   );

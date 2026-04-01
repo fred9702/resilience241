@@ -2,13 +2,20 @@
 
 import { useTranslations } from "next-intl";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { PhotoBackground } from "@/components/ui/PhotoBackground";
 
 export function AboutClosing() {
   const t = useTranslations("about");
 
   return (
-    <section className="relative py-12 md:py-16 overflow-hidden bg-brown">
-      <div className="relative mx-auto max-w-4xl px-6 lg:px-8 text-center">
+    <PhotoBackground
+      src="/images/photography/hands-unity.jpg"
+      alt=""
+      overlayColor="bg-brown"
+      overlayOpacity="opacity-85"
+    >
+      <section className="py-12 md:py-16 overflow-hidden">
+      <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
         <ScrollReveal>
           <div
             className="mx-auto w-16 h-1 bg-gradient-to-r from-orange to-crimson rounded-full mb-8"
@@ -23,6 +30,7 @@ export function AboutClosing() {
           />
         </ScrollReveal>
       </div>
-    </section>
+      </section>
+    </PhotoBackground>
   );
 }
