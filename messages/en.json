@@ -33,6 +33,7 @@
     "button": "Register now",
     "date": "17 April 2026 · Libreville, Gabon",
     "programmeButton": "View Programme",
+    "learnMoreButton": "Learn more",
     "stat1": { "value": "19", "label": "First Ladies" },
     "stat2": { "value": "4", "label": "Pillars" },
     "stat3": { "value": "1", "label": "Day" }
