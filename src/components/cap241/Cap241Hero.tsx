@@ -33,8 +33,8 @@ export function Cap241Hero() {
 
       <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
         <ScrollReveal>
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-8">
-            <span className="inline-block font-heading text-sm font-semibold uppercase tracking-widest text-orange bg-orange/10 px-4 py-1.5 rounded-full self-start">
+          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-8">
+            <span className="inline-block font-heading text-sm font-semibold uppercase tracking-widest text-orange bg-orange/10 px-4 py-1.5 rounded-full">
               {t("badge")}
             </span>
             <Image
@@ -42,7 +42,7 @@ export function Cap241Hero() {
               alt="CAP 241"
               width={200}
               height={80}
-              className="object-contain h-16 md:h-20 w-auto"
+              className="object-contain h-16 md:h-20 w-auto self-start"
               priority
             />
           </div>
