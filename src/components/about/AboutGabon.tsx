@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { SectionBadge } from "@/components/ui/SectionBadge";
@@ -24,9 +23,7 @@ export function AboutGabon() {
         aria-hidden="true"
       />
 
-      <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row-reverse gap-10 lg:gap-14">
-        <div className="md:w-3/5">
+      <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
         <ScrollReveal>
           <SectionBadge color="green" variant="underline">
             {t("gabonBadge")}
@@ -106,36 +103,6 @@ export function AboutGabon() {
             </Button>
           </div>
         </ScrollReveal>
-        </div>
-
-        {/* Image column */}
-        <div className="md:w-2/5">
-          <ScrollReveal>
-            <div className="space-y-6 md:sticky md:top-24">
-              <div className="rounded-2xl overflow-hidden">
-                <Image
-                  src="/images/photography/zita-boat.jpg"
-                  alt=""
-                  width={1600}
-                  height={1067}
-                  className="w-full h-auto object-cover"
-                  sizes="(max-width: 768px) 100vw, 40vw"
-                />
-              </div>
-              <div className="rounded-2xl overflow-hidden">
-                <Image
-                  src="/images/photography/artisan-weaving.jpg"
-                  alt=""
-                  width={1066}
-                  height={1600}
-                  className="w-full h-auto aspect-[4/3] object-cover"
-                  sizes="(max-width: 768px) 100vw, 40vw"
-                />
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-        </div>
       </div>
     </section>
   );

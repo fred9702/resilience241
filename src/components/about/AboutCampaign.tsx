@@ -10,18 +10,26 @@ export function AboutCampaign() {
 
   return (
     <section className="relative py-20 md:py-28 overflow-hidden">
+      {/* Full-bleed background photo */}
+      <Image
+        src="/images/photography/first-ladies-group.jpg"
+        alt=""
+        fill
+        className="object-cover"
+        sizes="100vw"
+      />
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(135deg, var(--color-warm-cream) 0%, var(--color-light-beige) 100%)",
+            "linear-gradient(135deg, rgba(251,240,230,0.90) 0%, rgba(245,230,211,0.88) 100%)",
         }}
         aria-hidden="true"
       />
 
       {/* Vertical accent stripe */}
       <div
-        className="absolute left-0 top-0 bottom-0 w-2 md:w-3"
+        className="absolute left-0 top-0 bottom-0 w-2 md:w-3 z-10"
         aria-hidden="true"
       >
         <div className="h-1/4 bg-orange" />
@@ -30,9 +38,7 @@ export function AboutCampaign() {
         <div className="h-1/4 bg-green" />
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row gap-10 lg:gap-14">
-        <div className="md:w-3/5">
+      <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
         <ScrollReveal>
           <span className="inline-block font-heading text-sm font-semibold uppercase tracking-widest text-orange bg-orange/10 px-4 py-1.5 rounded-full mb-6">
             {t("campaignBadge")}
@@ -116,36 +122,6 @@ export function AboutCampaign() {
             <HighlightKeywords>{t("campaignFramework")}</HighlightKeywords>
           </p>
         </ScrollReveal>
-        </div>
-
-        {/* Image column — stacked photos */}
-        <div className="md:w-2/5">
-          <ScrollReveal>
-            <div className="space-y-6 md:sticky md:top-24">
-              <div className="rounded-2xl overflow-hidden">
-                <Image
-                  src="/images/photography/zita-community.jpg"
-                  alt={t("campaignTitle")}
-                  width={1600}
-                  height={900}
-                  className="w-full h-auto object-cover"
-                  sizes="(max-width: 768px) 100vw, 40vw"
-                />
-              </div>
-              <div className="rounded-2xl overflow-hidden">
-                <Image
-                  src="/images/photography/mature-woman-memory.jpg"
-                  alt=""
-                  width={1066}
-                  height={1600}
-                  className="w-full h-auto aspect-[4/3] object-cover"
-                  sizes="(max-width: 768px) 100vw, 40vw"
-                />
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-        </div>
       </div>
     </section>
   );

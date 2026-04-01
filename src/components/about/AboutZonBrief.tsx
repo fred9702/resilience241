@@ -9,7 +9,7 @@ export function AboutZonBrief() {
 
   return (
     <PhotoBackground
-      src="/images/photography/zita-podium.jpg"
+      src="/images/photography/zita-community.jpg"
       alt=""
       overlayColor="bg-crimson"
       overlayOpacity="opacity-75"
