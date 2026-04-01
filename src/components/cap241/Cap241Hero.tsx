@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { HighlightKeywords } from "@/components/ui/HighlightKeywords";
@@ -32,9 +33,19 @@ export function Cap241Hero() {
 
       <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
         <ScrollReveal>
-          <span className="inline-block font-heading text-sm font-semibold uppercase tracking-widest text-orange bg-orange/10 px-4 py-1.5 rounded-full mb-6">
-            {t("badge")}
-          </span>
+          <div className="mb-8">
+            <Image
+              src="/images/cap241/cap-241.png"
+              alt="CAP 241"
+              width={200}
+              height={80}
+              className="object-contain h-16 md:h-20 w-auto mb-6"
+              priority
+            />
+            <span className="inline-block font-heading text-sm font-semibold uppercase tracking-widest text-orange bg-orange/10 px-4 py-1.5 rounded-full">
+              {t("badge")}
+            </span>
+          </div>
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>

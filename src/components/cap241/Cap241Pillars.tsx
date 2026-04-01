@@ -1,16 +1,24 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 const PILLAR_COLORS = [
-  { bg: "bg-crimson/8", border: "border-crimson/20", accent: "text-crimson", dot: "bg-crimson" },
-  { bg: "bg-orange/8", border: "border-orange/20", accent: "text-orange", dot: "bg-orange" },
   { bg: "bg-green/8", border: "border-green/20", accent: "text-green", dot: "bg-green" },
+  { bg: "bg-orange/8", border: "border-orange/20", accent: "text-orange", dot: "bg-orange" },
+  { bg: "bg-crimson/8", border: "border-crimson/20", accent: "text-crimson", dot: "bg-crimson" },
   { bg: "bg-navy/8", border: "border-navy/20", accent: "text-navy", dot: "bg-navy" },
 ] as const;
 
 const PILLAR_KEYS = ["pillar1", "pillar2", "pillar3", "pillar4"] as const;
+
+const PILLAR_LOGOS = [
+  "/images/cap241/cap-sante.png",
+  "/images/cap241/cap-femmes.png",
+  "/images/cap241/cap-jeunesse.png",
+  "/images/cap241/cap-education.png",
+] as const;
 
 export function Cap241Pillars() {
   const t = useTranslations("cap241");
@@ -39,22 +47,26 @@ export function Cap241Pillars() {
                 <div
                   className={`relative ${color.bg} border ${color.border} rounded-2xl p-8 h-full transition-transform hover:scale-[1.01]`}
                 >
-                  {/* Pillar number */}
-                  <div className={`w-10 h-10 rounded-full ${color.dot} flex items-center justify-center mb-5`}>
-                    <span className="font-heading font-bold text-white text-sm">
-                      {i + 1}
-                    </span>
+                  {/* Pillar logo + name */}
+                  <div className="flex items-center gap-4 mb-5">
+                    <Image
+                      src={PILLAR_LOGOS[i]}
+                      alt={t(`${key}.name`)}
+                      width={56}
+                      height={56}
+                      className="h-12 w-auto shrink-0"
+                    />
+                    <div>
+                      <h3 className={`font-heading text-xl font-bold ${color.accent}`}>
+                        {t(`${key}.name`)}
+                      </h3>
+                      <p className="font-heading text-sm font-semibold uppercase tracking-wider text-near-black/40">
+                        {t(`${key}.programme`)}
+                      </p>
+                    </div>
                   </div>
 
-                  <h3 className={`font-heading text-xl font-bold ${color.accent}`}>
-                    {t(`${key}.name`)}
-                  </h3>
-
-                  <p className="mt-1 font-heading text-sm font-semibold uppercase tracking-wider text-near-black/40">
-                    {t(`${key}.programme`)}
-                  </p>
-
-                  <p className="mt-4 font-body text-base md:text-lg text-near-black/75 leading-relaxed">
+                  <p className="font-body text-base md:text-lg text-near-black/75 leading-relaxed">
                     {t(`${key}.description`)}
                   </p>
 
