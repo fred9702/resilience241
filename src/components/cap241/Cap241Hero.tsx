@@ -31,7 +31,9 @@ export function Cap241Hero() {
         <div className="h-1/4 bg-brown" />
       </div>
 
-      <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
+      <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row gap-10 lg:gap-14 items-center">
+        <div className="md:w-1/2">
         <ScrollReveal>
           <div className="mb-8">
             <Image
@@ -88,6 +90,25 @@ export function Cap241Hero() {
             ))}
           </div>
         </ScrollReveal>
+        </div>
+
+        {/* Hero photo */}
+        <div className="md:w-1/2">
+          <ScrollReveal delay={0.2}>
+            <div className="rounded-2xl overflow-hidden">
+              <Image
+                src="/images/photography/doctor-baby.jpg"
+                alt=""
+                width={1067}
+                height={1600}
+                className="w-full h-auto object-cover"
+                style={{ maxHeight: "540px" }}
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+          </ScrollReveal>
+        </div>
+        </div>
       </div>
     </section>
   );
