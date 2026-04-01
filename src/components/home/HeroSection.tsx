@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import type { Transition } from "framer-motion";
-import { HighlightKeywords } from "@/components/ui/HighlightKeywords";
 
 const HERO_LOGOS: Record<string, string> = {
   fr: "/images/fr/campaign-logo-full.svg",
@@ -142,27 +141,13 @@ export function HeroSection() {
             alt="OAFLAD #BuildingResilience"
             width={480}
             height={240}
-            className="h-auto w-[240px] md:w-[360px] lg:w-[440px] mx-auto"
+            className="h-auto w-[320px] md:w-[480px] lg:w-[580px] mx-auto"
           />
         </motion.div>
 
-        <motion.h1
-          className="mt-8 font-heading text-5xl md:text-7xl font-extrabold text-crimson leading-tight"
+        <motion.p
+          className="mt-8 font-heading text-2xl md:text-4xl font-bold text-crimson"
           {...fadeUp(0.6)}
-        >
-          {t("title")}
-        </motion.h1>
-
-        <motion.p
-          className="mt-4 font-heading text-2xl md:text-3xl font-bold text-orange"
-          {...fadeUp(0.8)}
-        >
-          <HighlightKeywords>{t("hashtag")}</HighlightKeywords>
-        </motion.p>
-
-        <motion.p
-          className="mt-4 font-body text-lg md:text-xl text-brown/90"
-          {...fadeUp(1.0)}
         >
           {t("subtitle")}
         </motion.p>
@@ -170,7 +155,7 @@ export function HeroSection() {
         {/* Countdown timer */}
         <motion.div
           className="mt-10"
-          {...fadeUp(1.2)}
+          {...fadeUp(0.8)}
         >
           <div ref={srRef} className="sr-only" aria-live="polite" role="status" />
           <p className="text-sm uppercase tracking-widest text-brown/60 mb-4 font-heading">
