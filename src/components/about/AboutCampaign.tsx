@@ -12,7 +12,7 @@ export function AboutCampaign() {
     <section className="relative py-20 md:py-28 overflow-hidden">
       {/* Full-bleed background photo */}
       <Image
-        src="/images/photography/first-ladies-group.jpg"
+        src="/images/photography/cap-femmes-gathering.jpg"
         alt=""
         fill
         className="object-cover"

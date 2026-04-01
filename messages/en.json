@@ -352,6 +352,15 @@
     "honorificMrs": "H.E Mrs",
     "honorificMr": "H.E Mr",
     "partnersCta": "View partners",
+    "dignitariesBadge": "Dignitaries",
+    "dignitariesTitle": "Dignitaries in attendance",
+    "dignitaries": {
+      "drNardos": {
+        "name": "Dr Nardos Berhanu",
+        "title": "Executive Secretary",
+        "organisation": "OAFLAD"
+      }
+    },
     "firstLadies": {
       "gabon": { "name": "Zita Oligui Nguema", "country": "Gabon" },
       "angola": { "name": "Ana Dias Lourenço", "country": "Angola" },
