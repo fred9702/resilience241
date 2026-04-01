@@ -21,7 +21,7 @@ export async function ComingSoonPage({ namespace, backgroundImage }: ComingSoonP
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-warm-cream opacity-88" aria-hidden="true" />
+          <div className="absolute inset-0 bg-warm-cream opacity-90" aria-hidden="true" />
         </>
       ) : (
         <div

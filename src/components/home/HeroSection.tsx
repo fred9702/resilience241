@@ -127,7 +127,7 @@ export function HeroSection() {
         <motion.div {...logoAnim}>
           <Image
             src={heroLogo}
-            alt="OAFLAD #BuildingResilience"
+            alt={locale === "fr" ? "OPDAD #RenforcerLaRésilience" : "OAFLAD #BuildingResilience"}
             width={480}
             height={240}
             className="h-auto w-[320px] md:w-[480px] lg:w-[580px] mx-auto"
