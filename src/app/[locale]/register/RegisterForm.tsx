@@ -208,7 +208,7 @@ export function RegisterForm() {
             <select
               name="phoneCountryCode"
               defaultValue="+241"
-              className={`${inputClass} w-32 shrink-0`}
+              className={`${inputClass} max-w-[8rem] min-w-0 shrink-0`}
               aria-label={t("phoneCountryCode")}
             >
               <optgroup label="—">
