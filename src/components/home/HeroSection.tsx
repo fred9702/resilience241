@@ -122,17 +122,6 @@ export function HeroSection() {
         aria-hidden="true"
       />
 
-      {/* Geometric triangle stripe on far-left edge */}
-      <div
-        className="absolute left-0 top-0 bottom-0 w-3 md:w-4 z-10"
-        aria-hidden="true"
-      >
-        <div className="h-1/4 bg-orange" />
-        <div className="h-1/4 bg-crimson" />
-        <div className="h-1/4 bg-brown" />
-        <div className="h-1/4 bg-green" />
-      </div>
-
       {/* Content — centered */}
       <div className="relative z-10 mx-auto max-w-5xl w-full px-4 py-20 lg:px-8 text-center">
         <motion.div {...logoAnim}>
