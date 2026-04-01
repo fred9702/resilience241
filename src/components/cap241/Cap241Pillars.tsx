@@ -5,9 +5,9 @@ import { useTranslations } from "next-intl";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 const PILLAR_COLORS = [
-  { bg: "bg-crimson/8", border: "border-crimson/20", accent: "text-crimson", dot: "bg-crimson" },
-  { bg: "bg-orange/8", border: "border-orange/20", accent: "text-orange", dot: "bg-orange" },
   { bg: "bg-green/8", border: "border-green/20", accent: "text-green", dot: "bg-green" },
+  { bg: "bg-orange/8", border: "border-orange/20", accent: "text-orange", dot: "bg-orange" },
+  { bg: "bg-crimson/8", border: "border-crimson/20", accent: "text-crimson", dot: "bg-crimson" },
   { bg: "bg-navy/8", border: "border-navy/20", accent: "text-navy", dot: "bg-navy" },
 ] as const;
 
