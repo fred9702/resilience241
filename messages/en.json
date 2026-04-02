@@ -82,8 +82,7 @@
     "copyright": "© 2026 Bomalab. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Use",
-    "tagline": "Organisation of African First Ladies for Development",
-    "madeBy": "Made with love by Bomalab 🤖"
+    "tagline": "Organisation of African First Ladies for Development"
   },
   "media": {
     "metaDescription": "Media resources and coverage from the OAFLAD #BuildingResilience campaign — photos, press releases, and event highlights.",
@@ -328,10 +327,8 @@
         "description": "Official launch of CAP 241 and closing declarations"
       }
     },
-    "cap241Badge": "Gabon's National Response",
-    "cap241Title": "Discover CAP 241",
-    "cap241Intro": "Learn how Gabon is translating the continental #BuildingResilience vision into a structured national framework for social action.",
-    "cap241Cta": "Explore CAP 241",
+    "speakersCtaTitle": "Meet our speakers",
+    "speakersCtaIntro": "Discover the African leaders, experts, and advocates who will be speaking at the #BuildingResilience conference.",
     "speakersCta": "View speakers"
   },
   "speakers": {

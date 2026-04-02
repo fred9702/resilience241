@@ -23,23 +23,15 @@ export function ProgrammeCap241Cta() {
 
       <div className="relative mx-auto max-w-3xl px-6 lg:px-8 text-center">
         <ScrollReveal>
-          <span className="inline-block font-heading text-sm font-semibold uppercase tracking-widest text-white/80 bg-white/15 px-4 py-1.5 rounded-full mb-6">
-            {t("cap241Badge")}
-          </span>
           <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-white mb-4">
-            {t("cap241Title")}
+            {t("speakersCtaTitle")}
           </h2>
           <p className="font-body text-lg text-white/85 max-w-2xl mx-auto mb-10">
-            <HighlightKeywords>{t("cap241Intro")}</HighlightKeywords>
+            <HighlightKeywords>{t("speakersCtaIntro")}</HighlightKeywords>
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button href={`/${locale}/speakers`} variant="primary">
-              {t("speakersCta")}
-            </Button>
-            <Button href={`/${locale}/cap-241`} variant="secondary">
-              {t("cap241Cta")}
-            </Button>
-          </div>
+          <Button href={`/${locale}/speakers`} variant="primary">
+            {t("speakersCta")}
+          </Button>
         </ScrollReveal>
       </div>
     </section>

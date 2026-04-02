@@ -82,8 +82,7 @@
     "copyright": "© 2026 Bomalab. Tous droits réservés.",
     "privacy": "Politique de confidentialité",
     "terms": "Conditions d'utilisation",
-    "tagline": "Organisation des Premières Dames d'Afrique pour le Développement",
-    "madeBy": "Fait avec amour par Bomalab 🤖"
+    "tagline": "Organisation des Premières Dames d'Afrique pour le Développement"
   },
   "media": {
     "metaDescription": "Ressources médiatiques de la campagne OPDAD #RenforcerLaRésilience — photos, communiqués de presse et moments forts.",
@@ -328,10 +327,8 @@
         "description": "Lancement officiel du CAP 241 et déclarations de clôture"
       }
     },
-    "cap241Badge": "La réponse nationale du Gabon",
-    "cap241Title": "Découvrir CAP 241",
-    "cap241Intro": "Découvrez comment le Gabon traduit la vision continentale #RenforcerLaRésilience en un cadre national structuré d'action sociale.",
-    "cap241Cta": "Explorer CAP 241",
+    "speakersCtaTitle": "Découvrir nos intervenants",
+    "speakersCtaIntro": "Découvrez les leaders, experts et défenseurs africains qui interviendront lors de la conférence #RenforcerLaRésilience.",
     "speakersCta": "Voir les intervenants"
   },
   "speakers": {
