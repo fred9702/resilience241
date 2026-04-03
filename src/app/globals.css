@@ -13,6 +13,7 @@
   --color-near-black: #2D2D2D;
 
   /* Font families */
+  --font-sans: var(--font-source-sans), "Source Sans 3", sans-serif;
   --font-heading: var(--font-jost), "Jost", "Futura", sans-serif;
   --font-body: var(--font-source-sans), "Source Sans 3", sans-serif;
   --font-mono: var(--font-source-code), "Source Code Pro", monospace;
@@ -25,7 +26,6 @@ html {
 body {
   background-color: var(--color-warm-cream);
   color: var(--color-near-black);
-  font-family: var(--font-body);
 }
 
 /*

@@ -53,10 +53,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html suppressHydrationWarning>
-      <body
-        className={`${jost.variable} ${sourceSans.variable} ${sourceCode.variable} antialiased`}
-      >
+    <html suppressHydrationWarning className={`${jost.variable} ${sourceSans.variable} ${sourceCode.variable}`}>
+      <body className="antialiased">
+
         {children}
         <Analytics />
         <SpeedInsights />
