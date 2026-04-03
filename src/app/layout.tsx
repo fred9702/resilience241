@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Source_Sans_3, Source_Code_Pro } from "next/font/google";
+import { Jost, Source_Sans_3, Source_Code_Pro } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const jost = Jost({
+  variable: "--font-jost",
   subsets: ["latin"],
-  weight: ["400", "600", "700", "800"],
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -55,7 +55,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning>
       <body
-        className={`${playfair.variable} ${sourceSans.variable} ${sourceCode.variable} antialiased`}
+        className={`${jost.variable} ${sourceSans.variable} ${sourceCode.variable} antialiased`}
       >
         {children}
         <Analytics />

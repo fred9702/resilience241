@@ -57,17 +57,17 @@ This document defines the complete visual identity for the **Building Resilience
 
 ### Font System
 
-Two fonts only. Playfair Display is the brand voice — it unifies the site with the campaign logo, which uses Playfair Display Bold. Source Sans 3 handles body text where a serif would slow reading at paragraph length.
+Two fonts only. Jost is the brand voice — a geometric sans-serif designed as a contemporary interpretation of Futura. Clean, modern, and consistent across headings, navigation, buttons, and labels. Source Sans 3 handles body text for optimal reading comfort at paragraph length.
 
 | Role | Family | CSS Variable | Fallback |
 |------|--------|--------------|----------|
-| **Headings / UI / Nav / Buttons / Labels** | Playfair Display | `--font-heading` / `font-heading` | Georgia, serif |
+| **Headings / UI / Nav / Buttons / Labels** | Jost | `--font-heading` / `font-heading` | Futura, sans-serif |
 | **Body paragraphs / descriptions** | Source Sans 3 | `--font-body` / `font-body` | sans-serif |
 | **Monospace** | Source Code Pro | `--font-mono` / `font-mono` | monospace |
 
-**Rule of thumb:** if it's a UI element, heading, or label → `font-heading` (Playfair Display). If it's a body paragraph or long description → `font-body` (Source Sans 3).
+**Rule of thumb:** if it's a UI element, heading, or label → `font-heading` (Jost). If it's a body paragraph or long description → `font-body` (Source Sans 3).
 
-### Weight Scale (Playfair Display)
+### Weight Scale (Jost)
 
 | Context | Tailwind class | Weight |
 |---------|---------------|--------|
@@ -93,11 +93,9 @@ Two fonts only. Playfair Display is the brand voice — it unifies the site with
 ### Global Text Styles
 
 ```css
-h1, h2, h3 { letter-spacing: -0.01em; }
+h1, h2, h3 { letter-spacing: -0.02em; }
 p { line-height: 1.7; }
 ```
-
-> **Note on letter-spacing:** Playfair Display is a serif with generous built-in optical spacing. `-0.01em` is used (rather than the tighter `-0.02em` common for sans-serif display fonts) to preserve legibility and the natural character of the typeface.
 
 ---
 
@@ -447,4 +445,4 @@ Logo variants, favicon, and OG images are documented in [`ASSET-PLAN.md`](./ASSE
 
 ---
 
-*Source of truth: `feat/font-system` branch — `layout.tsx` (font imports), `globals.css` (CSS variables + heading styles), `HeroSection.tsx`, `CTABanner.tsx`, `Navbar.tsx`, `Button.tsx`, `ComingSoonPage.tsx`, `ScrollReveal.tsx`*
+*Source of truth: `feat/font-system` branch — `layout.tsx` (Jost + Source Sans 3 imports), `globals.css` (CSS variables + heading styles), `HeroSection.tsx`, `CTABanner.tsx`, `Navbar.tsx`, `Button.tsx`, `ComingSoonPage.tsx`, `ScrollReveal.tsx`*
