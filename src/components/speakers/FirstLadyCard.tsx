@@ -20,12 +20,6 @@ export function FirstLadyCard({
   const name = t(`firstLadies.${lady.id}.name`);
   const country = t(`firstLadies.${lady.id}.country`);
 
-  const titleLabel = lady.isHost
-    ? t("hostLabel")
-    : lady.isFirstGentleman
-      ? t("firstGentlemanLabel")
-      : t("firstLadyLabel");
-
   const honorific = lady.honorificOverride
     ? t(lady.honorificOverride)
     : lady.isFirstGentleman ? t("honorificMr") : t("honorificMrs");
@@ -52,9 +46,6 @@ export function FirstLadyCard({
 
         {/* Featured info */}
         <div className="flex-1 py-4 sm:py-6 px-2 sm:pr-6 text-center sm:text-left">
-          <span className="inline-block text-xs font-heading font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-crimson text-white mb-3">
-            {titleLabel}
-          </span>
           <div className="flex items-center justify-center sm:justify-start gap-2 mb-2">
             <span className="text-2xl leading-none">{lady.countryFlag}</span>
             <span className="font-body text-sm text-near-black/60">{country}</span>
@@ -99,18 +90,6 @@ export function FirstLadyCard({
           </div>
         )}
 
-        {/* Title badge overlay */}
-        <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/60 to-transparent pt-8 pb-2 px-2">
-          <span
-            className={`inline-block text-[10px] font-heading font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full ${
-              lady.isHost
-                ? "bg-crimson text-white"
-                : "bg-white/80 text-near-black/70"
-            }`}
-          >
-            {titleLabel}
-          </span>
-        </div>
       </div>
 
       {/* Info */}
