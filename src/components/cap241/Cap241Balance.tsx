@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { SectionBadge } from "@/components/ui/SectionBadge";
@@ -26,9 +27,18 @@ export function Cap241Balance() {
           <SectionBadge color="crimson" variant="underline">
             {t("balanceBadge")}
           </SectionBadge>
-          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-crimson">
-            <HighlightKeywords>{t("balanceTitle")}</HighlightKeywords>
-          </h2>
+          <div className="flex items-center gap-4 md:gap-6">
+            <Image
+              src="/images/cap241/cap-sante.png"
+              alt="CAP Santé"
+              width={80}
+              height={37}
+              className="shrink-0"
+            />
+            <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-crimson">
+              <HighlightKeywords>{t("balanceTitle")}</HighlightKeywords>
+            </h2>
+          </div>
           <p className="mt-2 font-heading text-lg md:text-xl font-semibold text-orange">
             {t("balanceSubtitle")}
           </p>
