@@ -59,7 +59,9 @@ export function FirstLadyMessageModal({
 
   const name = t(`firstLadies.${lady.id}.name`);
   const country = t(`firstLadies.${lady.id}.country`);
-  const honorific = lady.isFirstGentleman ? t("honorificMr") : t("honorificMrs");
+  const honorific = lady.honorificOverride
+    ? t(lady.honorificOverride)
+    : lady.isFirstGentleman ? t("honorificMr") : t("honorificMrs");
 
   return (
     <AnimatePresence>

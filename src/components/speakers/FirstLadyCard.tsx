@@ -26,7 +26,9 @@ export function FirstLadyCard({
       ? t("firstGentlemanLabel")
       : t("firstLadyLabel");
 
-  const honorific = lady.isFirstGentleman ? t("honorificMr") : t("honorificMrs");
+  const honorific = lady.honorificOverride
+    ? t(lady.honorificOverride)
+    : lady.isFirstGentleman ? t("honorificMr") : t("honorificMrs");
 
   if (featured) {
     return (

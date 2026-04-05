@@ -6,7 +6,8 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { Quotes } from "@phosphor-icons/react";
 
 export function PresidentialQuote() {
-  const t = useTranslations("speakers.president");
+  const t = useTranslations("speakers");
+  const tp = useTranslations("speakers.president");
 
   return (
     <section className="relative py-16 md:py-24 overflow-hidden bg-near-black">
@@ -28,7 +29,7 @@ export function PresidentialQuote() {
               <div className="relative w-48 md:w-56 aspect-[3/4] rounded-2xl overflow-hidden ring-2 ring-crimson/30 shadow-xl">
                 <Image
                   src="/images/speakers/president-brice-oligui-nguema.jpg"
-                  alt={t("name")}
+                  alt={tp("name")}
                   width={224}
                   height={300}
                   className="object-cover w-full h-full"
@@ -38,20 +39,23 @@ export function PresidentialQuote() {
 
             {/* Quote */}
             <div className="flex-1 text-center md:text-left">
+              <span className="inline-block text-xs font-heading font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-crimson text-white mb-4">
+                {t("presidentBadge")}
+              </span>
               <Quotes
                 size={36}
                 weight="fill"
                 className="text-crimson/40 mb-4 mx-auto md:mx-0"
               />
               <blockquote className="font-body text-base md:text-lg text-white/90 leading-relaxed italic">
-                {t("quote")}
+                {tp("quote")}
               </blockquote>
               <div className="mt-6 border-t border-white/10 pt-4">
                 <p className="font-heading text-base font-bold text-white">
-                  {t("name")}
+                  {tp("name")}
                 </p>
                 <p className="font-body text-sm text-white/60">
-                  {t("title")}
+                  {tp("title")}
                 </p>
               </div>
             </div>

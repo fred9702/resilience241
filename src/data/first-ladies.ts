@@ -4,6 +4,8 @@ export interface FirstLady {
   photoPath: string | null;
   isHost?: boolean;
   isFirstGentleman?: boolean;
+  /** Override the default honorific (e.g. "Dr" instead of "Mrs") */
+  honorificOverride?: string;
 }
 
 export const firstLadies: FirstLady[] = [
@@ -22,6 +24,7 @@ export const firstLadies: FirstLady[] = [
     id: "sierraLeone",
     countryFlag: "\u{1F1F8}\u{1F1F1}",
     photoPath: "/images/partners/first-ladies/fatima-maada-bio.jpg",
+    honorificOverride: "honorificDr",
   },
   {
     id: "senegal",

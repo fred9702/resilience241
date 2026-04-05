@@ -340,15 +340,15 @@
         "description": "Clôture officielle de la journée"
       }
     },
-    "speakersCtaTitle": "Découvrir nos intervenants",
-    "speakersCtaIntro": "Découvrez les leaders, experts et défenseurs africains qui interviendront lors de la conférence #RenforcerLaRésilience.",
-    "speakersCta": "Voir les intervenants"
+    "speakersCtaTitle": "Patronage & Dignitaires",
+    "speakersCtaIntro": "Découvrez les leaders distingués et Premières Dames qui accordent leur patronage à la conférence #RenforcerLaRésilience.",
+    "speakersCta": "Voir le patronage"
   },
   "speakers": {
-    "metaDescription": "Intervenants de la conférence OPDAD #RenforcerLaRésilience — leaders africains, experts et défenseurs de la résilience des femmes.",
+    "metaDescription": "Patronage de la conférence OPDAD #RenforcerLaRésilience — leaders distingués et Premières Dames engagées pour la résilience en Afrique.",
     "title": "Patronage & Dignitaires",
     "badge": "Patronage & Dignitaires",
-    "intro": "Découvrez les leaders et dignitaires distingués qui participent à la conférence #RenforcerLaRésilience à Libreville.",
+    "intro": "La conférence #RenforcerLaRésilience est honorée par le patronage de leaders distingués et de Premières Dames de tout le continent africain.",
     "content": "Liste des intervenants à venir.",
     "comingSoonBadge": "Bientôt disponible",
     "comingSoonTitle": "Annonces des intervenants",
@@ -359,8 +359,10 @@
     "firstLadyLabel": "Première Dame",
     "honorificMrs": "S.E Mme",
     "honorificMr": "S.E M.",
+    "honorificDr": "S.E Dr",
     "readMessage": "Lire le message",
     "closeModal": "Fermer",
+    "presidentBadge": "Message présidentiel",
     "president": {
       "name": "S.E. Brice Clotaire Oligui Nguema",
       "title": "Président de la République Gabonaise",

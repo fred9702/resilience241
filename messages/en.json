@@ -340,15 +340,15 @@
         "description": "Official closing of the conference"
       }
     },
-    "speakersCtaTitle": "Meet our speakers",
-    "speakersCtaIntro": "Discover the African leaders, experts, and advocates who will be speaking at the #BuildingResilience conference.",
-    "speakersCta": "View speakers"
+    "speakersCtaTitle": "Patronage & Dignitaries",
+    "speakersCtaIntro": "Discover the distinguished leaders and First Ladies lending their patronage to the #BuildingResilience conference.",
+    "speakersCta": "View patronage"
   },
   "speakers": {
-    "metaDescription": "Speakers at the OAFLAD #BuildingResilience conference — African leaders, experts, and advocates for women's resilience.",
+    "metaDescription": "Patronage of the OAFLAD #BuildingResilience conference — distinguished leaders and First Ladies championing resilience across Africa.",
     "title": "Patronage & Dignitaries",
     "badge": "Patronage & Dignitaries",
-    "intro": "Meet the distinguished leaders and dignitaries attending the #BuildingResilience conference in Libreville.",
+    "intro": "The #BuildingResilience conference is honoured by the patronage of distinguished leaders and First Ladies from across Africa.",
     "content": "Speaker list coming soon.",
     "comingSoonBadge": "Coming Soon",
     "comingSoonTitle": "Speaker Announcements",
@@ -359,8 +359,10 @@
     "firstLadyLabel": "First Lady",
     "honorificMrs": "H.E Mrs",
     "honorificMr": "H.E Mr",
+    "honorificDr": "H.E Dr",
     "readMessage": "Read message",
     "closeModal": "Close",
+    "presidentBadge": "Presidential message",
     "president": {
       "name": "H.E. Brice Clotaire Oligui Nguema",
       "title": "President of the Gabonese Republic",
