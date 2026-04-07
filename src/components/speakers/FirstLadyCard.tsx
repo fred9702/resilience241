@@ -9,11 +9,13 @@ export function FirstLadyCard({
   featured = false,
   hasMessage = false,
   onReadMessage,
+  roleBadge,
 }: {
   lady: FirstLady;
   featured?: boolean;
   hasMessage?: boolean;
   onReadMessage?: () => void;
+  roleBadge?: string;
 }) {
   const t = useTranslations("speakers");
 
@@ -103,6 +105,11 @@ export function FirstLadyCard({
         <p className="font-heading text-sm font-bold text-near-black leading-tight">
           {honorific} {name}
         </p>
+        {roleBadge && (
+          <span className="inline-block mt-1 font-heading text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-orange/15 text-orange">
+            {roleBadge}
+          </span>
+        )}
         {hasMessage && (
           <button
             onClick={onReadMessage}

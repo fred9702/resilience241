@@ -20,8 +20,7 @@ export function FirstLadiesSection() {
     : null;
 
   const host = firstLadies.find((l) => l.isHost);
-  const keynotes = firstLadies.filter((l) => l.isKeynote);
-  const speakers = firstLadies.filter((l) => l.isSpeaker && !l.isKeynote);
+  const speakers = firstLadies.filter((l) => l.isSpeaker || l.isKeynote);
   const attending = firstLadies.filter((l) => !l.isHost && !l.isSpeaker && !l.isKeynote);
 
   const cardProps = (lady: typeof firstLadies[number]) => ({
@@ -52,36 +51,21 @@ export function FirstLadiesSection() {
           </ScrollReveal>
         )}
 
-        {/* Tier 2: Keynote speakers */}
-        {keynotes.length > 0 && (
+        {/* Tier 2: Confirmed speakers */}
+        {speakers.length > 0 && (
           <div className="mb-12">
             <ScrollReveal>
               <span className="inline-block font-heading text-xs font-semibold uppercase tracking-widest text-orange bg-orange/10 px-3 py-1 rounded-full mb-5">
                 {t("keynoteBadge")}
               </span>
             </ScrollReveal>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              {keynotes.map((lady, i) => (
-                <ScrollReveal key={lady.id} delay={0.03 * (i + 1)}>
-                  <FirstLadyCard {...cardProps(lady)} />
-                </ScrollReveal>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Tier 2b: Confirmed speakers */}
-        {speakers.length > 0 && (
-          <div className="mb-12">
-            <ScrollReveal>
-              <span className="inline-block font-heading text-xs font-semibold uppercase tracking-widest text-green bg-green/10 px-3 py-1 rounded-full mb-5">
-                {t("speakersBadge")}
-              </span>
-            </ScrollReveal>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
               {speakers.map((lady, i) => (
                 <ScrollReveal key={lady.id} delay={0.03 * (i + 1)}>
-                  <FirstLadyCard {...cardProps(lady)} />
+                  <FirstLadyCard
+                    {...cardProps(lady)}
+                    roleBadge={lady.isKeynote ? t(`firstLadies.${lady.id}.role`) : undefined}
+                  />
                 </ScrollReveal>
               ))}
             </div>

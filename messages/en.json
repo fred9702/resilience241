@@ -395,8 +395,8 @@
     },
     "firstLadies": {
       "gabon": { "name": "Zita Oligui Nguema", "country": "Gabon" },
-      "angola": { "name": "Ana Dias Lourenço", "country": "Angola" },
-      "sierraLeone": { "name": "Fatima Maada Bio", "country": "Sierra Leone" },
+      "angola": { "name": "Ana Dias Lourenço", "country": "Angola", "role": "Vice-President, OAFLAD" },
+      "sierraLeone": { "name": "Fatima Maada Bio", "country": "Sierra Leone", "role": "President, OAFLAD" },
       "senegal": { "name": "Marie Khone Faye", "country": "Senegal" },
       "drc": { "name": "Denise Nyakeru Tshisekedi", "country": "DR Congo" },
       "congo": { "name": "Antoinette Sassou Nguesso", "country": "Congo" },
