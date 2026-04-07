@@ -110,14 +110,16 @@ export function FirstLadyCard({
             {roleBadge}
           </span>
         )}
-        {hasMessage && (
-          <button
-            onClick={onReadMessage}
-            className="mt-auto pt-2 font-heading text-xs font-semibold text-crimson hover:text-crimson/80 transition-colors self-start"
-          >
-            {t("readMessage")}
-          </button>
-        )}
+        <div className="mt-auto">
+          {hasMessage && (
+            <button
+              onClick={onReadMessage}
+              className="pt-2 font-heading text-xs font-semibold text-crimson hover:text-crimson/80 transition-colors"
+            >
+              {t("readMessage")}
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );

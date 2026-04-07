@@ -61,7 +61,7 @@ export function FirstLadiesSection() {
             </ScrollReveal>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
               {speakers.map((lady, i) => (
-                <ScrollReveal key={lady.id} delay={0.03 * (i + 1)}>
+                <ScrollReveal key={lady.id} delay={0.03 * (i + 1)} className="h-full">
                   <FirstLadyCard
                     {...cardProps(lady)}
                     roleBadge={lady.isKeynote ? t(`firstLadies.${lady.id}.role`) : undefined}
@@ -82,7 +82,7 @@ export function FirstLadiesSection() {
             </ScrollReveal>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
               {attending.map((lady, i) => (
-                <ScrollReveal key={lady.id} delay={0.03 * (i + 1)}>
+                <ScrollReveal key={lady.id} delay={0.03 * (i + 1)} className="h-full">
                   <FirstLadyCard {...cardProps(lady)} />
                 </ScrollReveal>
               ))}
