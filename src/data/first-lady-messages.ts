@@ -9,7 +9,7 @@ export interface FirstLadySignature {
 export interface FirstLadyMessage {
   id: string;
   languages: string[];
-  signature: FirstLadySignature;
+  signature: Record<string, FirstLadySignature>;
 }
 
 /**
@@ -46,58 +46,57 @@ export const firstLadyMessages: FirstLadyMessage[] = [
     id: "gabon",
     languages: ["fr", "en"],
     signature: {
-      formal: "H.E. Mrs Zita Oligui Nguema",
-      title: "First Lady of the Gabonese Republic",
+      en: { formal: "H.E. Mrs Zita Oligui Nguema", title: "First Lady of the Gabonese Republic" },
+      fr: { formal: "S.E. Mme Zita Oligui Nguema", title: "Première Dame de la République Gabonaise" },
     },
   },
   {
     id: "angola",
     languages: ["pt", "fr", "en"],
     signature: {
-      formal: "H.E. Mrs Ana Dias Lourenço",
-      title: "First Lady of Angola",
+      en: { formal: "H.E. Mrs Ana Dias Lourenço", title: "First Lady of Angola" },
+      fr: { formal: "S.E. Mme Ana Dias Lourenço", title: "Première Dame de la République d'Angola" },
+      pt: { formal: "S.E. Sra. Ana Dias Lourenço", title: "Primeira-Dama da República de Angola" },
     },
   },
   {
     id: "sierraLeone",
     languages: ["fr", "en"],
     signature: {
-      formal: "H.E. Dr Fatima Maada Bio",
-      title: "First Lady of Sierra Leone",
-      role: "President, OAFLAD",
+      en: { formal: "H.E. Dr Fatima Maada Bio", title: "First Lady of Sierra Leone", role: "President, OAFLAD" },
+      fr: { formal: "S.E. Dr Fatima Maada Bio", title: "Première Dame de la République de Sierra Leone", role: "Présidente en exercice de l'OPDAD" },
     },
   },
   {
     id: "nigeria",
     languages: ["fr", "en"],
     signature: {
-      formal: "H.E. Senator Oluremi Tinubu, CON",
-      title: "First Lady of the Federal Republic of Nigeria",
-      role: "Member, Steering Committee, OAFLAD",
+      en: { formal: "H.E. Senator Oluremi Tinubu, CON", title: "First Lady of the Federal Republic of Nigeria", role: "Member, Steering Committee, OAFLAD" },
+      fr: { formal: "S.E. Sénatrice Oluremi Tinubu, CON", title: "Première Dame de la République Fédérale du Nigéria", role: "Membre du Comité directeur de l'OPDAD" },
     },
   },
   {
     id: "burundi",
     languages: ["fr", "en"],
     signature: {
-      formal: "H.E. Mrs Angéline Ndayishimiye Ndayubaha",
-      title: "First Lady of the Republic of Burundi",
+      en: { formal: "H.E. Mrs Angéline Ndayishimiye Ndayubaha", title: "First Lady of the Republic of Burundi" },
+      fr: { formal: "S.E. Mme Angéline Ndayishimiye Ndayubaha", title: "Première Dame de la République du Burundi" },
     },
   },
   {
     id: "senegal",
     languages: ["fr", "en"],
     signature: {
-      formal: "H.E. Mrs Marie Khone Faye",
-      title: "First Lady of the Republic of Senegal",
+      en: { formal: "H.E. Mrs Marie Khone Faye", title: "First Lady of the Republic of Senegal" },
+      fr: { formal: "S.E. Mme Marie Khone Faye", title: "Première Dame de la République du Sénégal" },
     },
   },
   {
     id: "congo",
     languages: ["fr", "en"],
     signature: {
-      formal: "H.E. Mrs Antoinette Sassou N'Guesso",
-      title: "First Lady of the Republic of the Congo",
+      en: { formal: "H.E. Mrs Antoinette Sassou N'Guesso", title: "First Lady of the Republic of the Congo" },
+      fr: { formal: "S.E. Mme Antoinette Sassou N'Guesso", title: "Première Dame de la République du Congo" },
     },
   },
 ];

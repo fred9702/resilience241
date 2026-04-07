@@ -161,19 +161,24 @@ export function FirstLadyMessageModal({
             </div>
 
             {/* Signature */}
-            <div className="border-t border-near-black/10 pt-4">
-              <p className="font-heading text-sm font-bold text-near-black">
-                {message.signature.formal}
-              </p>
-              <p className="font-body text-sm text-near-black/60">
-                {message.signature.title}
-              </p>
-              {message.signature.role && (
-                <p className="font-body text-sm text-near-black/60">
-                  {message.signature.role}
-                </p>
-              )}
-            </div>
+            {(() => {
+              const sig = message.signature[locale] ?? message.signature["en"];
+              return (
+                <div className="border-t border-near-black/10 pt-4">
+                  <p className="font-heading text-sm font-bold text-near-black">
+                    {sig.formal}
+                  </p>
+                  <p className="font-body text-sm text-near-black/60">
+                    {sig.title}
+                  </p>
+                  {sig.role && (
+                    <p className="font-body text-sm text-near-black/60">
+                      {sig.role}
+                    </p>
+                  )}
+                </div>
+              );
+            })()}
           </motion.div>
         </motion.div>
       )}
