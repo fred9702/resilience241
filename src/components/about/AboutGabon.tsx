@@ -66,18 +66,24 @@ export function AboutGabon() {
                 <span className="font-heading text-3xl md:text-4xl font-extrabold text-orange">18</span>
                 <span className="font-heading text-xs font-semibold uppercase tracking-wider text-orange/70">quartiers</span>
               </div>
-              <div>
-                <p className="font-body text-lg text-near-black/80 leading-relaxed">
-                  {t("terrainTour")}
-                </p>
-                <p className="mt-3 font-body text-base md:text-lg text-near-black/60 leading-relaxed">
-                  {t("terrainNarrative")}
-                </p>
-              </div>
+              <p className="font-body text-lg text-near-black/80 leading-relaxed">
+                {t("terrainTour")}
+              </p>
             </div>
 
-            {/* Community voices */}
-            <div className="mt-8 space-y-3">
+            {/* Approach statement */}
+            <div className="mt-6 bg-orange/10 rounded-xl px-6 py-4">
+              <p className="font-heading text-base md:text-lg font-bold text-brown">
+                {t("terrainApproach")}
+              </p>
+            </div>
+
+            {/* Narrative + community voices */}
+            <p className="mt-6 font-body text-base md:text-lg text-near-black/70 leading-relaxed">
+              {t("terrainNarrative")}
+            </p>
+
+            <div className="mt-5 space-y-3">
               {(["terrainQuote1", "terrainQuote2"] as const).map((key) => (
                 <div key={key} className="border-l-3 border-orange bg-white/60 rounded-r-lg pl-5 py-4 shadow-sm">
                   <p className="font-body text-base md:text-lg italic text-brown">
@@ -85,13 +91,6 @@ export function AboutGabon() {
                   </p>
                 </div>
               ))}
-            </div>
-
-            {/* Approach statement */}
-            <div className="mt-8 bg-orange/10 rounded-xl px-6 py-4">
-              <p className="font-heading text-base md:text-lg font-bold text-brown">
-                {t("terrainApproach")}
-              </p>
             </div>
 
             {/* Link to 3 axes */}
