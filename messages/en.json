@@ -19,7 +19,8 @@
     "subtitle": "April 17, 2026 · Libreville, Gabon",
     "register": "Register",
     "programme": "Programme",
-    "cap241": "CAP 241"
+    "cap241": "CAP 241",
+    "tagline": "Resilience 241: a national initiative led by the First Lady to listen, understand, and act at the heart of communities."
   },
   "countdown": {
     "label": "Countdown to the conference",
@@ -27,6 +28,11 @@
     "hours": "Hours",
     "minutes": "Minutes",
     "seconds": "Seconds"
+  },
+  "quote": {
+    "text": "I did not come to give you a speech. I came to listen to you.",
+    "author": "Her Excellency Mrs. Zita Oligui Nguema",
+    "role": "First Lady of Gabon"
   },
   "cta": {
     "headline": "Join African leaders in building resilience",
