@@ -37,9 +37,6 @@ export function FirstLadiesSection() {
           <span className="inline-block font-heading text-sm font-semibold uppercase tracking-widest text-crimson bg-crimson/10 px-4 py-1.5 rounded-full mb-6">
             {t("firstLadiesBadge")}
           </span>
-          <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-near-black leading-tight">
-            {t("firstLadiesTitle")}
-          </h2>
         </ScrollReveal>
 
         {/* Tier 1: Featured host card */}
