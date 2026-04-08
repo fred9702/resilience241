@@ -53,7 +53,58 @@ export function AboutGabon() {
           </div>
         </ScrollReveal>
 
+        {/* Terrain dimension */}
+        <ScrollReveal delay={0.22}>
+          <div className="mt-10">
+            <SectionBadge color="orange" variant="pill">
+              {t("terrainBadge")}
+            </SectionBadge>
+            <p className="mt-2 font-body text-lg text-near-black/80 leading-relaxed">
+              {t("terrainTour")}
+            </p>
+            <p className="mt-4 font-body text-base md:text-lg text-near-black/70 leading-relaxed">
+              {t("terrainNarrative")}
+            </p>
+          </div>
+        </ScrollReveal>
+
+        {/* Community voices */}
+        <ScrollReveal delay={0.24}>
+          <div className="mt-8 space-y-4">
+            {(["terrainQuote1", "terrainQuote2"] as const).map((key) => (
+              <div key={key} className="border-l-2 border-orange/40 bg-orange/5 rounded-r-lg pl-5 py-3">
+                <p className="font-body text-base md:text-lg italic text-near-black/70">
+                  «&nbsp;{t(key)}&nbsp;»
+                </p>
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.24}>
+          <p className="mt-6 font-heading text-base md:text-lg font-semibold text-near-black/85">
+            {t("terrainApproach")}
+          </p>
+        </ScrollReveal>
+
+        {/* Link to 3 axes */}
         <ScrollReveal delay={0.25}>
+          <div className="mt-6">
+            <p className="font-body text-base md:text-lg text-near-black/70 mb-4">{t("terrainAxesIntro")}</p>
+            <div className="flex flex-col gap-3">
+              {(["prevention", "continuity", "trajectories"] as const).map((key) => (
+                <div key={key} className="flex items-start gap-3">
+                  <span className="mt-2 w-2 h-2 rounded-full bg-orange shrink-0" />
+                  <span className="font-body text-base md:text-lg text-near-black/75">
+                    {t(`terrainAxes.${key}`)}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.27}>
           <p className="mt-8 font-body text-base md:text-lg text-near-black/80">
             <HighlightKeywords>{t("gabonProgramme")}</HighlightKeywords>
           </p>

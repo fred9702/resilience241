@@ -140,6 +140,18 @@
     "gabonHealth": "Health is not a sectoral policy.",
     "gabonStability": "It is a condition for stability.",
     "gabonLever": "It is a lever for sustainable resilience.",
+    "terrainBadge": "From the field",
+    "terrainTour": "From April 7 to 13, the First Lady visited 18 neighbourhoods, including the most vulnerable, in Libreville, Akanda, Owendo and Ntoum.",
+    "terrainNarrative": "In these neighbourhoods, women spoke up to share their daily realities, their difficulties accessing healthcare, but also their expectations and their hopes.",
+    "terrainQuote1": "We start treatments, but we can't always see them through.",
+    "terrainQuote2": "Sometimes, we face hardship alone.",
+    "terrainApproach": "An approach deliberately rooted in working-class neighbourhoods, as close as possible to the communities.",
+    "terrainAxesIntro": "These exchanges helped identify the main challenges related to:",
+    "terrainAxes": {
+      "prevention": "Preventing disruptions",
+      "continuity": "Ensuring continuity of care",
+      "trajectories": "Rebuilding life trajectories"
+    },
     "zonBadge": "Message",
     "zonTitle": "Message from ZON",
     "zonQuote": "On this day of April 17, National Women's Day in Gabon, I wish to address each and every one of you. To those present here. To those working in our cities, in our villages, in our homes. And to those whose commitment, often unseen, continues to sustain our society.",

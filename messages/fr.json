@@ -140,6 +140,18 @@
     "gabonHealth": "La santé n'est pas une politique sectorielle.",
     "gabonStability": "Elle est une condition de stabilité.",
     "gabonLever": "Elle est un levier de résilience durable.",
+    "terrainBadge": "Dimension terrain",
+    "terrainTour": "Du 7 au 13 avril, la Première Dame s'est rendue dans 18 quartiers, notamment les plus vulnérables, à Libreville, Akanda, Owendo et Ntoum.",
+    "terrainNarrative": "Dans ces quartiers, des femmes ont pris la parole pour partager leurs réalités quotidiennes, leurs difficultés à accéder aux soins, mais aussi leurs attentes et leurs espoirs.",
+    "terrainQuote1": "Nous commençons les traitements, mais nous ne pouvons pas toujours aller jusqu'au bout.",
+    "terrainQuote2": "Parfois, nous sommes seules face aux difficultés.",
+    "terrainApproach": "Une démarche volontairement ancrée dans les quartiers populaires, au plus près des communautés.",
+    "terrainAxesIntro": "Ces échanges ont permis d'identifier les principaux défis liés à :",
+    "terrainAxes": {
+      "prevention": "La prévention des ruptures",
+      "continuity": "La continuité des soins",
+      "trajectories": "La reconstruction des trajectoires"
+    },
     "zonBadge": "Message",
     "zonTitle": "Message de ZON",
     "zonQuote": "En ce jour du 17 avril, journée nationale de la femme au Gabon, je souhaite m'adresser à chacune d'entre vous. À celles qui sont ici présentes. À celles qui œuvrent dans nos villes, dans nos villages, dans nos foyers. Et à celles dont l'engagement, souvent discret, continue de porter notre société.",
