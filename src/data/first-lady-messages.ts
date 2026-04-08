@@ -125,8 +125,8 @@ export const firstLadyMessages: FirstLadyMessage[] = [
     id: "saoTome",
     languages: ["fr", "en"],
     signature: {
-      en: { formal: "H.E. Mrs Maria de Fátima Vila Nova", title: "First Lady of São Tomé and Príncipe" },
-      fr: { formal: "S.E. Mme Maria de Fátima Vila Nova", title: "Première Dame de São Tomé-et-Príncipe" },
+      en: { formal: "H.E. Mrs Maria de Fátima Vila Nova", title: "First Lady of the Democratic Republic of São Tomé and Príncipe" },
+      fr: { formal: "S.E. Mme Maria de Fátima Vila Nova", title: "Première Dame de la République démocratique de São Tomé-et-Príncipe" },
     },
   },
 ];

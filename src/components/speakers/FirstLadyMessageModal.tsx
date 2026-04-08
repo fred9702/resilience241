@@ -57,6 +57,8 @@ export function FirstLadyMessageModal({
   // Extra languages beyond FR/EN (e.g. Portuguese for Angola)
   const extraLanguages = message.languages.filter((l) => l !== "fr" && l !== "en");
   const showToggle = extraLanguages.length > 0;
+  // Toggle only shows current locale + extra languages (not both FR and EN)
+  const toggleLanguages = showToggle ? [locale, ...extraLanguages] : [];
 
   // Use current locale by default; activeLang only matters for extra languages
   const displayLang = showToggle ? activeLang : locale;
@@ -139,7 +141,7 @@ export function FirstLadyMessageModal({
             {/* Language toggle — only shown when extra languages exist (e.g. Portuguese) */}
             {showToggle && (
               <div className="flex gap-1 mb-6 p-1 bg-near-black/5 rounded-full w-fit">
-                {message.languages.map((lang) => (
+                {toggleLanguages.map((lang) => (
                   <button
                     key={lang}
                     onClick={() => setActiveLang(lang)}
