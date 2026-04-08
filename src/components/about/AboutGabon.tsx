@@ -53,53 +53,60 @@ export function AboutGabon() {
           </div>
         </ScrollReveal>
 
-        {/* Terrain dimension */}
+        {/* Terrain dimension — contained in a warm card */}
         <ScrollReveal delay={0.22}>
-          <div className="mt-10">
+          <div className="mt-12 bg-gradient-to-br from-orange/8 via-orange/4 to-transparent border border-orange/15 rounded-2xl p-6 md:p-10">
             <SectionBadge color="orange" variant="pill">
               {t("terrainBadge")}
             </SectionBadge>
-            <p className="mt-2 font-body text-lg text-near-black/80 leading-relaxed">
-              {t("terrainTour")}
-            </p>
-            <p className="mt-4 font-body text-base md:text-lg text-near-black/70 leading-relaxed">
-              {t("terrainNarrative")}
-            </p>
-          </div>
-        </ScrollReveal>
 
-        {/* Community voices */}
-        <ScrollReveal delay={0.24}>
-          <div className="mt-8 space-y-4">
-            {(["terrainQuote1", "terrainQuote2"] as const).map((key) => (
-              <div key={key} className="border-l-2 border-orange/40 bg-orange/5 rounded-r-lg pl-5 py-3">
-                <p className="font-body text-base md:text-lg italic text-near-black/70">
-                  «&nbsp;{t(key)}&nbsp;»
+            {/* Stat highlight + tour description */}
+            <div className="mt-4 flex flex-col md:flex-row md:items-start gap-5">
+              <div className="shrink-0 flex flex-row md:flex-col items-center md:items-center gap-3 md:gap-1 bg-orange/10 rounded-xl px-5 py-3 md:py-4 md:min-w-[100px]">
+                <span className="font-heading text-3xl md:text-4xl font-extrabold text-orange">18</span>
+                <span className="font-heading text-xs font-semibold uppercase tracking-wider text-orange/70">quartiers</span>
+              </div>
+              <div>
+                <p className="font-body text-lg text-near-black/80 leading-relaxed">
+                  {t("terrainTour")}
+                </p>
+                <p className="mt-3 font-body text-base md:text-lg text-near-black/60 leading-relaxed">
+                  {t("terrainNarrative")}
                 </p>
               </div>
-            ))}
-          </div>
-        </ScrollReveal>
+            </div>
 
-        <ScrollReveal delay={0.24}>
-          <p className="mt-6 font-heading text-base md:text-lg font-semibold text-near-black/85">
-            {t("terrainApproach")}
-          </p>
-        </ScrollReveal>
-
-        {/* Link to 3 axes */}
-        <ScrollReveal delay={0.25}>
-          <div className="mt-6">
-            <p className="font-body text-base md:text-lg text-near-black/70 mb-4">{t("terrainAxesIntro")}</p>
-            <div className="flex flex-col gap-3">
-              {(["prevention", "continuity", "trajectories"] as const).map((key) => (
-                <div key={key} className="flex items-start gap-3">
-                  <span className="mt-2 w-2 h-2 rounded-full bg-orange shrink-0" />
-                  <span className="font-body text-base md:text-lg text-near-black/75">
-                    {t(`terrainAxes.${key}`)}
-                  </span>
+            {/* Community voices */}
+            <div className="mt-8 space-y-3">
+              {(["terrainQuote1", "terrainQuote2"] as const).map((key) => (
+                <div key={key} className="border-l-3 border-orange bg-white/60 rounded-r-lg pl-5 py-4 shadow-sm">
+                  <p className="font-body text-base md:text-lg italic text-brown">
+                    «&nbsp;{t(key)}&nbsp;»
+                  </p>
                 </div>
               ))}
+            </div>
+
+            {/* Approach statement */}
+            <div className="mt-8 bg-orange/10 rounded-xl px-6 py-4">
+              <p className="font-heading text-base md:text-lg font-bold text-brown">
+                {t("terrainApproach")}
+              </p>
+            </div>
+
+            {/* Link to 3 axes */}
+            <div className="mt-6">
+              <p className="font-body text-base md:text-lg text-near-black/70 mb-4">{t("terrainAxesIntro")}</p>
+              <div className="flex flex-col gap-3">
+                {(["prevention", "continuity", "trajectories"] as const).map((key) => (
+                  <div key={key} className="flex items-start gap-3">
+                    <span className="mt-2 w-2.5 h-2.5 rounded-full bg-orange shrink-0" />
+                    <span className="font-heading text-base md:text-lg font-semibold text-near-black/80">
+                      {t(`terrainAxes.${key}`)}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </ScrollReveal>
