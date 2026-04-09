@@ -120,6 +120,7 @@ export function FirstLadyMessageModal({
                     width={64}
                     height={64}
                     className="object-cover w-full h-full"
+                    style={lady.photoPosition ? { objectPosition: lady.photoPosition } : undefined}
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center">

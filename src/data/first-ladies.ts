@@ -10,6 +10,8 @@ export interface FirstLady {
   isKeynote?: boolean;
   /** Override the default honorific (e.g. "Dr" instead of "Mrs") */
   honorificOverride?: string;
+  /** CSS object-position for photo thumbnails (e.g. "center 20%") */
+  photoPosition?: string;
 }
 
 // Ordered by role seniority: Host → OAFLAD leadership → Speakers (by tenure) → Attending (by tenure)
@@ -19,6 +21,7 @@ export const firstLadies: FirstLady[] = [
     id: "gabon",
     countryFlag: "\u{1F1EC}\u{1F1E6}",
     photoPath: "/images/partners/first-ladies/zita-oligui-nguema.jpeg",
+    photoPosition: "center 35%",
     isHost: true,
   },
   // Keynote — OAFLAD President (since 2018)
