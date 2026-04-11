@@ -99,7 +99,7 @@ export const firstLadies: FirstLady[] = [
   {
     id: "car", // since March 2016
     countryFlag: "\u{1F1E8}\u{1F1EB}",
-    photoPath: "/images/partners/first-ladies/tina-marguerite-touadera.jpg",
+    photoPath: "/images/partners/first-ladies/brigitte-touadera.jpg",
   },
   {
     id: "drc", // since January 2019
