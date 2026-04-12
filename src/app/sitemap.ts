@@ -12,7 +12,6 @@ const routes = [
   "/media",
   "/partners",
   "/programme",
-  "/register",
   "/speakers",
 ];
 
