@@ -92,29 +92,9 @@ export const firstLadies: FirstLady[] = [
   },
   // Attending — ordered by tenure (earliest first)
   {
-    id: "rwanda", // since April 2000
-    countryFlag: "\u{1F1F7}\u{1F1FC}",
-    photoPath: "/images/partners/first-ladies/jeannette-kagame.jpeg",
-  },
-  {
     id: "car", // since March 2016
     countryFlag: "\u{1F1E8}\u{1F1EB}",
     photoPath: "/images/partners/first-ladies/brigitte-touadera.jpg",
-  },
-  {
-    id: "drc", // since January 2019
-    countryFlag: "\u{1F1E8}\u{1F1E9}",
-    photoPath: "/images/partners/first-ladies/denise-nyakeru-tshisekedi.jpeg",
-  },
-  {
-    id: "guinea", // since September 2021
-    countryFlag: "\u{1F1EC}\u{1F1F3}",
-    photoPath: null,
-  },
-  {
-    id: "liberia", // since January 2024
-    countryFlag: "\u{1F1F1}\u{1F1F7}",
-    photoPath: "/images/partners/first-ladies/kartumu-yarta-boakai.jpg",
   },
   {
     id: "ghana", // since January 2025

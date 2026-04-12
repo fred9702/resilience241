@@ -311,12 +311,22 @@
       "opening": {
         "time": "10:05am",
         "title": "Official Opening",
-        "description": "National anthem and address by the President of the Republic"
+        "description": "National anthem"
       },
       "launch": {
-        "time": "10:25am",
+        "time": "10:10am",
         "title": "Campaign Launch",
         "description": "Welcome address and launch of #BuildingResilience by the First Lady"
+      },
+      "president": {
+        "time": "10:20am",
+        "title": "Presidential Address",
+        "description": "Address by His Excellency the President of the Gabonese Republic"
+      },
+      "video": {
+        "time": "10:30am",
+        "title": "Campaign Video",
+        "description": "Screening of the campaign audiovisual capsule"
       },
       "oaflad": {
         "time": "10:35am",
@@ -328,23 +338,33 @@
         "title": "First Ladies' Addresses",
         "description": "Experience sharing by OAFLAD First Ladies"
       },
+      "un": {
+        "time": "11:30am",
+        "title": "United Nations Address",
+        "description": "Address by the United Nations Representative"
+      },
       "doctorate": {
-        "time": "11:35am",
+        "time": "11:40am",
         "title": "Honorary Doctorate Ceremony",
         "description": "Honorary Doctorate awarded to the First Lady of the Gabonese Republic"
       },
       "exhibition": {
-        "time": "11:45am",
+        "time": "11:50am",
         "title": "Exhibition Visit",
         "description": "Guided visit of the #BuildingResilience exhibition"
       },
       "lunch": {
-        "time": "12:15pm",
+        "time": "12:20pm",
         "title": "Official Lunch",
         "description": "Official luncheon"
       }
     },
     "seq2": {
+      "capsules": {
+        "time": "1:30pm",
+        "title": "Video Capsules",
+        "description": "Screening of audiovisual capsules"
+      },
       "minister": {
         "time": "1:40pm",
         "title": "Address by the Minister of Social Affairs",
@@ -420,17 +440,13 @@
       "angola": { "name": "Ana Dias Lourenço", "country": "Republic of Angola", "role": "Vice-President, OAFLAD" },
       "sierraLeone": { "name": "Fatima Maada Bio", "country": "Republic of Sierra Leone", "role": "President, OAFLAD" },
       "senegal": { "name": "Marie Khone Faye", "country": "Republic of Senegal" },
-      "drc": { "name": "Denise Nyakeru Tshisekedi", "country": "Democratic Republic of the Congo" },
       "congo": { "name": "Antoinette Sassou Nguesso", "country": "Republic of the Congo" },
       "burundi": { "name": "Angeline Ndayishimiye", "country": "Republic of Burundi" },
       "nigeria": { "name": "Oluremi Tinubu", "country": "Federal Republic of Nigeria" },
-      "liberia": { "name": "Kartumu Yarta Boakai", "country": "Republic of Liberia" },
       "coteIvoire": { "name": "Dominique Ouattara", "country": "Republic of Côte d'Ivoire" },
-      "rwanda": { "name": "Jeannette Kagame", "country": "Republic of Rwanda" },
       "kenya": { "name": "Rachel Ruto", "country": "Republic of Kenya" },
       "saoTome": { "name": "Maria de Fátima Vila Nova", "country": "Democratic Republic of São Tomé and Príncipe" },
       "equatorialGuinea": { "name": "Constancia Mangue de Obiang", "country": "Republic of Equatorial Guinea" },
-      "guinea": { "name": "Lauriane Doumbouya", "country": "Republic of Guinea" },
       "car": { "name": "Brigitte Touadéra", "country": "Central African Republic" },
       "ghana": { "name": "Lordina Mahama", "country": "Republic of Ghana" },
       "namibia": { "name": "Epaphras Denga Ndaitwah", "country": "Republic of Namibia" }

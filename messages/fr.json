@@ -311,40 +311,60 @@
       "opening": {
         "time": "10h05",
         "title": "Ouverture officielle",
-        "description": "Hymne national et allocution du Président de la République"
+        "description": "Exécution de l'Hymne national"
       },
       "launch": {
-        "time": "10h25",
+        "time": "10h10",
         "title": "Lancement de la campagne",
         "description": "Allocution de bienvenue et lancement de #RenforcerLaRésilience par la Première Dame"
+      },
+      "president": {
+        "time": "10h20",
+        "title": "Allocution présidentielle",
+        "description": "Allocution de Son Excellence le Président de la République Gabonaise"
+      },
+      "video": {
+        "time": "10h30",
+        "title": "Capsule audiovisuelle",
+        "description": "Projection de la capsule audiovisuelle de la campagne"
       },
       "oaflad": {
         "time": "10h35",
         "title": "Intervention du Dr Nardos Berhanu",
-        "description": "Secrétaire exécutif de l'OPDAD"
+        "description": "Secrétaire exécutive de l'OPDAD"
       },
       "firstLadies": {
         "time": "10h40",
         "title": "Allocutions des Premières Dames",
         "description": "Partages d'expérience des Premières Dames membres de l'OPDAD"
       },
+      "un": {
+        "time": "11h30",
+        "title": "Allocution des Nations Unies",
+        "description": "Allocution de la Représentante des Nations Unies"
+      },
       "doctorate": {
-        "time": "11h35",
+        "time": "11h40",
         "title": "Doctorat Honoris Causa",
         "description": "Cérémonie de remise du Doctorat Honoris Causa à la Première Dame"
       },
       "exhibition": {
-        "time": "11h45",
+        "time": "11h50",
         "title": "Visite de l'exposition",
         "description": "Visite guidée de l'exposition #RenforcerLaRésilience"
       },
       "lunch": {
-        "time": "12h15",
+        "time": "12h20",
         "title": "Déjeuner officiel",
         "description": "Déjeuner officiel"
       }
     },
     "seq2": {
+      "capsules": {
+        "time": "13h30",
+        "title": "Diffusion de capsules",
+        "description": "Projection de capsules audiovisuelles"
+      },
       "minister": {
         "time": "13h40",
         "title": "Allocution du Ministre des Affaires Sociales",
@@ -420,17 +440,13 @@
       "angola": { "name": "Ana Dias Lourenço", "country": "République d'Angola", "role": "Vice-Présidente, OPDAD" },
       "sierraLeone": { "name": "Fatima Maada Bio", "country": "République de Sierra Leone", "role": "Présidente, OPDAD" },
       "senegal": { "name": "Marie Khone Faye", "country": "République du Sénégal" },
-      "drc": { "name": "Denise Nyakeru Tshisekedi", "country": "République démocratique du Congo" },
       "congo": { "name": "Antoinette Sassou Nguesso", "country": "République du Congo" },
       "burundi": { "name": "Angeline Ndayishimiye", "country": "République du Burundi" },
       "nigeria": { "name": "Oluremi Tinubu", "country": "République fédérale du Nigéria" },
-      "liberia": { "name": "Kartumu Yarta Boakai", "country": "République du Libéria" },
       "coteIvoire": { "name": "Dominique Ouattara", "country": "République de Côte d'Ivoire" },
-      "rwanda": { "name": "Jeannette Kagame", "country": "République du Rwanda" },
       "kenya": { "name": "Rachel Ruto", "country": "République du Kenya" },
       "saoTome": { "name": "Maria de Fátima Vila Nova", "country": "République démocratique de São Tomé-et-Príncipe" },
       "equatorialGuinea": { "name": "Constancia Mangue de Obiang", "country": "République de Guinée équatoriale" },
-      "guinea": { "name": "Lauriane Doumbouya", "country": "République de Guinée" },
       "car": { "name": "Brigitte Touadéra", "country": "République centrafricaine" },
       "ghana": { "name": "Lordina Mahama", "country": "République du Ghana" },
       "namibia": { "name": "Epaphras Denga Ndaitwah", "country": "République de Namibie" }

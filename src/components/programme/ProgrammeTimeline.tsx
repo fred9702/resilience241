@@ -8,8 +8,11 @@ const SEQ1_KEYS = [
   "registration",
   "opening",
   "launch",
+  "president",
+  "video",
   "oaflad",
   "firstLadies",
+  "un",
   "doctorate",
   "exhibition",
   "lunch",
@@ -19,6 +22,7 @@ const SEQ1_KEYS = [
 const LINK_KEYS = new Set(["launch"]);
 
 const SEQ2_KEYS = [
+  "capsules",
   "minister",
   "panel1",
   "panel2",
@@ -27,12 +31,13 @@ const SEQ2_KEYS = [
 ] as const;
 
 const SEQ1_COLORS = [
-  "bg-orange", "bg-crimson", "bg-crimson",
-  "bg-orange", "bg-crimson", "bg-green", "bg-orange", "bg-crimson",
+  "bg-orange", "bg-crimson", "bg-crimson", "bg-orange",
+  "bg-orange", "bg-crimson", "bg-crimson", "bg-orange",
+  "bg-green", "bg-orange", "bg-crimson",
 ] as const;
 
 const SEQ2_COLORS = [
-  "bg-crimson", "bg-green",
+  "bg-orange", "bg-crimson", "bg-green",
   "bg-orange", "bg-crimson", "bg-green",
 ] as const;
 
