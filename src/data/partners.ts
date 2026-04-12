@@ -32,4 +32,10 @@ export const partners: Partner[] = [
     color: "orange",
     logoPath: "/images/partners/bomalab-logo.png",
   },
+  {
+    id: "rougeDelEst",
+    website: "",
+    color: "crimson",
+    logoPath: "/images/partners/rouge-de-lest-logo.jpg",
+  },
 ];
