@@ -76,7 +76,9 @@
     "phoneCountryCode": "Country code",
     "phoneLocal": "Phone number (without country code)",
     "invalidPhone": "Invalid phone number.",
-    "consentRequired": "You must accept the privacy policy."
+    "consentRequired": "You must accept the privacy policy.",
+    "invitationOnly": "Registration by invitation only",
+    "invitationOnlyDescription": "Registration for this event is by invitation only. If you have received a QR code, please scan it to access the registration form."
   },
   "confirmation": {
     "title": "Registration Confirmed",

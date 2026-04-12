@@ -23,7 +23,7 @@ const LANGUAGE_LABELS: Record<(typeof LANGUAGES)[number], string> = {
   es: "Español",
 };
 
-export function RegisterForm() {
+export function RegisterForm({ token }: { token: string }) {
   const t = useTranslations("register");
   const locale = useLocale();
   const router = useRouter();
@@ -86,6 +86,7 @@ export function RegisterForm() {
         category: formData.get("category"),
         language_pref: formData.get("languagePref") || "fr",
         gdpr_consent: true,
+        token,
       };
 
       const res = await fetch("/api/register", {

@@ -76,7 +76,9 @@
     "phoneCountryCode": "Indicatif pays",
     "phoneLocal": "Numéro de téléphone (sans indicatif)",
     "invalidPhone": "Numéro de téléphone invalide.",
-    "consentRequired": "Vous devez accepter la politique de confidentialité."
+    "consentRequired": "Vous devez accepter la politique de confidentialité.",
+    "invitationOnly": "Inscription sur invitation uniquement",
+    "invitationOnlyDescription": "L'inscription à cet événement est réservée aux personnes invitées. Si vous avez reçu un QR code, veuillez le scanner pour accéder au formulaire d'inscription."
   },
   "confirmation": {
     "title": "Inscription confirmée",
