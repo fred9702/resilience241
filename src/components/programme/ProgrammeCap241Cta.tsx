@@ -33,9 +33,6 @@ export function ProgrammeCap241Cta() {
             <Button href={`/${locale}/speakers`} variant="primary">
               {t("speakersCta")}
             </Button>
-            <Button href={`/${locale}/register`} variant="secondary">
-              {t("registerCta")}
-            </Button>
           </div>
         </ScrollReveal>
       </div>
