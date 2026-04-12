@@ -38,6 +38,7 @@ export function FirstLadyCard({
               width={224}
               height={300}
               className="object-cover w-full h-full"
+              style={lady.photoPosition ? { objectPosition: lady.photoPosition } : undefined}
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-light-beige to-warm-cream">
@@ -85,6 +86,7 @@ export function FirstLadyCard({
             width={183}
             height={246}
             className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+            style={lady.photoPosition ? { objectPosition: lady.photoPosition } : undefined}
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-light-beige to-warm-cream">

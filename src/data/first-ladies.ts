@@ -21,7 +21,7 @@ export const firstLadies: FirstLady[] = [
     id: "gabon",
     countryFlag: "\u{1F1EC}\u{1F1E6}",
     photoPath: "/images/partners/first-ladies/zita-oligui-nguema.jpeg",
-    photoPosition: "center 35%",
+    photoPosition: "center 20%",
     isHost: true,
   },
   // Keynote — OAFLAD President (since 2018)

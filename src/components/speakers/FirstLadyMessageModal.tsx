@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Quotes } from "@phosphor-icons/react";
+import { X, Quotes, CaretLeft, CaretRight } from "@phosphor-icons/react";
 import type { FirstLady } from "@/data/first-ladies";
 import { messageTexts, type FirstLadyMessage } from "@/data/first-lady-messages";
 
@@ -19,6 +19,8 @@ interface FirstLadyMessageModalProps {
   message: FirstLadyMessage;
   isOpen: boolean;
   onClose: () => void;
+  onPrev?: () => void;
+  onNext?: () => void;
 }
 
 export function FirstLadyMessageModal({
@@ -26,6 +28,8 @@ export function FirstLadyMessageModal({
   message,
   isOpen,
   onClose,
+  onPrev,
+  onNext,
 }: FirstLadyMessageModalProps) {
   const t = useTranslations("speakers");
   const locale = useLocale();
@@ -39,8 +43,10 @@ export function FirstLadyMessageModal({
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft" && onPrev) onPrev();
+      if (e.key === "ArrowRight" && onNext) onNext();
     },
-    [onClose]
+    [onClose, onPrev, onNext]
   );
 
   useEffect(() => {
@@ -89,6 +95,28 @@ export function FirstLadyMessageModal({
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
           />
+
+          {/* Prev button */}
+          {onPrev && (
+            <button
+              onClick={onPrev}
+              className="hidden md:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 items-center justify-center rounded-full bg-white/90 text-near-black/60 hover:text-near-black hover:bg-white shadow-lg transition-colors"
+              aria-label="Previous"
+            >
+              <CaretLeft size={20} weight="bold" />
+            </button>
+          )}
+
+          {/* Next button */}
+          {onNext && (
+            <button
+              onClick={onNext}
+              className="hidden md:flex absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 items-center justify-center rounded-full bg-white/90 text-near-black/60 hover:text-near-black hover:bg-white shadow-lg transition-colors"
+              aria-label="Next"
+            >
+              <CaretRight size={20} weight="bold" />
+            </button>
+          )}
 
           {/* Modal */}
           <motion.div
@@ -187,6 +215,28 @@ export function FirstLadyMessageModal({
                 </div>
               );
             })()}
+
+            {/* Mobile navigation */}
+            {(onPrev || onNext) && (
+              <div className="flex md:hidden items-center justify-between mt-6 pt-4 border-t border-near-black/10">
+                <button
+                  onClick={onPrev}
+                  disabled={!onPrev}
+                  className="flex items-center gap-1 text-sm font-heading font-semibold text-crimson disabled:opacity-30 disabled:cursor-default"
+                >
+                  <CaretLeft size={16} weight="bold" />
+                  {t("prevMessage")}
+                </button>
+                <button
+                  onClick={onNext}
+                  disabled={!onNext}
+                  className="flex items-center gap-1 text-sm font-heading font-semibold text-crimson disabled:opacity-30 disabled:cursor-default"
+                >
+                  {t("nextMessage")}
+                  <CaretRight size={16} weight="bold" />
+                </button>
+              </div>
+            )}
           </motion.div>
         </motion.div>
       )}

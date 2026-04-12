@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { firstLadies } from "@/data/first-ladies";
-import { firstLadyMessageIds, getFirstLadyMessage } from "@/data/first-lady-messages";
+import { firstLadyMessageIds, getFirstLadyMessage, messageTexts } from "@/data/first-lady-messages";
 import { FirstLadyCard } from "./FirstLadyCard";
 import { FirstLadyMessageModal } from "./FirstLadyMessageModal";
 
@@ -22,6 +22,21 @@ export function FirstLadiesSection() {
   const host = firstLadies.find((l) => l.isHost);
   const speakers = firstLadies.filter((l) => l.isSpeaker || l.isKeynote);
   const attending = firstLadies.filter((l) => !l.isHost && !l.isSpeaker && !l.isKeynote);
+
+  // Ordered list of IDs that have a non-empty message (for modal navigation)
+  const navigableIds = firstLadies
+    .filter((l) => firstLadyMessageIds.has(l.id) && (messageTexts["fr"]?.[l.id] || messageTexts["en"]?.[l.id]))
+    .map((l) => l.id);
+
+  const handleNavigate = (direction: 1 | -1) => {
+    if (!selectedLadyId) return;
+    const idx = navigableIds.indexOf(selectedLadyId);
+    if (idx === -1) return;
+    const nextIdx = idx + direction;
+    if (nextIdx >= 0 && nextIdx < navigableIds.length) {
+      setSelectedLadyId(navigableIds[nextIdx]);
+    }
+  };
 
   const cardProps = (lady: typeof firstLadies[number]) => ({
     lady,
@@ -72,7 +87,6 @@ export function FirstLadiesSection() {
         {/* Tier 3: Attending */}
         {attending.length > 0 && (
           <div>
-            <hr className="border-t border-brown/10 mb-8" />
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
               {attending.map((lady, i) => (
                 <ScrollReveal key={lady.id} delay={0.03 * (i + 1)} className="h-full">
@@ -90,6 +104,8 @@ export function FirstLadiesSection() {
           message={selectedMessage}
           isOpen={!!selectedLadyId}
           onClose={() => setSelectedLadyId(null)}
+          onPrev={navigableIds.indexOf(selectedLadyId!) > 0 ? () => handleNavigate(-1) : undefined}
+          onNext={navigableIds.indexOf(selectedLadyId!) < navigableIds.length - 1 ? () => handleNavigate(1) : undefined}
         />
       )}
     </section>

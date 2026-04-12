@@ -414,6 +414,8 @@
     "honorificDr": "S.E Dr",
     "readMessage": "Lire le message",
     "closeModal": "Fermer",
+    "prevMessage": "Précédent",
+    "nextMessage": "Suivant",
     "messagePlaceholder": "Message à venir.",
     "presidentBadge": "Message présidentiel",
     "president": {
