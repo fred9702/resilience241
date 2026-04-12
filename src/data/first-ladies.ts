@@ -90,15 +90,16 @@ export const firstLadies: FirstLady[] = [
     photoPath: "/images/partners/first-ladies/marie-khone-faye.jpeg",
     isSpeaker: true,
   },
-  // Attending — ordered by tenure (earliest first)
   {
     id: "car", // since March 2016
     countryFlag: "\u{1F1E8}\u{1F1EB}",
     photoPath: "/images/partners/first-ladies/brigitte-touadera.jpg",
+    isSpeaker: true,
   },
   {
     id: "ghana", // since January 2025
     countryFlag: "\u{1F1EC}\u{1F1ED}",
     photoPath: "/images/partners/first-ladies/lordina-mahama.jpeg",
+    isSpeaker: true,
   },
 ];
