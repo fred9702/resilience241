@@ -542,5 +542,16 @@
   "lang": {
     "switchTo": "FR",
     "current": "EN"
+  },
+  "login": {
+    "title": "Committee Area",
+    "subtitle": "Sign in to access the dashboard",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "your@email.com",
+    "submit": "Send login link",
+    "success": "A login link has been sent to your email address. Check your inbox.",
+    "errorGeneric": "An error occurred. Please try again.",
+    "errorAuth": "The login link has expired or is invalid. Please try again.",
+    "backHome": "Back to home"
   }
 }

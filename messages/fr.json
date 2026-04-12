@@ -542,5 +542,16 @@
   "lang": {
     "switchTo": "EN",
     "current": "FR"
+  },
+  "login": {
+    "title": "Espace Comité",
+    "subtitle": "Connectez-vous pour accéder au tableau de bord",
+    "emailLabel": "Adresse e-mail",
+    "emailPlaceholder": "votre@email.com",
+    "submit": "Envoyer le lien de connexion",
+    "success": "Un lien de connexion a été envoyé à votre adresse e-mail. Vérifiez votre boîte de réception.",
+    "errorGeneric": "Une erreur est survenue. Veuillez réessayer.",
+    "errorAuth": "Le lien de connexion a expiré ou est invalide. Veuillez réessayer.",
+    "backHome": "Retour à l'accueil"
   }
 }
