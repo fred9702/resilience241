@@ -41,23 +41,10 @@ export const firstLadies: FirstLady[] = [
     isSpeaker: true,
     isKeynote: true,
   },
-  // Speakers — ordered by tenure (earliest first)
   {
     id: "equatorialGuinea", // since 1979
     countryFlag: "\u{1F1EC}\u{1F1F6}",
     photoPath: "/images/partners/first-ladies/constancia-mangue-de-obiang.jpg",
-    isSpeaker: true,
-  },
-  {
-    id: "congo", // since 1997
-    countryFlag: "\u{1F1E8}\u{1F1EC}",
-    photoPath: "/images/partners/first-ladies/antoinette-sassou-nguesso.jpg",
-    isSpeaker: true,
-  },
-  {
-    id: "coteIvoire", // since April 2011
-    countryFlag: "\u{1F1E8}\u{1F1EE}",
-    photoPath: "/images/partners/first-ladies/dominique-ouattara.jpg",
     isSpeaker: true,
   },
   {
@@ -70,6 +57,18 @@ export const firstLadies: FirstLady[] = [
     id: "saoTome", // since October 2021
     countryFlag: "\u{1F1F8}\u{1F1F9}",
     photoPath: "/images/partners/first-ladies/maria-de-fatima-vila-nova.jpg",
+    isSpeaker: true,
+  },
+  {
+    id: "congo", // since 1997
+    countryFlag: "\u{1F1E8}\u{1F1EC}",
+    photoPath: "/images/partners/first-ladies/antoinette-sassou-nguesso.jpg",
+    isSpeaker: true,
+  },
+  {
+    id: "coteIvoire", // since April 2011
+    countryFlag: "\u{1F1E8}\u{1F1EE}",
+    photoPath: "/images/partners/first-ladies/dominique-ouattara.jpg",
     isSpeaker: true,
   },
   {
