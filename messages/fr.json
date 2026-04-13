@@ -9,6 +9,7 @@
     "media": "Média",
     "contact": "Contact",
     "register": "S'inscrire",
+    "faq": "FAQ",
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu"
   },
@@ -101,6 +102,25 @@
       "headline": "Suivez #RenforcerLaRésilience",
       "followUs": "Suivez-nous sur les réseaux sociaux pour les mises à jour en direct",
       "contact": "Demandes presse"
+    }
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "metaDescription": "Retrouvez les réponses aux questions fréquentes sur la conférence #RenforcerLaRésilience — 17 avril 2026, Libreville, Gabon.",
+    "intro": "Tout ce que vous devez savoir sur la conférence",
+    "categories": {
+      "event": "À propos de l'événement",
+      "attendance": "Participation & Logistique",
+      "campaign": "La Campagne"
+    },
+    "questions": {
+      "whatIs": { "question": "Qu'est-ce que #RenforcerLaRésilience ?", "answer": "#RenforcerLaRésilience est une campagne panafricaine portée par la Première Dame du Gabon, Son Excellence Madame Zita Oligui Nguema, visant à renforcer la résilience des femmes et des filles face aux changements climatiques et aux conflits sur le continent.", "category": "campaign" },
+      "attending": { "question": "Qui participe ?", "answer": "La conférence réunit 19 Premières Dames africaines, ainsi que des délégués, partenaires, représentants des Nations Unies et organisations de la société civile engagés dans les quatre piliers du CAP 241.", "category": "event" },
+      "when": { "question": "Quand et où a lieu l'événement ?", "answer": "La conférence se tient le 17 avril 2026, à Libreville, au Gabon.", "category": "event" },
+      "pillars": { "question": "Quels sont les quatre piliers du CAP 241 ?", "answer": "Les quatre piliers sont Santé, Femmes, Jeunesse et Éducation — les domaines fondamentaux à travers lesquels la campagne renforce la résilience des communautés à travers l'Afrique.", "category": "campaign" },
+      "oaflad": { "question": "Qu'est-ce que l'OPDAD ?", "answer": "L'OPDAD (Organisation des Premières Dames d'Afrique pour le Développement) est un organisme continental qui rassemble les Premières Dames africaines pour promouvoir la santé, l'éducation et l'autonomisation des femmes sur le continent.", "category": "campaign" },
+      "follow": { "question": "Comment suivre l'événement ?", "answer": "Suivez #RenforcerLaRésilience sur les réseaux sociaux : @resilience241 sur X/Twitter, @resilience_241 sur Instagram, et sur Facebook. Des mises à jour en direct seront partagées tout au long de la conférence.", "category": "event" },
+      "balance": { "question": "Qu'est-ce que le programme ÉQUILIBRES ?", "answer": "ÉQUILIBRES 2026–2029 est un programme pluriannuel dans le cadre du CAP 241 qui coordonne l'action autour de trois axes : Prévenir, Accompagner et Reconstruire — s'attaquant aux causes profondes et aux conséquences de la fragilité pour les femmes et les filles.", "category": "campaign" }
     }
   },
   "comingSoon": {
