@@ -6,6 +6,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { List, X, FacebookLogo, TwitterLogo, InstagramLogo } from "@phosphor-icons/react";
+import { LanguageToggle } from "@/components/ui/LanguageToggle";
 
 const NAV_LINKS = [
   { key: "about", href: "/about" },
@@ -168,25 +169,13 @@ export function Navbar({ locale }: { locale: string }) {
             </Link>
           ))}
 
-          {/* Language switcher — min 44px touch target */}
-          <button
-            onClick={switchLocale}
-            className="font-heading text-sm font-semibold text-brown/90 hover:text-brown border border-brown/30 hover:border-brown min-h-[44px] min-w-[44px] px-3 py-1 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-orange"
-            aria-label={`Switch to ${otherLocale.toUpperCase()}`}
-          >
-            {tLang("switchTo")}
-          </button>
+          {/* Language switcher pill */}
+          <LanguageToggle locale={locale} />
         </div>
 
         {/* Mobile controls */}
         <div className="flex items-center gap-3 lg:hidden">
-          <button
-            onClick={switchLocale}
-            className="font-heading text-sm font-semibold text-brown/90 hover:text-brown border border-brown/30 min-h-[44px] min-w-[44px] px-3 py-1 rounded focus:outline-none focus:ring-2 focus:ring-orange"
-            aria-label={`Switch to ${otherLocale.toUpperCase()}`}
-          >
-            {tLang("switchTo")}
-          </button>
+          <LanguageToggle locale={locale} />
           <button
             ref={hamburgerRef}
             onClick={() => setMenuOpen(!menuOpen)}
