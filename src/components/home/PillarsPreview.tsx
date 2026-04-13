@@ -10,7 +10,7 @@ import {
   CaretDown,
   ArrowRight,
 } from "@phosphor-icons/react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
@@ -35,9 +35,10 @@ export function PillarsPreview() {
   const t = useTranslations("home.pillars");
   const locale = useLocale();
   const [expanded, setExpanded] = useState<PillarKey | null>(null);
+  const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="bg-light-beige py-16 md:py-24" aria-labelledby="pillars-heading">
+    <section className="bg-light-beige py-16 md:py-24" aria-label="Four pillars">
       <div className="mx-auto max-w-6xl px-4 lg:px-8">
         <ScrollReveal>
           <div className="text-center mb-12">
@@ -73,28 +74,19 @@ export function PillarsPreview() {
                           {t(`${key}.description`)}
                         </p>
                       </div>
-                      <motion.span
-                        animate={{ rotate: isOpen ? 180 : 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="flex-shrink-0 mt-1 text-near-black/40"
+                      <span
+                        className={`flex-shrink-0 mt-1 text-near-black/40 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
                         aria-hidden="true"
                       >
                         <CaretDown size={18} />
-                      </motion.span>
+                      </span>
                     </div>
                   </button>
 
                   {/* Expandable bullets */}
-                  <AnimatePresence initial={false}>
-                    {isOpen && (
-                      <motion.div
-                        key="bullets"
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.25, ease: "easeInOut" }}
-                        className="overflow-hidden"
-                      >
+                  {shouldReduceMotion ? (
+                    isOpen && (
+                      <div>
                         <ul className="px-6 pb-4 space-y-2">
                           {bullets.map((bullet: string, i: number) => (
                             <li key={i} className="flex items-start gap-2 font-body text-sm text-near-black/75">
@@ -111,9 +103,39 @@ export function PillarsPreview() {
                             {t("learnMore")} <ArrowRight size={14} />
                           </a>
                         </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                      </div>
+                    )
+                  ) : (
+                    <AnimatePresence initial={false}>
+                      {isOpen && (
+                        <motion.div
+                          key="bullets"
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.25, ease: "easeInOut" }}
+                          className="overflow-hidden"
+                        >
+                          <ul className="px-6 pb-4 space-y-2">
+                            {bullets.map((bullet: string, i: number) => (
+                              <li key={i} className="flex items-start gap-2 font-body text-sm text-near-black/75">
+                                <span className={`mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0 bg-current ${iconColor}`} aria-hidden="true" />
+                                {bullet}
+                              </li>
+                            ))}
+                          </ul>
+                          <div className="px-6 pb-5">
+                            <a
+                              href={`/${locale}/cap-241`}
+                              className={`inline-flex items-center gap-1.5 font-heading text-sm font-semibold ${iconColor} hover:underline focus:outline-none focus:underline`}
+                            >
+                              {t("learnMore")} <ArrowRight size={14} />
+                            </a>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  )}
                 </div>
               </ScrollReveal>
             );

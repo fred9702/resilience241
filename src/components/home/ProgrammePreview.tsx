@@ -23,7 +23,7 @@ export function ProgrammePreview() {
   const locale = useLocale();
 
   return (
-    <section className="bg-light-beige py-16 md:py-24 overflow-hidden" aria-labelledby="programme-heading">
+    <section className="bg-light-beige py-16 md:py-24 overflow-hidden" aria-label="Programme preview">
       <div className="mx-auto max-w-6xl px-4 lg:px-8">
         <ScrollReveal>
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">

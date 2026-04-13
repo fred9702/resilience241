@@ -84,7 +84,7 @@ export function ImpactNumbers() {
     <section
       className="relative overflow-hidden py-16 md:py-24"
       style={{ background: "linear-gradient(135deg, #6B3417 0%, #4a2410 50%, #6B3417 100%)" }}
-      aria-labelledby="impact-heading"
+      aria-label="Impact numbers"
     >
       {/* Subtle texture overlay */}
       <div

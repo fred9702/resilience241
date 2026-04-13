@@ -18,7 +18,7 @@ export function FeaturedSpeakers() {
   const locale = useLocale();
 
   return (
-    <section className="bg-warm-cream py-16 md:py-24" aria-labelledby="speakers-heading">
+    <section className="bg-warm-cream py-16 md:py-24" aria-label="Featured speakers">
       <div className="mx-auto max-w-6xl px-4 lg:px-8">
         <ScrollReveal>
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">

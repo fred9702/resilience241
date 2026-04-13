@@ -19,7 +19,7 @@ export function PartnersMarquee() {
   const [paused, setPaused] = useState(false);
 
   return (
-    <section className="bg-warm-cream py-16 md:py-20" aria-labelledby="partners-heading">
+    <section className="bg-warm-cream py-16 md:py-20" aria-label="Partners">
       <div className="mx-auto max-w-6xl px-4 lg:px-8">
         <ScrollReveal>
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">

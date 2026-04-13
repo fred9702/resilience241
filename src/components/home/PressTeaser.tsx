@@ -20,11 +20,10 @@ export function PressTeaser() {
   const locale = useLocale();
 
   return (
-    <section className="bg-light-beige py-16 md:py-20" aria-labelledby="press-heading">
+    <section className="bg-light-beige py-16 md:py-20" aria-label="Press and media">
       <div className="mx-auto max-w-2xl px-4 text-center">
         <ScrollReveal>
           <h2
-            id="press-heading"
             className="font-heading text-2xl md:text-3xl font-bold text-near-black mb-4"
           >
             {t("headline")}
