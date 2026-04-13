@@ -92,6 +92,12 @@ p {
   100% { transform: translateX(-50%); }
 }
 
+@keyframes pulse-scale {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
 /* Glass utility */
 .glass {
   background: rgba(107, 52, 23, 0.5);

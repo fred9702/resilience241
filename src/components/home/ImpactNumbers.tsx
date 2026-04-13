@@ -12,13 +12,15 @@ function easeOutCubic(t: number): number {
   return 1 - Math.pow(1 - t, 3);
 }
 
-function AnimatedCounter({ target, duration = 1600 }: { target: number; duration?: number }) {
+function AnimatedCounter({ target, duration = 1600, onComplete }: { target: number; duration?: number; onComplete?: () => void }) {
   const [count, setCount] = useState(0);
   const startRef = useRef<number | null>(null);
   const rafRef = useRef<number | null>(null);
+  const completedRef = useRef(false);
 
   useEffect(() => {
     startRef.current = null;
+    completedRef.current = false;
     setCount(0);
 
     function tick(ts: number) {
@@ -28,6 +30,9 @@ function AnimatedCounter({ target, duration = 1600 }: { target: number; duration
       setCount(Math.round(easeOutCubic(progress) * target));
       if (progress < 1) {
         rafRef.current = requestAnimationFrame(tick);
+      } else if (!completedRef.current) {
+        completedRef.current = true;
+        onComplete?.();
       }
     }
 
@@ -35,7 +40,7 @@ function AnimatedCounter({ target, duration = 1600 }: { target: number; duration
     return () => {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
     };
-  }, [target, duration]);
+  }, [target, duration, onComplete]);
 
   return <>{count}</>;
 }
@@ -44,6 +49,7 @@ function StatCard({ statKey }: { statKey: StatKey }) {
   const t = useTranslations("home.impact");
   const shouldReduceMotion = useReducedMotion();
   const [inView, setInView] = useState(false);
+  const [pulse, setPulse] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   const value = t(`${statKey}.value`);
@@ -62,11 +68,19 @@ function StatCard({ statKey }: { statKey: StatKey }) {
     return () => observer.disconnect();
   }, []);
 
+  const handleComplete = () => {
+    setPulse(true);
+    setTimeout(() => setPulse(false), 600);
+  };
+
   return (
     <div ref={ref} className="flex flex-col items-center text-center p-6">
-      <div className="font-heading text-5xl md:text-6xl font-extrabold text-orange tabular-nums">
+      <div
+        className="font-heading text-5xl md:text-6xl font-extrabold text-orange tabular-nums"
+        style={pulse ? { animation: "pulse-scale 0.6s ease-in-out" } : undefined}
+      >
         {shouldReduceMotion || !inView ? numericValue : (
-          inView ? <AnimatedCounter target={numericValue} /> : 0
+          inView ? <AnimatedCounter target={numericValue} onComplete={handleComplete} /> : 0
         )}
       </div>
       <div className="mt-2 font-heading text-lg font-semibold text-warm-cream uppercase tracking-wide">
@@ -83,18 +97,16 @@ export function ImpactNumbers() {
   return (
     <section
       className="relative overflow-hidden py-16 md:py-24"
-      style={{ background: "linear-gradient(135deg, #6B3417 0%, #4a2410 50%, #6B3417 100%)" }}
       aria-label="Impact numbers"
     >
-      {/* Subtle texture overlay */}
+      {/* Parallax photo background */}
       <div
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage: "radial-gradient(circle at 1px 1px, #FBF0E6 1px, transparent 0)",
-          backgroundSize: "24px 24px",
-        }}
+        className="absolute inset-0 bg-brown bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: 'url("/images/photography/hands-unity.jpg")' }}
         aria-hidden="true"
       />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-brown/85" aria-hidden="true" />
 
       <div className="relative mx-auto max-w-5xl px-4 lg:px-8">
         <ScrollReveal>
