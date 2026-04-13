@@ -198,10 +198,10 @@ export function Navbar({ locale }: { locale: string }) {
         aria-modal={menuOpen ? true : undefined}
         aria-label={menuOpen ? "Mobile navigation" : undefined}
         aria-hidden={!menuOpen}
-        className={`lg:hidden fixed inset-x-0 top-[68px] bottom-0 bg-brown transition-transform duration-300 ease-in-out ${
+        className={`lg:hidden fixed inset-x-0 top-[68px] bottom-0 bg-brown transition-all duration-300 ease-in-out ${
           menuOpen
-            ? "pointer-events-auto translate-x-0"
-            : "pointer-events-none translate-x-full"
+            ? "pointer-events-auto translate-x-0 opacity-100"
+            : "pointer-events-none translate-x-full opacity-0"
         }`}
       >
         {/* Campaign logo at top */}
