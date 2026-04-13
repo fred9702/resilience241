@@ -102,11 +102,13 @@ export function HeroSection() {
   return (
     <section
       className="relative min-h-screen flex items-center overflow-hidden"
+      aria-label="Hero"
     >
       {/* Full-bleed background photo */}
       <Image
         src="/images/photography/hands-unity.jpg"
         alt=""
+        aria-hidden="true"
         fill
         className="object-cover"
         sizes="100vw"

@@ -8,10 +8,11 @@ export function Cap241Nkok() {
   const t = useTranslations("cap241");
 
   return (
-    <section className="relative py-20 md:py-28 overflow-hidden bg-brown">
+    <section className="relative py-20 md:py-28 overflow-hidden bg-brown" aria-label="Nkok Centre">
       <Image
         src="/images/photography/artisan-weaving.jpg"
         alt=""
+        aria-hidden="true"
         fill
         className="object-cover"
         sizes="100vw"

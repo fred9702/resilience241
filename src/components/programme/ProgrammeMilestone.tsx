@@ -14,6 +14,7 @@ export function ProgrammeMilestone() {
       <Image
         src="/images/photography/zita-podium.jpg"
         alt=""
+        aria-hidden="true"
         fill
         className="object-cover"
         sizes="100vw"

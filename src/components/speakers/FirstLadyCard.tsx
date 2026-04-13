@@ -34,7 +34,7 @@ export function FirstLadyCard({
           {lady.photoPath ? (
             <Image
               src={lady.photoPath}
-              alt={name}
+              alt={`${honorific} ${name}, ${country}`}
               width={224}
               height={300}
               className="object-cover w-full h-full"
@@ -82,7 +82,7 @@ export function FirstLadyCard({
         {lady.photoPath ? (
           <Image
             src={lady.photoPath}
-            alt={name}
+            alt={`${honorific} ${name}, ${country}`}
             width={183}
             height={246}
             className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
