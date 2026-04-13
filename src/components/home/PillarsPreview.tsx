@@ -54,7 +54,7 @@ export function PillarsPreview() {
             return (
               <ScrollReveal key={key} delay={index * 0.1}>
                 <div
-                  className={`relative bg-warm-cream rounded-2xl border-t-4 ${borderColor} shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden flex flex-col`}
+                  className={`relative bg-warm-cream rounded-2xl border-t-4 ${borderColor} shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-200 overflow-hidden flex flex-col`}
                 >
                   {/* Card header — always visible */}
                   <button
@@ -62,8 +62,8 @@ export function PillarsPreview() {
                     aria-expanded={isOpen}
                     onClick={() => setExpanded(isOpen ? null : key)}
                   >
-                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${iconColor} bg-current/10`}>
-                      <Icon size={26} weight="duotone" className={iconColor} />
+                    <div className="w-14 h-14 rounded-xl flex items-center justify-center bg-light-beige shadow-sm">
+                      <Icon size={28} weight="duotone" className={iconColor} />
                     </div>
                     <div className="flex items-start justify-between gap-2">
                       <div>

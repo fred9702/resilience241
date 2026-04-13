@@ -33,7 +33,7 @@ export function FeaturedSpeakers() {
 
         {/* Mobile: horizontal scroll with snap; Desktop: grid */}
         <div
-          className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 md:pb-0 md:grid md:grid-cols-3 lg:grid-cols-6 md:overflow-visible scrollbar-hide"
+          className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 md:pb-0 md:grid md:grid-cols-3 lg:grid-cols-6 md:overflow-visible scrollbar-hide justify-items-center"
           style={{ scrollbarWidth: "none" }}
         >
           {FEATURED.map((fl, index) => {
@@ -48,7 +48,7 @@ export function FeaturedSpeakers() {
                   aria-label={name}
                 >
                   {/* Circular portrait */}
-                  <div className="relative w-32 h-32 md:w-36 md:h-36 rounded-full overflow-hidden border-[3px] border-orange shadow-md group-hover:shadow-orange/30 group-hover:scale-105 transition-all duration-300">
+                  <div className="relative w-36 h-36 md:w-40 md:h-40 rounded-full overflow-hidden border-[3px] border-orange shadow-md group-hover:shadow-orange/30 group-hover:scale-105 transition-all duration-300">
                     {fl.photoPath ? (
                       <Image
                         src={fl.photoPath}

@@ -67,15 +67,15 @@ export function PartnersMarquee() {
               {[...LOGO_PARTNERS, ...LOGO_PARTNERS].map((partner, i) => (
                 <div
                   key={`${partner.id}-${i}`}
-                  className="relative w-28 h-16 flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300"
+                  className="flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 px-4"
                   aria-hidden={i >= LOGO_PARTNERS.length}
                 >
                   <Image
                     src={partner.logoPath!}
                     alt={i < LOGO_PARTNERS.length ? tPartners(`${partner.id}.name`) : ""}
-                    fill
-                    className="object-contain"
-                    sizes="112px"
+                    width={120}
+                    height={48}
+                    className="h-12 w-auto object-contain"
                   />
                 </div>
               ))}

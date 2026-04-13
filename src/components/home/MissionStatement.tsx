@@ -81,10 +81,10 @@ export function MissionStatement() {
                         initial={{ opacity: 0, y: 8 }}
                         animate={inView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.4, delay: i * 0.03, ease: "easeOut" }}
-                        className="inline-block mr-[0.25em]"
+                        className="inline"
                         aria-hidden="true"
                       >
-                        {word}
+                        {word}{" "}
                       </motion.span>
                     ))}
                     &nbsp;&raquo;
