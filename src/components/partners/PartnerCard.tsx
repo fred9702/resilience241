@@ -44,7 +44,7 @@ export function PartnerCard({ partner }: { partner: Partner }) {
 
   return (
     <div
-      className={`relative rounded-2xl p-8 border ${colors.border} ${colors.bg} backdrop-blur-sm transition-all duration-300`}
+      className={`relative rounded-2xl p-8 border ${colors.border} ${colors.bg} backdrop-blur-sm transition-all duration-300 h-full hover:-translate-y-1 hover:shadow-lg`}
     >
       {/* Logo */}
       {partner.logoPath && (
