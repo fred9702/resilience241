@@ -113,12 +113,6 @@ p {
   box-shadow: 0 2px 8px rgba(224, 123, 57, 0.15);
 }
 
-.speaker-photo {
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  filter: sepia(20%) saturate(80%) brightness(105%) contrast(92%);
-  border-radius: 0.5rem;
-}
 
 
 @media (prefers-reduced-motion: reduce) {
