@@ -7,19 +7,22 @@ import "./globals.css";
 const jost = Jost({
   variable: "--font-jost",
   subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
 });
 
 const sourceSans = Source_Sans_3({
   variable: "--font-source-sans",
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
 const sourceCode = Source_Code_Pro({
   variable: "--font-source-code",
   subsets: ["latin"],
+  weight: ["400"],
   display: "swap",
 });
 
