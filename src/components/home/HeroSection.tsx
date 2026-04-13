@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
-import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import type { Transition } from "framer-motion";
 
 const HERO_LOGOS: Record<string, string> = {
@@ -70,6 +70,14 @@ export function HeroSection() {
   const [time, setTime] = useState(getTimeLeft);
   const srRef = useRef<HTMLDivElement>(null);
   const lastAnnouncedMinute = useRef(-1);
+  const heroRef = useRef<HTMLElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+  const logoY = useTransform(scrollYProgress, [0, 1], [0, -40]);
+  const titleY = useTransform(scrollYProgress, [0, 1], [0, -20]);
 
   useEffect(() => {
     setMounted(true);
@@ -113,6 +121,7 @@ export function HeroSection() {
 
   return (
     <section
+      ref={heroRef}
       className="relative min-h-screen flex items-center overflow-hidden"
       aria-label="Hero"
     >
@@ -172,7 +181,7 @@ export function HeroSection() {
 
       {/* Content — centered */}
       <div className="relative z-10 mx-auto max-w-5xl w-full px-4 py-20 lg:px-8 text-center">
-        <motion.div {...logoAnim}>
+        <motion.div {...logoAnim} style={!shouldReduceMotion ? { y: logoY } : undefined}>
           <Image
             src={heroLogo}
             alt={locale === "fr" ? "OPDAD #RenforcerLaRésilience" : "OAFLAD #BuildingResilience"}
@@ -185,6 +194,7 @@ export function HeroSection() {
         <motion.div
           className="mt-8 max-w-2xl mx-auto text-center"
           {...fadeUp(0.3)}
+          style={!shouldReduceMotion ? { y: titleY } : undefined}
         >
           <p className="font-heading text-xl md:text-2xl font-semibold text-brown leading-snug tracking-tight">
             {t("tagline")}
