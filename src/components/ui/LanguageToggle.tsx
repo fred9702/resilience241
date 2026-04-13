@@ -5,8 +5,6 @@ import { usePathname, useRouter } from "next/navigation";
 export function LanguageToggle({ locale }: { locale: string }) {
   const pathname = usePathname();
   const router = useRouter();
-  const otherLocale = locale === "fr" ? "en" : "fr";
-
   function switchTo(target: string) {
     if (target === locale) return;
     const pathWithoutLocale = pathname.replace(/^\/(fr|en)/, "") || "/";
