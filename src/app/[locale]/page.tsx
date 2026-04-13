@@ -2,11 +2,7 @@ import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { HeroSection } from "@/components/home/HeroSection";
 import { MissionStatement } from "@/components/home/MissionStatement";
-import { PillarsPreview } from "@/components/home/PillarsPreview";
-import { FeaturedSpeakers } from "@/components/home/FeaturedSpeakers";
-import { ProgrammePreview } from "@/components/home/ProgrammePreview";
 import { ImpactNumbers } from "@/components/home/ImpactNumbers";
-import { PartnersMarquee } from "@/components/home/PartnersMarquee";
 import { PressTeaser } from "@/components/home/PressTeaser";
 import { CTABanner } from "@/components/home/CTABanner";
 import { BASE_URL } from "@/lib/seo";
@@ -37,11 +33,7 @@ export default async function HomePage({ params }: Props) {
     <>
       <HeroSection />
       <MissionStatement />
-      <PillarsPreview />
-      <FeaturedSpeakers />
-      <ProgrammePreview />
       <ImpactNumbers />
-      <PartnersMarquee />
       <PressTeaser />
       <CTABanner />
     </>

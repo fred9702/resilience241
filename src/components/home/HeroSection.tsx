@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
-import { motion, AnimatePresence, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import type { Transition } from "framer-motion";
 
 const HERO_LOGOS: Record<string, string> = {
@@ -11,9 +11,6 @@ const HERO_LOGOS: Record<string, string> = {
   en: "/images/en/campaign-logo-full.svg",
 };
 const HERO_LOGO_FALLBACK = "/images/common/mark.svg";
-
-// Set to a video URL to enable video background; null uses the photo fallback
-const HERO_VIDEO: string | null = null;
 
 const TARGET = new Date("2026-04-17T08:00:00+01:00").getTime();
 
@@ -50,15 +47,6 @@ function FlipNumber({ value, mounted, shouldReduceMotion }: { value: number; mou
   );
 }
 
-const PARTICLES = Array.from({ length: 12 }, (_, i) => ({
-  id: i,
-  left: `${8 + (i * 7.5) % 84}%`,
-  top: `${20 + (i * 13) % 60}%`,
-  size: 4 + (i % 3) * 3,
-  delay: `${(i * 1.7) % 8}s`,
-  duration: `${8 + (i * 2.3) % 6}s`,
-}));
-
 export function HeroSection() {
   const t = useTranslations("hero");
   const tCountdown = useTranslations("countdown");
@@ -70,14 +58,6 @@ export function HeroSection() {
   const [time, setTime] = useState(getTimeLeft);
   const srRef = useRef<HTMLDivElement>(null);
   const lastAnnouncedMinute = useRef(-1);
-  const heroRef = useRef<HTMLElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ["start start", "end start"],
-  });
-  const logoY = useTransform(scrollYProgress, [0, 1], [0, -40]);
-  const titleY = useTransform(scrollYProgress, [0, 1], [0, -20]);
 
   useEffect(() => {
     setMounted(true);
@@ -121,34 +101,19 @@ export function HeroSection() {
 
   return (
     <section
-      ref={heroRef}
       className="relative min-h-screen flex items-center overflow-hidden"
       aria-label="Hero"
     >
-      {/* Background: video or photo with Ken Burns */}
-      {HERO_VIDEO ? (
-        <video
-          src={HERO_VIDEO}
-          poster="/images/photography/hands-unity.jpg"
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          aria-hidden="true"
-        />
-      ) : (
-        <Image
-          src="/images/photography/hands-unity.jpg"
-          alt=""
-          aria-hidden="true"
-          fill
-          className={`object-cover ${!shouldReduceMotion ? "animate-[kenburns_20s_ease-in-out_infinite_alternate]" : ""}`}
-          sizes="100vw"
-          priority
-        />
-      )}
-
+      {/* Full-bleed background photo */}
+      <Image
+        src="/images/photography/hands-unity.jpg"
+        alt=""
+        fill
+        className="object-cover"
+        sizes="100vw"
+        priority
+        aria-hidden="true"
+      />
       {/* Warm gradient overlay for text readability */}
       <div
         className="absolute inset-0"
@@ -159,29 +124,9 @@ export function HeroSection() {
         aria-hidden="true"
       />
 
-      {/* Ambient particles — disabled under reduced motion */}
-      {!shouldReduceMotion && (
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          {PARTICLES.map(({ id, left, top, size, delay, duration }) => (
-            <span
-              key={id}
-              className="absolute rounded-full bg-orange"
-              style={{
-                left,
-                top,
-                width: size,
-                height: size,
-                opacity: 0,
-                animation: `particle-float ${duration} ${delay} ease-in-out infinite`,
-              }}
-            />
-          ))}
-        </div>
-      )}
-
       {/* Content — centered */}
       <div className="relative z-10 mx-auto max-w-5xl w-full px-4 py-20 lg:px-8 text-center">
-        <motion.div {...logoAnim} style={!shouldReduceMotion ? { y: logoY } : undefined}>
+        <motion.div {...logoAnim}>
           <Image
             src={heroLogo}
             alt={locale === "fr" ? "OPDAD #RenforcerLaRésilience" : "OAFLAD #BuildingResilience"}
@@ -194,7 +139,6 @@ export function HeroSection() {
         <motion.div
           className="mt-8 max-w-2xl mx-auto text-center"
           {...fadeUp(0.3)}
-          style={!shouldReduceMotion ? { y: titleY } : undefined}
         >
           <p className="font-heading text-xl md:text-2xl font-semibold text-brown leading-snug tracking-tight">
             {t("tagline")}
@@ -226,7 +170,7 @@ export function HeroSection() {
             {boxes.map(({ value, label }, i) => (
               <div key={label} className="flex items-center gap-1.5 md:gap-5">
                 <div
-                  className="glass rounded-lg md:rounded-xl px-2.5 py-2 md:px-5 md:py-4 flex flex-col items-center min-w-[60px] md:min-w-0"
+                  className="bg-brown/80 backdrop-blur-sm border border-brown/20 rounded-lg md:rounded-xl px-2.5 py-2 md:px-5 md:py-4 flex flex-col items-center min-w-[60px] md:min-w-0"
                   aria-hidden="true"
                 >
                   <FlipNumber value={value} mounted={mounted} shouldReduceMotion={shouldReduceMotion} />
