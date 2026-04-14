@@ -14,7 +14,6 @@ const SEQ1_KEYS = [
   "video",
   "oaflad",
   "firstLadies",
-  "un",
   "doctorate",
   "exhibition",
   "lunch",
