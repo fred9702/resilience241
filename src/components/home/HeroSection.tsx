@@ -102,6 +102,7 @@ export function HeroSection() {
   return (
     <section
       className="relative min-h-screen flex items-center overflow-hidden"
+      aria-label="Hero"
     >
       {/* Full-bleed background photo */}
       <Image
@@ -111,6 +112,7 @@ export function HeroSection() {
         className="object-cover"
         sizes="100vw"
         priority
+        aria-hidden="true"
       />
       {/* Warm gradient overlay for text readability */}
       <div

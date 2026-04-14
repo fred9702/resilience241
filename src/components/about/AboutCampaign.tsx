@@ -14,6 +14,7 @@ export function AboutCampaign() {
       <Image
         src="/images/photography/cap-femmes-gathering.jpg"
         alt=""
+        aria-hidden="true"
         fill
         className="object-cover"
         sizes="100vw"

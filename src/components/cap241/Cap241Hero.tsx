@@ -14,6 +14,7 @@ export function Cap241Hero() {
       <Image
         src="/images/photography/zita-boat.jpg"
         alt=""
+        aria-hidden="true"
         fill
         className="object-cover"
         sizes="100vw"

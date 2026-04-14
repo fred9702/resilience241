@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { HeroSection } from "@/components/home/HeroSection";
-import { CTABanner } from "@/components/home/CTABanner";
-import { QuoteSection } from "@/components/home/QuoteSection";
+import { MissionStatement } from "@/components/home/MissionStatement";
+import { ImpactNumbers } from "@/components/home/ImpactNumbers";
+import { PressTeaser } from "@/components/home/PressTeaser";
+import { HomeFinalCta } from "@/components/home/HomeFinalCta";
 import { BASE_URL } from "@/lib/seo";
 
 type Props = {
@@ -30,8 +32,10 @@ export default async function HomePage({ params }: Props) {
   return (
     <>
       <HeroSection />
-      <QuoteSection />
-      <CTABanner />
+      <MissionStatement />
+      <ImpactNumbers />
+      <PressTeaser />
+      <HomeFinalCta />
     </>
   );
 }

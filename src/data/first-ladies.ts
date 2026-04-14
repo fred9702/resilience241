@@ -51,6 +51,7 @@ export const firstLadies: FirstLady[] = [
     id: "burundi", // since June 2020
     countryFlag: "\u{1F1E7}\u{1F1EE}",
     photoPath: "/images/partners/first-ladies/angeline-ndayishimiye.jpg",
+    photoPosition: "center top",
     isSpeaker: true,
   },
   {
@@ -69,6 +70,7 @@ export const firstLadies: FirstLady[] = [
     id: "coteIvoire", // since April 2011
     countryFlag: "\u{1F1E8}\u{1F1EE}",
     photoPath: "/images/partners/first-ladies/dominique-ouattara.jpg",
+    photoPosition: "center 10%",
     isSpeaker: true,
   },
   {
@@ -81,12 +83,14 @@ export const firstLadies: FirstLady[] = [
     id: "nigeria", // since May 2023
     countryFlag: "\u{1F1F3}\u{1F1EC}",
     photoPath: "/images/partners/first-ladies/oluremi-tinubu.jpg",
+    honorificOverride: "honorificSenator",
     isSpeaker: true,
   },
   {
     id: "senegal", // since April 2024
     countryFlag: "\u{1F1F8}\u{1F1F3}",
     photoPath: "/images/partners/first-ladies/marie-khone-faye.jpeg",
+    photoPosition: "center 10%",
     isSpeaker: true,
   },
   {
@@ -98,7 +102,8 @@ export const firstLadies: FirstLady[] = [
   {
     id: "ghana", // since January 2025
     countryFlag: "\u{1F1EC}\u{1F1ED}",
-    photoPath: "/images/partners/first-ladies/lordina-mahama.jpeg",
+    photoPath: "/images/partners/first-ladies/lordina-mahama.jpg",
+    photoPosition: "center top",
     isSpeaker: true,
   },
 ];

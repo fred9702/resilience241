@@ -75,6 +75,18 @@ p {
   50% { transform: translateY(-10px) rotate(1deg); }
 }
 
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes pulse-scale {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
 /* Glass utility */
 .glass {
   background: rgba(107, 52, 23, 0.5);
@@ -89,6 +101,8 @@ p {
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   box-shadow: 0 2px 8px rgba(224, 123, 57, 0.15);
 }
+
+
 
 @media (prefers-reduced-motion: reduce) {
   html {

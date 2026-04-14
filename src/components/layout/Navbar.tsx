@@ -5,7 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { List, X } from "@phosphor-icons/react";
+import { List, X, FacebookLogo, TwitterLogo, InstagramLogo } from "@phosphor-icons/react";
+import { LanguageToggle } from "@/components/ui/LanguageToggle";
 
 const NAV_LINKS = [
   { key: "about", href: "/about" },
@@ -15,6 +16,7 @@ const NAV_LINKS = [
   { key: "partners", href: "/partners" },
   { key: "media", href: "/media" },
   { key: "contact", href: "/contact" },
+  { key: "faq", href: "/faq" },
 ] as const;
 
 const NAVBAR_LOGOS: Record<string, string> = {
@@ -168,25 +170,13 @@ export function Navbar({ locale }: { locale: string }) {
             </Link>
           ))}
 
-          {/* Language switcher — min 44px touch target */}
-          <button
-            onClick={switchLocale}
-            className="font-heading text-sm font-semibold text-brown/90 hover:text-brown border border-brown/30 hover:border-brown min-h-[44px] min-w-[44px] px-3 py-1 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-orange"
-            aria-label={`Switch to ${otherLocale.toUpperCase()}`}
-          >
-            {tLang("switchTo")}
-          </button>
+          {/* Language switcher pill */}
+          <LanguageToggle locale={locale} />
         </div>
 
         {/* Mobile controls */}
         <div className="flex items-center gap-3 lg:hidden">
-          <button
-            onClick={switchLocale}
-            className="font-heading text-sm font-semibold text-brown/90 hover:text-brown border border-brown/30 min-h-[44px] min-w-[44px] px-3 py-1 rounded focus:outline-none focus:ring-2 focus:ring-orange"
-            aria-label={`Switch to ${otherLocale.toUpperCase()}`}
-          >
-            {tLang("switchTo")}
-          </button>
+          <LanguageToggle locale={locale} />
           <button
             ref={hamburgerRef}
             onClick={() => setMenuOpen(!menuOpen)}
@@ -200,7 +190,7 @@ export function Navbar({ locale }: { locale: string }) {
         </div>
       </nav>
 
-      {/* Mobile menu — fixed full-screen overlay below navbar */}
+      {/* Mobile menu — fixed full-screen overlay below navbar, slides in from right */}
       <div
         ref={menuRef}
         id="mobile-menu"
@@ -208,28 +198,59 @@ export function Navbar({ locale }: { locale: string }) {
         aria-modal={menuOpen ? true : undefined}
         aria-label={menuOpen ? "Mobile navigation" : undefined}
         aria-hidden={!menuOpen}
-        className={`lg:hidden fixed inset-x-0 top-[68px] bottom-0 bg-warm-cream transition-all duration-300 ease-in-out ${
+        className={`lg:hidden fixed inset-x-0 top-[68px] bottom-0 bg-brown transition-all duration-300 ease-in-out ${
           menuOpen
-            ? "opacity-100 pointer-events-auto translate-y-0"
-            : "opacity-0 pointer-events-none -translate-y-2"
+            ? "pointer-events-auto translate-x-0 opacity-100"
+            : "pointer-events-none translate-x-full opacity-0"
         }`}
       >
-        <div className="flex flex-col px-6 py-6 gap-1 border-t border-brown/10">
+        {/* Nav links */}
+        <div className="flex flex-col px-6 py-6 gap-1">
           {NAV_LINKS.map(({ key, href }) => (
             <Link
               key={key}
               href={`/${locale}${href}`}
               onClick={() => setMenuOpen(false)}
               tabIndex={menuOpen ? 0 : -1}
-              className={`font-heading text-lg font-semibold px-3 py-3 border-b border-brown/10 focus:outline-none focus:ring-2 focus:ring-orange rounded ${
+              className={`font-heading text-xl font-semibold min-h-[56px] flex items-center px-3 border-b border-warm-cream/10 focus:outline-none focus:ring-2 focus:ring-orange rounded ${
                 isActive(href)
-                  ? "text-crimson"
-                  : "text-brown hover:text-crimson"
+                  ? "text-orange border-l-4 border-l-orange pl-2"
+                  : "text-warm-cream hover:text-orange"
               }`}
             >
               {t(key)}
             </Link>
           ))}
+        </div>
+
+        {/* Bottom: language toggle + social icons */}
+        <div className="absolute bottom-0 left-0 right-0 px-6 py-6 border-t border-warm-cream/10 flex items-center justify-between">
+          <button
+            onClick={switchLocale}
+            tabIndex={menuOpen ? 0 : -1}
+            className="font-heading text-sm font-semibold text-warm-cream border border-warm-cream/30 min-h-[44px] min-w-[44px] px-4 py-1 rounded-full focus:outline-none focus:ring-2 focus:ring-orange"
+            aria-label={`Switch to ${otherLocale.toUpperCase()}`}
+          >
+            {tLang("switchTo")}
+          </button>
+
+          <div className="flex gap-3">
+            {[
+              { Icon: FacebookLogo, label: "Facebook", href: "https://www.facebook.com/share/1B4pNuGHt7/?mibextid=wwXIfr" },
+              { Icon: TwitterLogo, label: "Twitter / X", href: "https://x.com/resilience241" },
+              { Icon: InstagramLogo, label: "Instagram", href: "https://instagram.com/resilience_241" },
+            ].map(({ Icon, label, href }) => (
+              <a
+                key={label}
+                href={href}
+                aria-label={label}
+                tabIndex={menuOpen ? 0 : -1}
+                className="text-warm-cream hover:text-orange transition-colors focus:outline-none focus:ring-2 focus:ring-orange rounded-full flex items-center justify-center min-w-[44px] min-h-[44px] p-2"
+              >
+                <Icon size={22} />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </header>

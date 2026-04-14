@@ -34,7 +34,7 @@ export function FirstLadyCard({
           {lady.photoPath ? (
             <Image
               src={lady.photoPath}
-              alt={name}
+              alt={`${honorific} ${name}, ${country}`}
               width={224}
               height={300}
               className="object-cover w-full h-full"
@@ -69,20 +69,20 @@ export function FirstLadyCard({
     );
   }
 
-  return (
-    <div
-      className={`group relative rounded-xl overflow-hidden border transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full flex flex-col ${
-        lady.isHost
-          ? "border-crimson/30 bg-crimson/5 ring-2 ring-crimson/20"
-          : "border-brown/10 bg-white/60"
-      }`}
-    >
+  const cardClassName = `group relative rounded-xl overflow-hidden border transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full flex flex-col text-left w-full ${
+    lady.isHost
+      ? "border-crimson/30 bg-crimson/5 ring-2 ring-crimson/20"
+      : "border-brown/10 bg-white/60"
+  }${onReadMessage ? " cursor-pointer focus:outline-none focus:ring-2 focus:ring-orange" : ""}`;
+
+  const cardContent = (
+    <>
       {/* Photo or flag placeholder */}
       <div className="relative aspect-[3/4] bg-light-beige overflow-hidden">
         {lady.photoPath ? (
           <Image
             src={lady.photoPath}
-            alt={name}
+            alt={`${honorific} ${name}, ${country}`}
             width={183}
             height={246}
             className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
@@ -93,7 +93,6 @@ export function FirstLadyCard({
             <span className="text-6xl">{lady.countryFlag}</span>
           </div>
         )}
-
       </div>
 
       {/* Info */}
@@ -114,15 +113,26 @@ export function FirstLadyCard({
         )}
         <div className="mt-auto">
           {hasMessage && (
-            <button
-              onClick={onReadMessage}
-              className="pt-2 font-heading text-xs font-semibold text-crimson hover:text-crimson/80 transition-colors"
-            >
+            <span className="pt-2 font-heading text-xs font-semibold text-crimson">
               {t("readMessage")}
-            </button>
+            </span>
           )}
         </div>
       </div>
+    </>
+  );
+
+  if (onReadMessage) {
+    return (
+      <button type="button" onClick={onReadMessage} className={cardClassName}>
+        {cardContent}
+      </button>
+    );
+  }
+
+  return (
+    <div className={cardClassName}>
+      {cardContent}
     </div>
   );
 }
