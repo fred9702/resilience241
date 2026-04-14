@@ -16,7 +16,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "hero" });
   const org = locale === "fr" ? "OPDAD" : "OAFLAD";
   return {
-    title: locale === "fr" ? `Accueil | ${org} #BuildingResilience` : `Home | ${org} #BuildingResilience`,
+    title: locale === "fr"
+      ? "Zita Oligui Nguema – #RenforcerLaRésilience | Première Dame du Gabon"
+      : "Zita Oligui Nguema – #BuildingResilience | First Lady of Gabon",
     description: t("metaDescription"),
     alternates: {
       canonical: `${BASE_URL}/${locale}`,

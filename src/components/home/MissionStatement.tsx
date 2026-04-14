@@ -60,10 +60,13 @@ export function MissionStatement() {
           {/* Quote */}
           <figure className="flex-1">
             <div
-              className="w-10 h-1 rounded-full mb-6"
+              className="w-10 h-1 rounded-full mb-4"
               style={{ background: "linear-gradient(to right, #E07B39, #9B1C37)" }}
               aria-hidden="true"
             />
+            <h2 className="font-heading text-base md:text-lg font-semibold text-brown/70 mb-4 normal-case tracking-normal">
+              {tHome("heading")}
+            </h2>
             <blockquote>
               <p className="font-heading text-xl md:text-2xl lg:text-3xl italic text-crimson leading-snug" aria-label={quoteText}>
                 {shouldReduceMotion ? (

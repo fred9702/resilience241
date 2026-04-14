@@ -91,6 +91,25 @@ export default async function LocaleLayout({ children, params }: Props) {
         inLanguage: [locale],
         performer: performers,
       },
+      {
+        "@type": "Person",
+        "@id": "https://zitaoliguinguema.ga/#person",
+        name: "Zita Oligui Nguema",
+        givenName: "Zita",
+        familyName: "Oligui Nguema",
+        jobTitle: locale === "fr" ? "Première Dame de la République du Gabon" : "First Lady of the Gabonese Republic",
+        nationality: locale === "fr" ? "Gabonaise" : "Gabonese",
+        image: `${BASE_URL}/images/photography/zita-oligui-nguema-portrait.jpg`,
+        url: "https://zitaoliguinguema.ga",
+        mainEntityOfPage: "https://zitaoliguinguema.ga",
+        sameAs: ["https://zitaoliguinguema.ga"],
+        knowsAbout: [
+          "#BuildingResilience",
+          "#RenforcerLaRésilience",
+          "CAP 241",
+          locale === "fr" ? "Résilience des femmes et des filles" : "Resilience of women and girls",
+        ],
+      },
     ],
   };
 

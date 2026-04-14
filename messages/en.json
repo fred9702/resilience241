@@ -56,7 +56,8 @@
   "home": {
     "mission": {
       "photoAlt": "Her Excellency Mrs. Zita Oligui Nguema, First Lady of Gabon",
-      "learnMore": "Learn more about the First Lady"
+      "learnMore": "Learn more about the First Lady",
+      "heading": "A message from Zita Oligui Nguema"
     },
     "pillars": {
       "badge": "The Four Pillars",
@@ -355,7 +356,7 @@
   },
   "cap241": {
     "metaDescription": "CAP 241 — Gabon's strategic framework for social action under the #BuildingResilience campaign, linking health, family stability, prevention, and skills transfer.",
-    "title": "CAP 241",
+    "title": "CAP 241 – Zita Oligui Nguema's strategic framework",
     "badge": "Strategic Framework",
     "heroTitle": "CAP 241: A Framework for Social Action",
     "heroIntro": "The work of the <link>Ma Banniere Foundation</link> is structured through CAP 241, a framework linking:",
@@ -570,7 +571,7 @@
   },
   "speakers": {
     "metaDescription": "Patronage of the OAFLAD #BuildingResilience conference — distinguished leaders and First Ladies championing resilience across Africa.",
-    "title": "Patronage & Dignitaries",
+    "title": "Patronage of Zita Oligui Nguema & First Ladies of Africa",
     "badge": "Patronage & Dignitaries",
     "intro": "The #BuildingResilience conference is placed under the high patronage of the President and First Lady of the Republic of Gabon, and First Ladies from across Africa.",
     "content": "Moderator profiles will be announced soon.",
