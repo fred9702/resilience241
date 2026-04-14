@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { ArrowUpRight } from "@phosphor-icons/react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function Cap241Nkok() {
@@ -55,6 +56,16 @@ export function Cap241Nkok() {
                 </li>
               ))}
             </ul>
+
+            <a
+              href="https://zitaoliguinguema.ga/centers"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-2 font-heading text-sm font-semibold text-orange hover:text-orange/80 transition-colors focus:outline-none focus:ring-2 focus:ring-orange rounded"
+            >
+              {t("nkokLink")}
+              <ArrowUpRight size={16} weight="bold" aria-hidden="true" />
+            </a>
           </div>
         </ScrollReveal>
 
