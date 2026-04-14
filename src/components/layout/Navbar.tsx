@@ -204,20 +204,8 @@ export function Navbar({ locale }: { locale: string }) {
             : "pointer-events-none translate-x-full opacity-0"
         }`}
       >
-        {/* Campaign logo at top */}
-        <div className="px-6 py-5 border-b border-warm-cream/10">
-          <Image
-            src={navbarLogo}
-            alt=""
-            width={140}
-            height={42}
-            className="h-10 w-auto brightness-0 invert"
-            aria-hidden="true"
-          />
-        </div>
-
         {/* Nav links */}
-        <div className="flex flex-col px-6 py-4 gap-1">
+        <div className="flex flex-col px-6 py-6 gap-1">
           {NAV_LINKS.map(({ key, href }) => (
             <Link
               key={key}

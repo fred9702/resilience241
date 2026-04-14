@@ -66,11 +66,6 @@ export function FirstLadiesSection() {
         {/* Tier 2: Confirmed speakers */}
         {speakers.length > 0 && (
           <div className="mb-12">
-            <ScrollReveal>
-              <span className="inline-block font-heading text-xs font-semibold uppercase tracking-widest text-orange bg-orange/10 px-3 py-1 rounded-full mb-5">
-                {t("keynoteBadge")}
-              </span>
-            </ScrollReveal>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
               {speakers.map((lady, i) => (
                 <ScrollReveal key={lady.id} delay={0.03 * (i + 1)} className="h-full">
