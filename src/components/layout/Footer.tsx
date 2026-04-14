@@ -62,25 +62,22 @@ export function Footer() {
 
       <div className="mx-auto max-w-7xl px-4 py-16 lg:py-20 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
-          {/* Col 1: Logo + tagline */}
-          <div className="flex flex-col items-center md:items-start gap-3">
+          {/* Col 1: Logos */}
+          <div className="flex flex-col items-center md:items-start gap-4">
             <Image
               src={footerLogo}
               alt="#BuildingResilience"
               width={140}
               height={42}
-              className="h-auto w-[140px] brightness-0 invert"
+              className="h-[42px] w-auto brightness-0 invert"
             />
             <Image
               src="/images/partners/oaflad-logo.png"
               alt={locale === "fr" ? "OPDAD" : "OAFLAD"}
-              width={120}
-              height={40}
-              className="h-10 w-auto brightness-0 invert opacity-90"
+              width={140}
+              height={42}
+              className="h-[42px] w-auto brightness-0 invert opacity-90"
             />
-            <p className="font-body text-sm text-white/90 text-center md:text-left max-w-xs">
-              {t("tagline")}
-            </p>
           </div>
 
           {/* Col 2: Quick links — two sub-columns */}
