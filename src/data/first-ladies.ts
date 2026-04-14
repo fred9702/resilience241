@@ -70,6 +70,7 @@ export const firstLadies: FirstLady[] = [
     id: "coteIvoire", // since April 2011
     countryFlag: "\u{1F1E8}\u{1F1EE}",
     photoPath: "/images/partners/first-ladies/dominique-ouattara.jpg",
+    photoPosition: "center 10%",
     isSpeaker: true,
   },
   {
@@ -88,6 +89,7 @@ export const firstLadies: FirstLady[] = [
     id: "senegal", // since April 2024
     countryFlag: "\u{1F1F8}\u{1F1F3}",
     photoPath: "/images/partners/first-ladies/marie-khone-faye.jpeg",
+    photoPosition: "center 10%",
     isSpeaker: true,
   },
   {
