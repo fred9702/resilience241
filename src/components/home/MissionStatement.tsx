@@ -44,19 +44,14 @@ export function MissionStatement() {
         >
           {/* Portrait */}
           <div className="flex-shrink-0">
-            <div className="relative w-48 h-64 md:w-56 md:h-72 rounded-2xl overflow-hidden shadow-lg">
+            <div className="relative w-56 h-72 md:w-64 md:h-80 rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="/images/partners/first-ladies/zita-oligui-nguema.jpeg"
+                src="/images/photography/zita-oligui-nguema-portrait.jpg"
                 alt={tHome("photoAlt")}
                 fill
-                className="object-cover object-top"
-                sizes="(max-width: 768px) 192px, 224px"
-              />
-              {/* Subtle gradient overlay at bottom */}
-              <div
-                className="absolute inset-x-0 bottom-0 h-16"
-                style={{ background: "linear-gradient(to top, rgba(107,52,23,0.4), transparent)" }}
-                aria-hidden="true"
+                className="object-cover"
+                style={{ objectPosition: "35% 25%" }}
+                sizes="(max-width: 768px) 224px, 256px"
               />
             </div>
           </div>
