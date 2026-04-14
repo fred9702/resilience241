@@ -14,33 +14,36 @@ function easeOutCubic(t: number): number {
 
 function AnimatedCounter({ target, duration = 1600, onComplete }: { target: number; duration?: number; onComplete?: () => void }) {
   const [count, setCount] = useState(0);
-  const startRef = useRef<number | null>(null);
-  const rafRef = useRef<number | null>(null);
-  const completedRef = useRef(false);
+  const onCompleteRef = useRef(onComplete);
+
+  // Keep the latest onComplete callback in a ref so it doesn't retrigger the effect
+  useEffect(() => {
+    onCompleteRef.current = onComplete;
+  }, [onComplete]);
 
   useEffect(() => {
-    startRef.current = null;
-    completedRef.current = false;
-    setCount(0);
+    let startTs: number | null = null;
+    let rafId: number | null = null;
+    let completed = false;
 
     function tick(ts: number) {
-      if (!startRef.current) startRef.current = ts;
-      const elapsed = ts - startRef.current;
+      if (startTs === null) startTs = ts;
+      const elapsed = ts - startTs;
       const progress = Math.min(elapsed / duration, 1);
       setCount(Math.round(easeOutCubic(progress) * target));
       if (progress < 1) {
-        rafRef.current = requestAnimationFrame(tick);
-      } else if (!completedRef.current) {
-        completedRef.current = true;
-        onComplete?.();
+        rafId = requestAnimationFrame(tick);
+      } else if (!completed) {
+        completed = true;
+        onCompleteRef.current?.();
       }
     }
 
-    rafRef.current = requestAnimationFrame(tick);
+    rafId = requestAnimationFrame(tick);
     return () => {
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      if (rafId !== null) cancelAnimationFrame(rafId);
     };
-  }, [target, duration, onComplete]);
+  }, [target, duration]);
 
   return <>{count}</>;
 }
