@@ -83,6 +83,7 @@ export const firstLadies: FirstLady[] = [
     id: "nigeria", // since May 2023
     countryFlag: "\u{1F1F3}\u{1F1EC}",
     photoPath: "/images/partners/first-ladies/oluremi-tinubu.jpg",
+    honorificOverride: "honorificSenator",
     isSpeaker: true,
   },
   {

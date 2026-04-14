@@ -40,9 +40,18 @@
     "programmeButton": "Voir le programme",
     "registerButton": "S'inscrire",
     "learnMoreButton": "En savoir plus",
-    "stat1": { "value": "13", "label": "Premières Dames" },
-    "stat2": { "value": "4", "label": "Piliers" },
-    "stat3": { "value": "1", "label": "Jour" }
+    "stat1": {
+      "value": "13",
+      "label": "Premières Dames"
+    },
+    "stat2": {
+      "value": "4",
+      "label": "Piliers"
+    },
+    "stat3": {
+      "value": "1",
+      "label": "Jour"
+    }
   },
   "home": {
     "mission": {
@@ -53,22 +62,38 @@
       "health": {
         "name": "Santé",
         "description": "Renforcer l'accès aux soins pour les femmes et les filles en contexte fragile",
-        "bullets": ["Santé maternelle en zones de crise", "Réseaux de soutien en santé mentale", "Infrastructures de santé communautaire"]
+        "bullets": [
+          "Santé maternelle en zones de crise",
+          "Réseaux de soutien en santé mentale",
+          "Infrastructures de santé communautaire"
+        ]
       },
       "women": {
         "name": "Femmes",
         "description": "Autonomisation économique et protection des droits des femmes",
-        "bullets": ["Programmes d'inclusion financière", "Cadres de protection juridique", "Développement du leadership"]
+        "bullets": [
+          "Programmes d'inclusion financière",
+          "Cadres de protection juridique",
+          "Développement du leadership"
+        ]
       },
       "youth": {
         "name": "Jeunesse",
         "description": "Investir dans la prochaine génération par l'éducation et les opportunités",
-        "bullets": ["Formation professionnelle pour les jeunes déplacés", "Programmes d'alphabétisation numérique", "Forums de leadership jeunesse"]
+        "bullets": [
+          "Formation professionnelle pour les jeunes déplacés",
+          "Programmes d'alphabétisation numérique",
+          "Forums de leadership jeunesse"
+        ]
       },
       "education": {
         "name": "Éducation",
         "description": "Garantir l'accès à une éducation de qualité dans les zones touchées par les conflits",
-        "bullets": ["Initiatives de reconstruction d'écoles", "Programmes de formation des enseignants", "Solutions d'apprentissage à distance"]
+        "bullets": [
+          "Initiatives de reconstruction d'écoles",
+          "Programmes de formation des enseignants",
+          "Solutions d'apprentissage à distance"
+        ]
       },
       "learnMore": "En savoir plus"
     },
@@ -80,19 +105,59 @@
       "badge": "Programme",
       "viewFull": "Voir le programme complet",
       "moments": {
-        "opening": { "time": "08h00", "title": "Cérémonie d'ouverture", "description": "Discours de bienvenue et ouverture officielle" },
-        "presidential": { "time": "09h00", "title": "Allocution présidentielle", "description": "Message du Président de la République du Gabon" },
-        "firstLadies": { "time": "10h00", "title": "Allocutions des Premières Dames", "description": "Discours des Premières Dames participantes" },
-        "lunch": { "time": "12h30", "title": "Déjeuner & Exposition", "description": "Déjeuner de réseautage et exposition des partenaires" },
-        "panels": { "time": "14h00", "title": "Tables rondes", "description": "Panels thématiques sur les quatre piliers" },
-        "closing": { "time": "17h00", "title": "Cérémonie de clôture", "description": "Déclaration et discours de clôture" }
+        "opening": {
+          "time": "08h00",
+          "title": "Cérémonie d'ouverture",
+          "description": "Discours de bienvenue et ouverture officielle"
+        },
+        "presidential": {
+          "time": "09h00",
+          "title": "Allocution présidentielle",
+          "description": "Message du Président de la République du Gabon"
+        },
+        "firstLadies": {
+          "time": "10h00",
+          "title": "Allocutions des Premières Dames",
+          "description": "Discours des Premières Dames participantes"
+        },
+        "lunch": {
+          "time": "12h30",
+          "title": "Déjeuner & Exposition",
+          "description": "Déjeuner de réseautage et exposition des partenaires"
+        },
+        "panels": {
+          "time": "14h00",
+          "title": "Tables rondes",
+          "description": "Panels thématiques sur les quatre piliers"
+        },
+        "closing": {
+          "time": "17h00",
+          "title": "Cérémonie de clôture",
+          "description": "Déclaration et discours de clôture"
+        }
       }
     },
     "impact": {
-      "stat1": { "value": "13", "label": "Premières Dames", "subtitle": "Venues de tout le continent" },
-      "stat2": { "value": "4", "label": "Piliers", "subtitle": "Santé, Femmes, Jeunesse, Éducation" },
-      "stat3": { "value": "18", "label": "Quartiers", "subtitle": "Visites d'engagement communautaire" },
-      "stat4": { "value": "1", "label": "Jour", "subtitle": "Conférence Libreville 2026" }
+      "stat1": {
+        "value": "13",
+        "label": "Premières Dames",
+        "subtitle": "Venues de tout le continent"
+      },
+      "stat2": {
+        "value": "4",
+        "label": "Piliers",
+        "subtitle": "Santé, Femmes, Jeunesse, Éducation"
+      },
+      "stat3": {
+        "value": "18",
+        "label": "Quartiers",
+        "subtitle": "Visites d'engagement communautaire"
+      },
+      "stat4": {
+        "value": "1",
+        "label": "Jour",
+        "subtitle": "Conférence Libreville 2026"
+      }
     },
     "partners": {
       "badge": "Partenaires & Soutiens",
@@ -114,13 +179,41 @@
       "campaign": "La Campagne"
     },
     "questions": {
-      "whatIs": { "question": "Qu'est-ce que #RenforcerLaRésilience ?", "answer": "#RenforcerLaRésilience est une campagne panafricaine portée par la Première Dame du Gabon, Son Excellence Madame Zita Oligui Nguema, visant à renforcer la résilience des femmes et des filles face aux changements climatiques et aux conflits sur le continent.", "category": "campaign" },
-      "attending": { "question": "Qui participe ?", "answer": "La conférence réunit 19 Premières Dames africaines, ainsi que des délégués, partenaires, représentants des Nations Unies et organisations de la société civile engagés dans les quatre piliers du CAP 241.", "category": "event" },
-      "when": { "question": "Quand et où a lieu l'événement ?", "answer": "La conférence se tient le 17 avril 2026, à Libreville, au Gabon.", "category": "event" },
-      "pillars": { "question": "Quels sont les quatre piliers du CAP 241 ?", "answer": "Les quatre piliers sont Santé, Femmes, Jeunesse et Éducation — les domaines fondamentaux à travers lesquels la campagne renforce la résilience des communautés à travers l'Afrique.", "category": "campaign" },
-      "oaflad": { "question": "Qu'est-ce que l'OPDAD ?", "answer": "L'OPDAD (Organisation des Premières Dames d'Afrique pour le Développement) est un organisme continental qui rassemble les Premières Dames africaines pour promouvoir la santé, l'éducation et l'autonomisation des femmes sur le continent.", "category": "campaign" },
-      "follow": { "question": "Comment suivre l'événement ?", "answer": "Suivez #RenforcerLaRésilience sur les réseaux sociaux : @resilience241 sur X/Twitter, @resilience_241 sur Instagram, et sur Facebook. Des mises à jour en direct seront partagées tout au long de la conférence.", "category": "event" },
-      "balance": { "question": "Qu'est-ce que le programme ÉQUILIBRES ?", "answer": "ÉQUILIBRES 2026–2029 est un programme pluriannuel dans le cadre du CAP 241 qui coordonne l'action autour de trois axes : Prévenir, Accompagner et Reconstruire — s'attaquant aux causes profondes et aux conséquences de la fragilité pour les femmes et les filles.", "category": "campaign" }
+      "whatIs": {
+        "question": "Qu'est-ce que #RenforcerLaRésilience ?",
+        "answer": "#RenforcerLaRésilience est une campagne panafricaine portée par la Première Dame du Gabon, Son Excellence Madame Zita Oligui Nguema, visant à renforcer la résilience des femmes et des filles face aux changements climatiques et aux conflits sur le continent.",
+        "category": "campaign"
+      },
+      "attending": {
+        "question": "Qui participe ?",
+        "answer": "La conférence réunit 19 Premières Dames africaines, ainsi que des délégués, partenaires, représentants des Nations Unies et organisations de la société civile engagés dans les quatre piliers du CAP 241.",
+        "category": "event"
+      },
+      "when": {
+        "question": "Quand et où a lieu l'événement ?",
+        "answer": "La conférence se tient le 17 avril 2026, à Libreville, au Gabon.",
+        "category": "event"
+      },
+      "pillars": {
+        "question": "Quels sont les quatre piliers du CAP 241 ?",
+        "answer": "Les quatre piliers sont Santé, Femmes, Jeunesse et Éducation — les domaines fondamentaux à travers lesquels la campagne renforce la résilience des communautés à travers l'Afrique.",
+        "category": "campaign"
+      },
+      "oaflad": {
+        "question": "Qu'est-ce que l'OPDAD ?",
+        "answer": "L'OPDAD (Organisation des Premières Dames d'Afrique pour le Développement) est un organisme continental qui rassemble les Premières Dames africaines pour promouvoir la santé, l'éducation et l'autonomisation des femmes sur le continent.",
+        "category": "campaign"
+      },
+      "follow": {
+        "question": "Comment suivre l'événement ?",
+        "answer": "Suivez #RenforcerLaRésilience sur les réseaux sociaux : @resilience241 sur X/Twitter, @resilience_241 sur Instagram, et sur Facebook. Des mises à jour en direct seront partagées tout au long de la conférence.",
+        "category": "event"
+      },
+      "balance": {
+        "question": "Qu'est-ce que le programme ÉQUILIBRES ?",
+        "answer": "ÉQUILIBRES 2026–2029 est un programme pluriannuel dans le cadre du CAP 241 qui coordonne l'action autour de trois axes : Prévenir, Accompagner et Reconstruire — s'attaquant aux causes profondes et aux conséquences de la fragilité pour les femmes et les filles.",
+        "category": "campaign"
+      }
     }
   },
   "comingSoon": {
@@ -515,20 +608,62 @@
       }
     },
     "firstLadies": {
-      "gabon": { "name": "Zita Oligui Nguema", "country": "République du Gabon" },
-      "angola": { "name": "Ana Dias Lourenço", "country": "République d'Angola", "role": "Vice-Présidente, OPDAD" },
-      "sierraLeone": { "name": "Fatima Maada Bio", "country": "République de Sierra Leone", "role": "Présidente, OPDAD" },
-      "senegal": { "name": "Marie Khone Faye", "country": "République du Sénégal" },
-      "congo": { "name": "Antoinette Sassou Nguesso", "country": "République du Congo" },
-      "burundi": { "name": "Angeline Ndayishimiye", "country": "République du Burundi" },
-      "nigeria": { "name": "Oluremi Tinubu", "country": "République fédérale du Nigéria" },
-      "coteIvoire": { "name": "Dominique Ouattara", "country": "République de Côte d'Ivoire" },
-      "kenya": { "name": "Rachel Ruto", "country": "République du Kenya" },
-      "saoTome": { "name": "Maria de Fátima Vila Nova", "country": "République démocratique de São Tomé-et-Príncipe" },
-      "equatorialGuinea": { "name": "Constancia Mangue de Obiang", "country": "République de Guinée équatoriale" },
-      "car": { "name": "Brigitte Touadéra", "country": "République centrafricaine" },
-      "ghana": { "name": "Lordina Mahama", "country": "République du Ghana" }
-    }
+      "gabon": {
+        "name": "Zita Oligui Nguema",
+        "country": "République du Gabon"
+      },
+      "angola": {
+        "name": "Ana Dias Lourenço",
+        "country": "République d'Angola",
+        "role": "Vice-Présidente, OPDAD"
+      },
+      "sierraLeone": {
+        "name": "Fatima Maada Bio",
+        "country": "République de Sierra Leone",
+        "role": "Présidente, OPDAD"
+      },
+      "senegal": {
+        "name": "Marie Khone Faye",
+        "country": "République du Sénégal"
+      },
+      "congo": {
+        "name": "Antoinette Sassou N'Guesso",
+        "country": "République du Congo"
+      },
+      "burundi": {
+        "name": "Angéline Ndayishimiye Ndayubaha",
+        "country": "République du Burundi"
+      },
+      "nigeria": {
+        "name": "Oluremi Tinubu, CON",
+        "country": "République fédérale du Nigéria"
+      },
+      "coteIvoire": {
+        "name": "Dominique Ouattara",
+        "country": "République de Côte d'Ivoire"
+      },
+      "kenya": {
+        "name": "Rachel Ruto",
+        "country": "République du Kenya"
+      },
+      "saoTome": {
+        "name": "Maria de Fátima Vila Nova",
+        "country": "République démocratique de São Tomé-et-Príncipe"
+      },
+      "equatorialGuinea": {
+        "name": "Constancia Mangue de Obiang",
+        "country": "République de Guinée équatoriale"
+      },
+      "car": {
+        "name": "Brigitte Touadéra",
+        "country": "République centrafricaine"
+      },
+      "ghana": {
+        "name": "Lordina Dramani Mahama",
+        "country": "République du Ghana"
+      }
+    },
+    "honorificSenator": "S.E Sénatrice"
   },
   "partners": {
     "metaDescription": "Partenaires de la campagne OPDAD #RenforcerLaRésilience — organisations engagées pour renforcer la résilience à travers l'Afrique.",

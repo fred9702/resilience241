@@ -40,9 +40,18 @@
     "programmeButton": "View Programme",
     "registerButton": "Register",
     "learnMoreButton": "Learn more",
-    "stat1": { "value": "13", "label": "First Ladies" },
-    "stat2": { "value": "4", "label": "Pillars" },
-    "stat3": { "value": "1", "label": "Day" }
+    "stat1": {
+      "value": "13",
+      "label": "First Ladies"
+    },
+    "stat2": {
+      "value": "4",
+      "label": "Pillars"
+    },
+    "stat3": {
+      "value": "1",
+      "label": "Day"
+    }
   },
   "home": {
     "mission": {
@@ -53,22 +62,38 @@
       "health": {
         "name": "Health",
         "description": "Strengthening healthcare access for women and girls in fragile contexts",
-        "bullets": ["Maternal health in crisis zones", "Mental health support networks", "Community health infrastructure"]
+        "bullets": [
+          "Maternal health in crisis zones",
+          "Mental health support networks",
+          "Community health infrastructure"
+        ]
       },
       "women": {
         "name": "Women",
         "description": "Economic empowerment and protection of women's rights",
-        "bullets": ["Financial inclusion programmes", "Legal protection frameworks", "Leadership development"]
+        "bullets": [
+          "Financial inclusion programmes",
+          "Legal protection frameworks",
+          "Leadership development"
+        ]
       },
       "youth": {
         "name": "Youth",
         "description": "Investing in the next generation through education and opportunity",
-        "bullets": ["Skills training for displaced youth", "Digital literacy programmes", "Youth leadership forums"]
+        "bullets": [
+          "Skills training for displaced youth",
+          "Digital literacy programmes",
+          "Youth leadership forums"
+        ]
       },
       "education": {
         "name": "Education",
         "description": "Ensuring access to quality education in conflict-affected areas",
-        "bullets": ["School reconstruction initiatives", "Teacher training programmes", "Distance learning solutions"]
+        "bullets": [
+          "School reconstruction initiatives",
+          "Teacher training programmes",
+          "Distance learning solutions"
+        ]
       },
       "learnMore": "Learn more"
     },
@@ -80,19 +105,59 @@
       "badge": "Programme",
       "viewFull": "View full programme",
       "moments": {
-        "opening": { "time": "08:00", "title": "Opening Ceremony", "description": "Welcome address and official opening" },
-        "presidential": { "time": "09:00", "title": "Presidential Address", "description": "Message from the President of Gabon" },
-        "firstLadies": { "time": "10:00", "title": "First Ladies' Addresses", "description": "Addresses from attending First Ladies" },
-        "lunch": { "time": "12:30", "title": "Lunch & Exhibition", "description": "Networking lunch and partner exhibition" },
-        "panels": { "time": "14:00", "title": "Panel Discussions", "description": "Thematic panels on the four pillars" },
-        "closing": { "time": "17:00", "title": "Closing Ceremony", "description": "Declaration and closing remarks" }
+        "opening": {
+          "time": "08:00",
+          "title": "Opening Ceremony",
+          "description": "Welcome address and official opening"
+        },
+        "presidential": {
+          "time": "09:00",
+          "title": "Presidential Address",
+          "description": "Message from the President of Gabon"
+        },
+        "firstLadies": {
+          "time": "10:00",
+          "title": "First Ladies' Addresses",
+          "description": "Addresses from attending First Ladies"
+        },
+        "lunch": {
+          "time": "12:30",
+          "title": "Lunch & Exhibition",
+          "description": "Networking lunch and partner exhibition"
+        },
+        "panels": {
+          "time": "14:00",
+          "title": "Panel Discussions",
+          "description": "Thematic panels on the four pillars"
+        },
+        "closing": {
+          "time": "17:00",
+          "title": "Closing Ceremony",
+          "description": "Declaration and closing remarks"
+        }
       }
     },
     "impact": {
-      "stat1": { "value": "13", "label": "First Ladies", "subtitle": "Attending from across Africa" },
-      "stat2": { "value": "4", "label": "Pillars", "subtitle": "Health, Women, Youth, Education" },
-      "stat3": { "value": "18", "label": "Neighbourhoods", "subtitle": "Community engagement visits" },
-      "stat4": { "value": "1", "label": "Day", "subtitle": "Libreville Conference 2026" }
+      "stat1": {
+        "value": "13",
+        "label": "First Ladies",
+        "subtitle": "Attending from across Africa"
+      },
+      "stat2": {
+        "value": "4",
+        "label": "Pillars",
+        "subtitle": "Health, Women, Youth, Education"
+      },
+      "stat3": {
+        "value": "18",
+        "label": "Neighbourhoods",
+        "subtitle": "Community engagement visits"
+      },
+      "stat4": {
+        "value": "1",
+        "label": "Day",
+        "subtitle": "Libreville Conference 2026"
+      }
     },
     "partners": {
       "badge": "Partners & Supporters",
@@ -114,13 +179,41 @@
       "campaign": "The Campaign"
     },
     "questions": {
-      "whatIs": { "question": "What is #BuildingResilience?", "answer": "#BuildingResilience is a pan-African campaign led by the First Lady of Gabon, Her Excellency Mrs. Zita Oligui Nguema, focused on strengthening resilience for women and girls facing climate change and conflict across the continent.", "category": "campaign" },
-      "attending": { "question": "Who is attending?", "answer": "The conference brings together 19 African First Ladies, alongside delegates, partners, UN representatives, and civil society organisations committed to the four pillars of CAP 241.", "category": "event" },
-      "when": { "question": "When and where is the event?", "answer": "The conference takes place on April 17, 2026, in Libreville, Gabon.", "category": "event" },
-      "pillars": { "question": "What are the four pillars of CAP 241?", "answer": "The four pillars are Health, Women, Youth, and Education — the foundational areas through which the campaign strengthens resilience for communities across Africa.", "category": "campaign" },
-      "oaflad": { "question": "What is OAFLAD?", "answer": "OAFLAD (Organization of African First Ladies for Development) is a continental body that brings together African First Ladies to advocate for health, education, and women's empowerment across the continent.", "category": "campaign" },
-      "follow": { "question": "How can I follow the event?", "answer": "Follow #BuildingResilience on social media: @resilience241 on X/Twitter, @resilience_241 on Instagram, and on Facebook. Live updates will be shared throughout the conference.", "category": "event" },
-      "balance": { "question": "What is the BALANCE programme?", "answer": "BALANCE (ÉQUILIBRES 2026–2029) is a multi-year programme under CAP 241 that coordinates action across three axes: Prevent, Support, and Rebuild — addressing the root causes and consequences of fragility for women and girls.", "category": "campaign" }
+      "whatIs": {
+        "question": "What is #BuildingResilience?",
+        "answer": "#BuildingResilience is a pan-African campaign led by the First Lady of Gabon, Her Excellency Mrs. Zita Oligui Nguema, focused on strengthening resilience for women and girls facing climate change and conflict across the continent.",
+        "category": "campaign"
+      },
+      "attending": {
+        "question": "Who is attending?",
+        "answer": "The conference brings together 19 African First Ladies, alongside delegates, partners, UN representatives, and civil society organisations committed to the four pillars of CAP 241.",
+        "category": "event"
+      },
+      "when": {
+        "question": "When and where is the event?",
+        "answer": "The conference takes place on April 17, 2026, in Libreville, Gabon.",
+        "category": "event"
+      },
+      "pillars": {
+        "question": "What are the four pillars of CAP 241?",
+        "answer": "The four pillars are Health, Women, Youth, and Education — the foundational areas through which the campaign strengthens resilience for communities across Africa.",
+        "category": "campaign"
+      },
+      "oaflad": {
+        "question": "What is OAFLAD?",
+        "answer": "OAFLAD (Organization of African First Ladies for Development) is a continental body that brings together African First Ladies to advocate for health, education, and women's empowerment across the continent.",
+        "category": "campaign"
+      },
+      "follow": {
+        "question": "How can I follow the event?",
+        "answer": "Follow #BuildingResilience on social media: @resilience241 on X/Twitter, @resilience_241 on Instagram, and on Facebook. Live updates will be shared throughout the conference.",
+        "category": "event"
+      },
+      "balance": {
+        "question": "What is the BALANCE programme?",
+        "answer": "BALANCE (ÉQUILIBRES 2026–2029) is a multi-year programme under CAP 241 that coordinates action across three axes: Prevent, Support, and Rebuild — addressing the root causes and consequences of fragility for women and girls.",
+        "category": "campaign"
+      }
     }
   },
   "comingSoon": {
@@ -515,20 +608,62 @@
       }
     },
     "firstLadies": {
-      "gabon": { "name": "Zita Oligui Nguema", "country": "Republic of Gabon" },
-      "angola": { "name": "Ana Dias Lourenço", "country": "Republic of Angola", "role": "Vice-President, OAFLAD" },
-      "sierraLeone": { "name": "Fatima Maada Bio", "country": "Republic of Sierra Leone", "role": "President, OAFLAD" },
-      "senegal": { "name": "Marie Khone Faye", "country": "Republic of Senegal" },
-      "congo": { "name": "Antoinette Sassou Nguesso", "country": "Republic of the Congo" },
-      "burundi": { "name": "Angeline Ndayishimiye", "country": "Republic of Burundi" },
-      "nigeria": { "name": "Oluremi Tinubu", "country": "Federal Republic of Nigeria" },
-      "coteIvoire": { "name": "Dominique Ouattara", "country": "Republic of Côte d'Ivoire" },
-      "kenya": { "name": "Rachel Ruto", "country": "Republic of Kenya" },
-      "saoTome": { "name": "Maria de Fátima Vila Nova", "country": "Democratic Republic of São Tomé and Príncipe" },
-      "equatorialGuinea": { "name": "Constancia Mangue de Obiang", "country": "Republic of Equatorial Guinea" },
-      "car": { "name": "Brigitte Touadéra", "country": "Central African Republic" },
-      "ghana": { "name": "Lordina Mahama", "country": "Republic of Ghana" }
-    }
+      "gabon": {
+        "name": "Zita Oligui Nguema",
+        "country": "Republic of Gabon"
+      },
+      "angola": {
+        "name": "Ana Dias Lourenço",
+        "country": "Republic of Angola",
+        "role": "Vice-President, OAFLAD"
+      },
+      "sierraLeone": {
+        "name": "Fatima Maada Bio",
+        "country": "Republic of Sierra Leone",
+        "role": "President, OAFLAD"
+      },
+      "senegal": {
+        "name": "Marie Khone Faye",
+        "country": "Republic of Senegal"
+      },
+      "congo": {
+        "name": "Antoinette Sassou N'Guesso",
+        "country": "Republic of the Congo"
+      },
+      "burundi": {
+        "name": "Angéline Ndayishimiye Ndayubaha",
+        "country": "Republic of Burundi"
+      },
+      "nigeria": {
+        "name": "Oluremi Tinubu, CON",
+        "country": "Federal Republic of Nigeria"
+      },
+      "coteIvoire": {
+        "name": "Dominique Ouattara",
+        "country": "Republic of Côte d'Ivoire"
+      },
+      "kenya": {
+        "name": "Rachel Ruto",
+        "country": "Republic of Kenya"
+      },
+      "saoTome": {
+        "name": "Maria de Fátima Vila Nova",
+        "country": "Democratic Republic of São Tomé and Príncipe"
+      },
+      "equatorialGuinea": {
+        "name": "Constancia Mangue de Obiang",
+        "country": "Republic of Equatorial Guinea"
+      },
+      "car": {
+        "name": "Brigitte Touadéra",
+        "country": "Central African Republic"
+      },
+      "ghana": {
+        "name": "Lordina Dramani Mahama",
+        "country": "Republic of Ghana"
+      }
+    },
+    "honorificSenator": "H.E Senator"
   },
   "partners": {
     "metaDescription": "Partners of the OAFLAD #BuildingResilience campaign — organizations working together to strengthen resilience across Africa.",

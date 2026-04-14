@@ -66,10 +66,17 @@ export function Footer() {
           <div className="flex flex-col items-center md:items-start gap-3">
             <Image
               src={footerLogo}
-              alt="OAFLAD logo"
+              alt="#BuildingResilience"
               width={140}
               height={42}
               className="h-auto w-[140px] brightness-0 invert"
+            />
+            <Image
+              src="/images/partners/oaflad-logo.png"
+              alt={locale === "fr" ? "OPDAD" : "OAFLAD"}
+              width={120}
+              height={40}
+              className="h-10 w-auto brightness-0 invert opacity-90"
             />
             <p className="font-body text-sm text-white/90 text-center md:text-left max-w-xs">
               {t("tagline")}

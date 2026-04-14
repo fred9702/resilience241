@@ -116,29 +116,12 @@ function TimelineItem({
             )}
           </button>
         ) : (
-          <button
-            onClick={() => setExpanded(!expanded)}
-            className="w-full text-left bg-warm-cream/60 border border-brown/10 rounded-xl px-5 py-4 md:px-6 md:py-5 hover:border-brown/20 hover:bg-warm-cream/80 transition-colors focus:outline-none focus:ring-2 focus:ring-orange"
-            aria-expanded={expanded}
-          >
-            <div className="flex items-center justify-between gap-2">
-              <h4 className="font-heading text-base md:text-lg font-bold text-near-black">
-                {title}
-              </h4>
-              <CaretDown
-                size={16}
-                className={`shrink-0 text-near-black/40 transition-transform duration-200 ${expanded ? "rotate-180" : ""}`}
-              />
-            </div>
-            {!expanded && (
-              <p className="mt-1 font-body text-sm text-near-black/60">{description}</p>
-            )}
-            {expanded && (
-              <div className="mt-3">
-                <p className="font-body text-sm text-near-black/60">{description}</p>
-              </div>
-            )}
-          </button>
+          <div className="bg-warm-cream/60 border border-brown/10 rounded-xl px-5 py-4 md:px-6 md:py-5">
+            <h4 className="font-heading text-base md:text-lg font-bold text-near-black">
+              {title}
+            </h4>
+            <p className="mt-1 font-body text-sm text-near-black/60">{description}</p>
+          </div>
         )}
       </div>
     </div>
