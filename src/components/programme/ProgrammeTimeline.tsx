@@ -145,8 +145,8 @@ function TimelineSequence({
 }) {
   return (
     <div className="mb-20 last:mb-0">
-      {/* Sticky sequence header */}
-      <div className="sticky top-[68px] z-10 bg-white/90 backdrop-blur-sm py-4 mb-8">
+      {/* Sequence header */}
+      <div className="mb-8">
         <ScrollReveal>
           <div className="text-center">
             <span className={`inline-block font-heading text-sm font-semibold uppercase tracking-widest ${ACCENT_STYLES[accent].badge} px-4 py-1.5 rounded-full mb-4`}>
