@@ -96,7 +96,7 @@ p {
 }
 
 .glass-cream {
-  background: rgba(251, 240, 230, 0.85);
+  background: rgba(251, 240, 230, 0.96);
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   box-shadow: 0 2px 8px rgba(224, 123, 57, 0.15);
