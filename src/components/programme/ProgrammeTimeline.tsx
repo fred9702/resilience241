@@ -71,13 +71,14 @@ function TimelineItem({
   const title = t(`${seqKey}.${itemKey}.title`);
   const description = t(`${seqKey}.${itemKey}.description`);
   const time = t(`${seqKey}.${itemKey}.time`);
+  const startTime = time.split(/[–—-]/)[0].trim();
 
   return (
     <div className="relative flex items-start gap-6 md:gap-8">
       <div className="relative z-10 flex items-center justify-center shrink-0">
         <div className={`w-12 md:w-16 h-12 md:h-16 rounded-full ${dotColor} flex items-center justify-center shadow-md`}>
           <span className="font-heading text-xs md:text-sm font-bold text-white">
-            {time}
+            {startTime}
           </span>
         </div>
       </div>
