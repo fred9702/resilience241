@@ -77,7 +77,8 @@ export async function POST(request: Request) {
     }
 
     return NextResponse.json({ success: true }, { status: 201 });
-  } catch {
+  } catch (e) {
+    console.error("Register route error:", e);
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 }

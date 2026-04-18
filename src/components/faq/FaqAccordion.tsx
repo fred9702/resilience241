@@ -93,6 +93,7 @@ export function FaqAccordion() {
                           {t(`questions.${key}.answer`)}
                         </p>
                         {(() => {
+                          if (!t.has(`questions.${key}.link`)) return null;
                           try {
                             const linkData = t.raw(`questions.${key}.link`) as { href: string; label: string; external?: boolean } | undefined;
                             if (!linkData) return null;
